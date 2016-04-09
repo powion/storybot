@@ -1,0 +1,43 @@
+This is a fuckup that spans nearly two years.
+
+A while back, I had a spine surgery; Idiopathic Adolescent Scoliosis. It meant my back literally started twisting. Painful shit, and the worst case the surgeon had ever seen.
+
+Anyway, post-surgery, my parents agreed that for actually going through with it (*The surgery did have a small chance to completely paralyze me from the waist down, which probably would have spiralled into me having to go to Comicon as Gage from PAYDAY 2*), they would buy me a gaming PC. Not some ludicrous NASA-grade supercomputer, no, but certainly a rig-and-a-half.
+
+So, for the past two years, I've been playing with it, talking to friends on it, and doing relatively well-rendered screenshots in Garry's Mod. However, despite its caliber as a 'gaming' PC, I was slightly underwhelmed by how it performed. It was...average.
+
+It was only today that I realized something I'd done wrong.
+
+In a moment of irritation whilst the display kept freezing up and frames were terrible, I looked online to see if there was a means of fixing it. And there it was; A diagram of the back of a PC. Sweet, let's do this.
+
+You had the integrated processor with its' own built-in graphics, right...
+
+...and the two Nvidia GTX-770s at the bottom of the PC.
+
+I then checked my PC.
+
+I'd had my display connected to the wrong place.
+
+***For two years.***
+
+I took this as nothing major, and changed where it was plugged in.
+
+Then, I loaded up PAYDAY 2 and was ***literally brought to orgasm*** when I saw the incredible 70FPS I was getting on foliage-heavy environments.
+
+**TL;DR**: My PC hid its power level from me for two years because I'm shite at plugging things in.
+
+**EDIT**: Right, let's clarify a few things.
+
+No, I am not an advertising agent of any kind. I'm a teenage lad with a job stacking shelves in a supermarket.
+
+No, I am not retarded. To those who have said I'm mentally retarded because the surgery *on my SPINE* failed, I think you might need to rethink that statement.
+
+I don't know why it wouldn't operate the graphics cards over the integrated graphics. It was registering they were on the system, and for the whole time I hadn't connected them properly, I was installing driver updates with no problems. It only properly began using them when I plugged my monitor into the graphics cards.
+
+To me, 70FPS on PAYDAY 2 is fucking amazing, probably because I'm used to it going at about 20-30FPS.
+
+Garry's Mod was an alright benchmark for graphics, since it was able to render more advanced lighting with few problems.
+
+Any other games I played in the time I hadn't connected my graphics card normally got put on the lowest settings and reached relatively high framerates.
+
+The surgery went fine. I am now worth £10,000 more because of the metal, and I work long shifts and do construction work from time to time.

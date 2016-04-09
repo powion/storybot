@@ -1,0 +1,48 @@
+So I had this idea to make an old school adventure game using the directory system on my computer. Every decision you could make would be a different folder, and each folder would then contain a few more folders to choose from. Of course, this meant making thousands of folders, many of which would be redundant, and so I decided that the best way to make it would be by writing a brief little program. My proof of concept was a hedge maze, without any decisions at each step besides North, East, South, and West; before I did that, though, I wanted to check that my code for making a large nested directory tree worked, and so I wrote up my program. And then I compiled it. And ran it.
+
+Hagrid.java was only a few seconds into creating his hedge maze when I had the horrifying realization that I had told my computer to make a directory tree with a depth of 100, and was thus on my way to creating 4^100 nested folders. I immediately reset my computer, but by the time I had booted it up again, there were 33,315,196 folders on my desktop.
+
+Shift-Del gave an estimated time of 12 days to delete the thing, so I just made sure it wasn't being indexed by the computer and set it as an operating system file, so I'll never have to see it again. Nobody will ever know.
+
+But *I* know. I know that somewhere, hidden on my desktop, there are millions and millions of empty folders. :(
+
+**Edit 4:** Thank you everyone who made suggestions on how to fix my ridiculous problem! The one that finally did the trick was 
+
+    cd blank
+    robocopy blank "Hedge Maze" /mir &gt; NUL
+
+which fixed everything in a mere five or so hours. I've also edited my previous edit to say where my background's from and give a non-compressed version.
+
+Thanks all! You make my mistakes a joy
+
+**Edit 3:** Here's my [wallpaper](https://www.dropbox.com/s/5yfxmxo96d0wuav/Streets%20of%20Rage%20BG.png?dl=0), which is originally from the SEGA game Streets of Rage.
+
+**Edit 2:** Yes, I tried rmdir /s /q and not just Shift-Del. The reason why I decided just to hide them all was because that was also taking a kind of preposterous amount of time. (Then again, I have the patience of a flea, so who knows...)
+
+**Edit:** [Proof!](http://i.imgur.com/oSxqxZJ.png) Well, kinda. My earlier attempts to delete got rid of around a million files, so I guess you'll just have to take it on faith that there were 33 million and not just 32.
+
+**Hagrid.java:** (use at your own peril)
+
+
+    import java.io.File;
+    import java.util.ArrayList;
+    import java.util.Arrays;
+    import java.util.List;
+
+        public class Hagrid {
+	    final static List&lt;String&gt; compass = new ArrayList&lt;&gt;(Arrays.asList("N","E","S","W"));
+	
+	    public static void main(String[] args) {
+		    File root = new File("C:/Users/.../Desktop/Hedge Maze");
+		    gogogo(root,100);
+	    }
+
+	    public static void gogogo(File root, int depth) {
+		    if (depth == 0) return;
+		    for (String s : compass) {
+			    File subdir = new File(root,s);
+			    subdir.mkdirs();
+			    gogogo(subdir,depth-1);
+		    }
+	    }
+    }

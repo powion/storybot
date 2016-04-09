@@ -1,0 +1,27 @@
+This happened a bit ago.  I've wanted to put some distance from the event, because you never know who's a Redditor out there.
+
+The company I worked for was an advertising company.  So needless to say, their website consisted of posting all of their work.  About a hundred or so video files.  And it was my job to convert them and put them up on the website.
+
+Here's where it gets a little tricky.  The website was hosted via a server that we also used to send out clients works-in-progress.  Problem is, I was new and didn't know that.  I assumed the website linked back to some other server, not the server we regularly deleted media off of (via FTP).
+
+In case you don't see where this is going, I had to free up space on the server via an FTP.  So I selected a bunch of files and hit delete.  Then I see it.  A folder marked WEBSITE.  And then it was gone.
+
+My pulse starts to race; I can feel the color drain from my face.  I go to the website and start clicking around.  It's ALL GONE.  Every file.  Just a QuickTime symbol with a line through it.
+
+Even worse, I found out we didn't have back-ups for ANY OF IT, and this was work going back to when the company started 10 years ago. 
+
+When I say back-ups, I mean the converted files.  The files needed to be a certain size, codec, etc to play on the website.  I couldn't just put them up there raw.  Also, they were scattered around in the archives.  ALSO, they each had specific HTML code that linked them to the site that I didn't know.
+
+Long story short, I spent the next week covertly converting and resorting the entire website.  No one ever found out, but there was a very close call when the owner of the company brought up the site in a meeting with a client.  Luckily he clicked on one of the only files I managed to restore at that point.  I spent that entire week horribly anxious, not sleeping well.
+
+TL;DR: Didn't know our company was hosting their site off a server we used via FTP to send clients materials. Deleted the content, and spent the entire week fixing it.
+
+Edit for clarification:  I knew that the video files were on the server, but I was only told to put them there to send to the web designer.  I had absolutely no idea he was hosting off our server (meaning ALL of the video files on the website linked back solely to the FTP), which made little to no sense to me.  Therefore, I didn't think anything of quickly deleting files off the FTP we normally deleted from.
+
+Edit 2: We were not a web design company, so I don't know anything about web design.  I merely was tasked with creating/converting the files and sending them.  We outsourced the task of web design to a particularly inept individual.
+
+***Edit 3:The website was set up by an outsourced web designer not affiliated with the company.  I don't know where the website itself ran from.  For the videos however,  they were instructed to put all of the video files into a single folder on a server via the FTP.  He linked directly to that folder for all the videos.  This was not my design, this was someone else's.***
+
+**Edit 4: Ok, NOW I see why everyone's having a problem with this post.  You have to understand, we just called it "The FTP", meaning we were uploading to a server via an FTP (Transmit).  So when I say we threw it up "on the FTP" it means we used Transmit to upload the files to a folder on a server.  There.  That should clear things up.  Sorry for the massive confusion.**  (Fixed instances of this in the post)
+
+Edit 5:  The video files for the website were in the same location as the places we put the videos we sent to clients.  They were in a separate folder, yes, but still in the same location.  We were always scrambling for server space, so we would have to delete things here to make room.  This particular day I was being hounded by my boss to make room very quickly.  So I just selected a bunch of items for delete, not knowing at all that the videos for our website were housed there as well until it was too late.  It was common practice to delete things from there, except nobody gave me the heads-up there was anything to avoid.  We only used the FTP to transmit files, so while I HAD transmitted website files before, I thought it was simply a transference, not that they were being hosted from that server as well.)

@@ -1,0 +1,33 @@
+I work at a small video game development studio. We recently attended a major exhibition/convention to promote our new title—a strategy game with real-time strategy and card game elements. We had a fancy booth with half a dozen computers set up and a full set of staff recruiting people, pitching to them, and showing them the game. The key "sell" that we were trying to make was to collect emails for a mailing list that we would use in the future for marketing, beta testing, and crowdfunding/kickstarter. Emails are the holy grail. Without them, showing off the product would be virtually worthless.
+
+A few important things about booths at conventions/trade shows:
+
+* There is seldom and cell phone reception because there are tens of thousands of people walking around.
+* The wifi is unusably awful.
+* Wired internet costs $700/day, or $2800 for the 4-day convention.
+
+Fuck-up number 1: I had chosen to skimp out and skip getting the wired internet. Our game demo didn't require any internet connectivity.
+
+Fuck-up number 2: All of our nice computers were being used as demo machines, and we were stuck with a Chromebook to collect the email sign-ups. Chromebooks don't work very well without internet, but I had managed to load up a Google Doc spreadsheet in "offline mode" to collect all of the emails. Or so I thought.
+
+Over the course of four days, we collected hundreds of email sign-ups in the spreadsheet. Everything seemed just fine. However, when we got back to the office, the Chromebook reconnected with the internet, synced, and the entire spreadsheet was erased in an instant. Turns out that it wasn't properly set up in offline mode, so none of our edits to it were saved.
+
+The entire product of our trip to the trade show, which required weeks of preparation and over $6500 in costs, was gone.
+
+Edit: Yay, looks like this is actually the top /r/TIFU post that has nothing to do with sex.
+
+Edit 2: As others have pointed out, the game is called [Prismata](http://prismata.net). I'm not sure if posting that is a violation of the rules on posting personal information; I will gladly remove the link if mods so request.
+
+Edit 3: Thank you to everyone trying to help. We've tried just about everything. The chromebook is an HP CB2. The one thing we have not tried is scraping the hard drive, but every method I've seen for doing that seems to involve booting the device in developer mode, which apparently erases the hard drive. If anybody knows a method of actually doing this, we'll certainly give it a go.
+
+Edit 4: Damn, now this is on top of all the sex posts.
+
+Edit 5: Thanks to everyone who pmed me offering to sign themselves up to our list; you guys are awesome.
+
+Edit 6: HOLY SHIT! I just checked our site stats; apparently THOUSANDS of you clicked that link above, and our list grew by more today than it otherwise has grown in the last MONTH! We added **more new emails than we lost at the exhibition**. Honestly, I have no words; you guys fucking rock.
+
+Edit 7: WHAT THE FUCKING FUCK!!?!?! I get in this morning and our mailing list has TRIPLED. You guys have added 2x more names than the rest of our company's entire marketing efforts to date. What is this shit?
+
+Edit 8: So apparently the r/bestof crosspost is now one of the top links on r/all; here's what you guys did to our mailing list: [http://imgur.com/EDRQhjx](http://imgur.com/EDRQhjx)
+
+Edit 9: Here it is again at the end of the day, it's literally 1100% times higher than it was 48 hours ago: [http://i.imgur.com/S33tyqY.png](http://i.imgur.com/S33tyqY.png) Just fucking unbelievable. Even a few media folks contacted me about the story. The Google Docs Offline team also contacted us to try to identify the problem and possibly recover our lost data. Thank you all for your interest in Prismata; we will try our damnedest to get the servers running at their max capacity so that you can all play as soon as possible!

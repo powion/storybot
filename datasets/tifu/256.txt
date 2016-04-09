@@ -1,0 +1,31 @@
+This was about 2 weeks ago but new info about the story made me want to post it.   I work at an industrial waste water treatment plant, and one of the things we need to monitor is the gasses in the manholes outside.  Our meters test for H2S, CO, O2, and LEL (lower explosive limit of methane).  For testing these manholes we have a little air vacuum that we use to pull air from the lower portions of the holes to test.  High H2S levels are deadly.   (here's 2 pictures of what our equipment looks like  http://imgur.com/a/Km0Zs)
+
+Now I was working 5 days in a row with 12 hour shifts,  and I like food. The day before my shifts  I made a nice triple batch of chili, not just any chili though,  spiced Italian sausage with extra hot seasoning and extra beans kind of chili. You can probably guess what that does to the digestive system...
+
+On the 3rd day of work, after eating maybe 2 bowls of chili a day, I went to take manhole readings on the street with my vehicle.  I have the gas meter hooked up to the vacuum and the vacuum is pumping whilst sitting on my lap while the hose is falling between my legs.  Feeling a nice fart coming on I give a nice push, letting out the fumes of the chili only diet of the last 2-3 days.  The vacuum hose, sitting between my legs, picks up plenty of the gasses and sends them to the gas monitor.  The monitor is astounded at the levels of gas it's receiving and goes berserk with its alarms.  All of the gasses that it monitors were over the reading levels (except for O2, that went under level), and threw the entire monitor out of whack, so I couldn't take my manhole readings.  I shut it down and set it to the side for later.
+
+Now today I've learned that the gas monitor that I had farted into needs to go back to the company to get recalibrated because our calibrations aren't making it work properly...  My farts potentially killed a 700$ piece of equipment...
+
+TL;DR: My manhole smells worse than the others...
+
+-edits- 
+
+We have the monitors fresh air calibrated daily and have them recalibrated elsewhere by the HSE head every 2 months. We keep the monitors calibrated properly so the readings are on point. 
+
+Found the reading limits for the gas meter
+
+H2S PPM: 0-200
+
+CO PPM: 0-1000
+
+O2 %: 0-30
+
+LEL %: 0-100
+
+As for the levels of gas it recieved from my concentrated fart, I don't remember what some of them were,  but the LEL % was at 100%, and the CO went over range.
+
+
+Good grief, Gilded?? Thank you kind stranger!
+
+
+Really enjoying most of the comments too  :p

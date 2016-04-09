@@ -1,0 +1,15 @@
+Today Reddit was blocked in Russia, and I am the one who posted [this post](https://www.reddit.com/r/rudrugs/comments/1derq9/%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B8_%D0%BD%D0%B0%D0%B4%D0%B5%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BC%D0%B5%D1%82%D0%BE%D0%B4_%D0%B2%D1%8B%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F_%D0%BF%D1%81%D0%B8%D0%BB%D0%BE%D1%86%D0%B8%D0%B1%D1%8B/) which lead to this.
+
+In Russia, there is a law which allow Roskomnadzor, Russian censorship agency, to block any website without court rulling. Two years ago I tested how RKN react to abuse on popular websites/crazy abuses. On of that websites was Reddit.
+
+One thing I learned is that RKN doesn't want to block popular websites. They respond me that this content is illegal and they blocked it, but they weren't. [It was on 05/21/2013](https://img.bi/#/VN0xdFz!SUfwaAZuQ0OgFP6nJQpMgqpwENsQfA4KLn1gdqhZ). On 10st Aug 2015 they posted [a call to help them contact Reddit administration](https://vk.com/wall-76229642_54727) to official VK page. Funny thing, but they called Psilocybe a plant. Several hours ago they [reported that Reddit is blocked in Russia](https://vk.com/wall-76229642_55304). Seems like things changed.
+
+How Reddit is blocked? Fully. As Reddit switched to HTTPS, there is no way to block special page.
+
+Will I remove this post? No. I also think that Reddit administration needs to do nothing. This is important issue on freedom of speech, and only RKN want to violate it.
+
+BTW, this post is a guide for indoor growing Psilocybe mushrooms in Russian. I'm not sure if any people saw this before blocking, but if you are here and you can read Russian, now you know to grow some shrooms, thanks to RKN.
+
+UPD: [Russia unbans Reddit](https://meduza.io/en/news/2015/08/13/russia-unblocks-reddit) as they comply with request and blocked that post for Russian users.
+
+UPD2: [This is how Russian Internet censorship works](https://meduza.io/en/feature/2015/08/13/this-is-how-russian-internet-censorship-works)

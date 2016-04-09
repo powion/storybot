@@ -1,0 +1,21 @@
+Approximately 5-6 years ago as a nerdy 12 year old I had found a small minecraft server. This server was basically about 100 people building extravagant designs. These people put a lot of work into this server, like up to hundreds of hours each.
+
+The admins on the server were pretty trusting and gave everyone mod tools, which basically meant you had god mode and could use commands to make building easier.
+
+I used the command which allows you to fill the volume between 2 points with a certain block. I unknowingly set one of the points at the 'spawn' and then walked diagonally for about half an hour to find a free region to build a house.
+
+It was going to be a sky house I decided, so I built a tower to the top of the world and started with a nice pond. I wanted to surround the pond with sugar cane block, so I used the fill all command.
+
+Here's where I fucked up. I thought I set the first point at one corner of the pond and the other at a connecting corner. Instead, the first point was still at the spawn (half hours walk away!) and the second was in my pond.
+
+I used the fill command and filled the space with sugar cane. If I recall correctly, close to 600 million blocks of fucking sugar cane.
+
+The thing about sugar cane is that if it's not next to water or if it's stacked above a height of 5, it drops into an item on the ground. 
+
+I had just dropped 600 million cubic metres of sugar cane on to the ground.
+
+Unsurprisingly the server crashed after a few minutes due to the intense load.
+
+I found out through the servers IRC chat that the map AND the server couldn't be saved. Which means the backups couldn't be accessed, nor the chat logs, so they didn't know I did it. The admin of the server had to delete the map completely and create a new one. Needless to say, the players didn't like this one bit. The 100 players dwindled to about 10 before the server was shut down due to low interest.
+
+Tldr: I destroyed the world by ending world hunger.

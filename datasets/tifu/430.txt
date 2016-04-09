@@ -1,0 +1,5 @@
+There's an extension that converts any appearance of "cloud" on a webpage to "butt". I work in web development and as such am exposed to a lot of marketing copy about How To Use The Cloud To Disrupt Your Business Vertical and the like. I installed this extension on chrome on my home computer, not my work computer, but didn't realize that Chrome will sync your extensions across all logged in browsers.
+
+So one day at work, I'm asked to take a look at a bug in a weather forecast script in the sidebar of a news website that my company manages. I open up the script (which is annoyingly only accessible in-browser through the CMS), fix the bug, and get back to my other projects.
+
+The next day, the newspaper editor stops by and asks me to take a look at the weather forecast cause it's "acting strange." Long story short, approximately 6,000 area residents were informed that the weather in their county today would be "Butty with light rain in the evening."

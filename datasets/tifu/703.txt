@@ -1,0 +1,27 @@
+**Obligatory: This was 7th grade, I'm now a Junior in high school**
+
+So there was this one kid in my class that *everyone* hated. He was the biggest arse to anyone he met, and I think at one point he was even caught wanking in the ladies room. 
+
+Let's call him Derp. Derp was a guy who thought he was super smart, and he and I were kinda mutual friends. Like not the kind of friends who ever text or talk about anything cool, more just like the friends who exchange homework answers. 
+
+Now me: I'm a programmer. I've been a computer geek for the longest time, and ive been a badass with all kinds of coding. This was kinda common knowledge. There was also a rumor that I could hack anything, though that was quite false.
+
+Anyway, one day I decided to prank this Derp. I managed to convince him that I could code him a program that could hack *any* website, and access any account ever created anywhere. I told him I had used it to break into the Pentagon and learn government secrets, and hack apple and screw up the creation of the new iPad. Of course, he believed me and agreed to try it. 
+
+I go home and crack my knuckles, then bring up all kinds of programs. After 2 hours of work, I come up with the master program:
+
+It was an install wizard. It looked very professional, and rapidly installed "UberHack" to your system. In reality, it installed a video of various drawings of dicks popping up all over the screen, as well as running a shutdown script in the background. As soon as the video finished, the computer turns off. And this pops up every time you log in. **MWAHAHAHA**
+
+Whelp, here comes the fuckup. I give it to him the next day, all prepared and awesome. As I hand him the flash drive, I repeat "DO NOT install this on school computers. The blocking software they have can track you, me, and it can even screw up the computers. Do **NOT** install it on any school PC."
+
+Two days later I get called to the office. He installed it on *not one, not two, but* **22 FUCKING SCHOOL COMPUTERS!**  Once he was caught, he was quick to rat me out as to redirect the blame. I explained myself in saying it was a harmless prank, and could easily be uninstalled with the proper knowledge (which was literally alt+f4 and delete it out of the startup folder).
+
+Miraculously, I got off with a warning and he was suspended for a week. I also was tasked with removing it from all the computers, which was quite embarrassing. But hell, it was funny. And it got me this story.
+
+Tl:Dr: Trolled the classhole by making dicks appear on his pc whenever he turns it on, the idiot installs it on 22 fuckin school computers, didn't get brutally murdered by school officials.
+
+**Edit:** Alot are asking about the program itself. It was **NOT** any sort of virus, and was as simple as an easy shutdown batch file and a video put together into an install wizard and installed into a startup folder.
+
+**Edit 2:** Holy hell, I've never been on the front page before! I HAVE ASCENDED!
+
+**Edit 3:** Alot of people are calling me a bully. This kid was hated for a reason, and that's because *he* was a huge bully and asshat to everyone in the school. He didn't have any sort of disorder, he was just a cunt.

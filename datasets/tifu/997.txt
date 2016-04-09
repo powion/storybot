@@ -1,0 +1,11 @@
+Every single time I ask my girlfriend what she wants to eat it becomes like this big fucking grand debate. [This scene from the notebook pretty accurately illustrates us every night.](https://www.youtube.com/watch?v=ZmivKyEY1Dk) With her birthday rolling around I decided I should kill two birds with one stone...
+
+So I spent a month building her a glorious app as a present. This thing is my fucking masterpiece. You give it money and it will go out and order you delivery. Thing is, you don't know what you're getting. Some guy just shows up with some food. You could get some pad thai, you could get a rare steak with a side of cat, who knows? No decisions, no problems. It was perfect, or at least I thought so.
+
+The morning of her birthday arrived (this morning) and after some sexy time I presented her with her gift. She loved it, and after plenty of laughs suggested that we use it at her birthday party tonight. Her birthday party rolled around and a large group of us drunkenly placed the first order ever with the app for ~200$ of food. We were hysterical about the thought of what the hell would show up at the door... But after an hour I started to get a bit worried that no food had arrived. Finally we got a call from Pablo the delivery driver!
+
+Turns out I forgot one minor (major) detail: picking your address. I hard coded in an address I knew would get delivery at any hour while making the app… So while Pablo the delivery guy was sitting outside of 350 5th Ave, New York aka the fucking Empire State Building, wondering where to drop off $200 worth of Peruvian chicken… I was sitting inside my apartment in the middle of Kansas wondering how the hell I’m going to feed my 10 drunk hungry friends. Fuck.
+
+**tldr: made a shit delivery app. placed order for gf's bday party. Delivery guy in NY, but i live in Kansas.**
+
+**edit: reading through all of your guys's comments has made me seriously consider making this thing in to a reality. I honestly think I'd need to start from scratch though considering the atrocity that is my current code base. At least this time around I'll have the design that /u/awkwwward offered. Check this thread back in like 1-2 months and I'll keep you updated!**

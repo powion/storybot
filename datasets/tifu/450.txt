@@ -1,0 +1,58 @@
+Like almost all TIFUs this did not happen today, but some time ago. For obvious reasons I am using a throw away and being vague about some details because anyone who reads this and is a chemist at the university I attended will know who I am. For some background, I was a graduate student at a large R1 university getting a Ph.D. in chemistry. As an organic chemist, I frequently use compounds that require delicate handling and an exquisite extravagance of attention. I was working in a lab that frequently used fairly reactive things (in that they reacted spontaneously and spectacularly with air or water)^[1](https://www.youtube.com/watch?v=EmkBH-ncG1Y). The problem with that is when you use dangerous things every day, you get used to them, and the danger goes away. You become complacent. Maybe you make assumptions about the what safety protocols others are following. This is a horrible practice. 
+
+
+
+One of the things I frequently used to clean certain types of glassware was concentrated nitric acid. You really need to be careful with nitric acid, not only is it a very strong acid, but also insanely good at nitrating things in addition to being a superb oxidizing agent. This means that not only is it super corrosive and can eat through copper and other metals pretty quickly, but that it also reacts violently and often explosively with most organic chemicals to produce toxic gas + a nitrated compound.^[2](https://www.youtube.com/watch?v=aBVdGGml6bU) Nitrated compounds make great explosives. As Wikipedia says, “Nitration of organic compounds with nitric acid is the primary method of synthesis of many common explosives, such as nitroglycerin and trinitrotoluene (TNT). As very many less stable byproducts are possible, these reactions must be carefully thermally controlled, and the byproducts removed to isolate the desired product.”^[3](https://en.wikipedia.org/wiki/Nitric_acid)
+
+
+
+I’m sure you can see where this is going…
+
+
+
+So here is where the chain of events that was my fuckup begins. I was cleaning some glassware with nitric acid, which is a fairly common method to get very clean glass.^[4](http://curlyarrow.blogspot.com/2008/01/how-to-clean-your-sintered-funnel.html),[5](http://www.starna.com/ukhome/d_tech/tech01.html) The waste bottle that we use to dispose of nitric acid was full, so I had to procure a new empty bottle to use as the nitric acid waste. Typically we use an empty bottle of nitric acid as the waste container for used nitric acid. This way, the nitric acid is going into a container that only ever held nitric acid (IE no random organic chemicals left around in the bottle to react with the acid). There were no empty nitric bottle in lab so rather than go get a new one 4 floors down, I grabbed a common use waste bottle. These are 4 liter glass bottles with a screw on cap.^[6](https://static.fishersci.com/images/F203653~wl.jpg) Usually they are used to collect organic waste, brought to a central facility where they are emptied and then thoroughly cleaned. University protocol is that they are first cleaned with ethanol, then water. The idea is that the only remnants in these bottles should be water. I happened to pick a bottle that had not been washed with water. Knowing that nitric acid was dangerous, I visually checked the bottle to make sure it was empty. There was a little bit of water (or so I thought)^7 in the bottom, which did not concern me because nitric acid and water are fine to mix.^8 I proceeded to clean my glass using a total of 30-50 mL of nitric acid, which I disposed of in the waste container. Knowing that nitric acid could react with organics, I left the waste bottle un-capped in my fumehood for about 60 seconds after I put the nitric in. Seeing no reaction, I then capped the waste bottle loosely. This probably saved me a trip to the hospital.
+
+ Now, the astute chemist reading this may have figured out what happened next.^[9](https://www.youtube.com/watch?v=uFwiZYfEsuY) Nitric acid and ethanol (remember this bottle was supposed to be washed with water, but never was) react very violently to produce heat and a large amount of gas. This reaction has an incubation time of a few minutes before it really kicks in. So 20 or so seconds after capping this bottle, I hear an ominous whistling sound. The kind of whistling you would rather not hear in a chemistry lab. I look at my fume hood and saw a very large and copious amount of brown gas (NOx) billowing out from my loosely fitted cap. As the whistling increased to a truly terrifying pitch, I had a few seconds to dive behind a wall before the waste bottle exploded with a force much larger than that mortar from the front page yesterday.^[10](http://i.imgur.com/sHhftlF.gifv),[11](http://publicsafety.tufts.edu/ehs/files/March2015.VII-LabAccidentsExplosionsInvolvingNitricAcid.pdf),[12](https://www.youtube.com/watch?v=ulNeRQxORTM) Here I fucked up again as despite my 10 or so second lead time, I did not warn anyone that a glass shrapnel bomb was about to go off. I am so fucking lucky that no one decided to come around the corner at that moment. As the nitric acid tinged glass rained down upon me, my lab mates rushed to see what was wrong. I yelled for them to evacuate the lab as a billowing cloud of brownish green gas (a toxic mix of nitric acid, nitrous oxide, ethyl nitrate and the various other chemicals in my hood which were vaporized and atomized) was spewing forth from my fumehood. Alarms were going off, lights in the ceiling were blown out and haphazardly hanging from their sockets, I'm pretty sure an undergraduate was crying... Needless to say, we exited the lab in admirable time. A few minutes later, the chief safety officer arrived with gasmasks in tow. Our lab replaces the air about every 2 minutes due to the fumehoods and by design for instances just like this, so after 5 minutes, we deemed it safe enough to reenter with gasmasks on. The level of destruction was actually surprising.^[11](http://publicsafety.tufts.edu/ehs/files/March2015.VII-LabAccidentsExplosionsInvolvingNitricAcid.pdf) Everything in my hood was destroyed. The window directly behind my fumehood was destroyed. That window was made out of ¼ inch thick safety glass. This explosion sent a shard or shards of glass flying hard enough to bust a hole clean through 1/4 inch thick safety glass... Had I been standing in front of this thing, or had anyone else, they would have been in the hospital with some very serious injuries. In doing some research, I found out this is not a fairly uncommon laboratory accident and a simple google search of Nitric acid + ethanol furnishes a number of safety reports on similar incidents.
+
+An investigation found out that two parties were at fault. The waste bottle should have never had ethanol left over in it. Improper handeling on EH&amp;S was determined to be the major cause. Me being a fucktard was determined to also be a cause. Because of this, a number of safety protocol with how waste bottles are handled were changed, and incoming graduate students get to hear about what I did. Gratifyingly I did not get in trouble because everyone handled themselves like adults. 
+
+TLDR: I might be the only person to use the excuse “I blew up my lab today” for why I was late to my first date ~~with my future fiancé~~ and have it be a real excuse. *Luckily she realized I was a keeper, is now my fiance and we have a great first date story. 
+
+
+The damage
+http://imgur.com/a/AoRpm
+
+References: 
+
+1.	https://www.youtube.com/watch?v=EmkBH-ncG1Y
+
+2.	Nitric acid reaction with protective gloves. https://www.youtube.com/watch?v=aBVdGGml6bU
+
+3.	https://en.wikipedia.org/wiki/Nitric_acid
+
+4.	http://curlyarrow.blogspot.com/2008/01/how-to-clean-your-sintered-funnel.html
+
+5.	http://www.starna.com/ukhome/d_tech/tech01.html
+
+6.	https://static.fishersci.com/images/F203653~wl.jpg
+
+7.	It should be noted that working in an organic lab all day removes your ability to smell ethanol and most other solvents. 
+
+8.	Have PhD, trust me.
+
+9.	https://www.youtube.com/watch?v=uFwiZYfEsuY
+ 
+10.	http://i.imgur.com/sHhftlF.gifv
+
+11.	http://publicsafety.tufts.edu/ehs/files/March2015.VII-LabAccidentsExplosionsInvolvingNitricAcid.pdf.
+
+12.	A similar explosion albeit in a smaller non glass bottle, with less toxic things ingredients. https://www.youtube.com/watch?v=ulNeRQxORTM
+
+
+Edit: not safety glass, should have fact checked that and referenced it.
+
+
+Also, this did not happen at your university. Waste bottle over pressurization is not an uncommon lab accident. 
+
+
+
