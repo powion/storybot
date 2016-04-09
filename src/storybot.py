@@ -13,7 +13,7 @@ VERBOSE = False
 # Max amount of choices for next word.
 top_amount = 20
 # Minimum amount of choices for next word (otherwise lower gram).
-min_amount = 3
+min_amount = 1
 # Max value of n for n-gram.
 grams_top = 5
 
@@ -56,6 +56,13 @@ story_map = {
     "tolkien" : ["../lib/datasets/tolkien.txt",
                [1000, 0, 0],
                ["frodo", "was"],
+               [],
+               [],
+               [],
+               nltk.MLEProbDist],
+    "tifu" : ["../datasets/tifu/storybot.txt",
+               [1000, 0, 0],
+               ["today", "i"],
                [],
                [],
                [],
