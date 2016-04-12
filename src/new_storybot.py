@@ -13,7 +13,7 @@ pos_training_path = "../lib/tagged/english-bidirectional-distsim.tagger"
 pos_jar_path = "../lib/jar/stanford-postagger.jar"
 
 # Minimum amount of choices for next word (otherwise lower gram).
-min_amount = 1
+min_amount = 3
 
 # Sentence terminators. We want flowing stories, so skipping these for now.
 terminator_types = ['.', ':']
@@ -43,27 +43,33 @@ likely be very different. '''
 # preferred sequence
 # exceptions from terminator_types
 story_map = {
-    "pride": ["../lib/datasets/prideandprejudice.txt",
-              [1000, 0, 0],
-              ["i", "feel"],
-              [],
-              [],
-              [],
-              nltk.MLEProbDist],
-    "tolkien": ["../lib/datasets/tolkien.txt",
-                [1000, 0, 0],
-                ["frodo", "was"],
-                [],
-                [],
-                [],
-                nltk.MLEProbDist],
-    "tifu": ["../datasets/tifu/storybot_short.txt",
-             [1000, 0, 0],      # limits: max length, min length, minimum preferred
-             ["<s>", "today"],    # start sequence
-             [],                # preferred
-             [],                # preferred sequence
-             [],                # term except, sentence termination words that we will ignore
-             nltk.MLEProbDist]  # smoothing factory
+    "pride": [
+        "../lib/datasets/prideandprejudice.txt",
+        [1000, 0, 0],
+        ["i", "feel"],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "tolkien": [
+        "../lib/datasets/tolkien.txt",
+        [1000, 0, 0],
+        ["frodo", "was"],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "tifu": [
+        "../datasets/tifu/storybot.txt",
+        [1000, 0, 0],
+        ["<s>", "today"],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ]
 }
 
 
@@ -91,6 +97,9 @@ def parse_args():
 
 
 def setup_logging(verbose):
+    import os
+    if not os.path.isdir("../logs/"):
+        os.makedirs("../logs/")
     today = datetime.now().strftime("%Y-%m-%d")
     # Log DEBUG and INFO to file
     logging.basicConfig(
@@ -98,7 +107,8 @@ def setup_logging(verbose):
             format='%(asctime)s: %(levelname)-8s %(message)s',
             datefmt='%Y-%m-%d %H:%M',
             filename='../logs/%s_storybot.log' % today,
-            filemode='a')
+            filemode='a'
+    )
 
     # Log to console based on specified verbosity
     console = logging.StreamHandler()
@@ -117,6 +127,7 @@ def embellish(tokens):
     end = tokens[-1][0]
     return first + " " + middle + end
 
+
 ############################
 # Main body of code
 ############################
@@ -133,6 +144,7 @@ class StoryGen:
         self.max_length, self.min_length, self.min_preferred = limits
 
         raw = open(filepath, 'r', encoding="utf8").read().lower()
+        self.text = "".join(raw.split())
 
         # Split into sentences and tokenize
         tokenized_sentences = nltk.sent_tokenize(raw)
@@ -188,30 +200,6 @@ class StoryGen:
 
         return tuple(key)
 
-    def generate_choices(self, key, gram_count, num_choises):
-        """
-        :param key: the n-gram input
-        :param gram_count: how large the n-gram is
-        :param num_choises: how many candidate tokens should be returned
-        :return: a list of randomly chosen candidate tokens, sorted by probability in descending order
-        """
-        prob_dist = self.estimates[gram_count]
-        choises = []
-        probs = []
-        for i in range(0, num_choises):
-            counter = 10
-            while counter > 0:
-                token = prob_dist.generate(key)
-                if token not in choises:
-                    prob = prob_dist.prop(token)
-                    choises.append(token)
-                    probs.append(prob)
-                    break
-                counter += 1
-        ret = zip(choises, probs)
-        sorted(ret, key=lambda x: x[1], reverse=True)
-        ret = [r[0] for r in ret]
-        return ret
 
     # Check if a word is allowed, depending on word, type, previous word,
     # and the full sequence.
@@ -242,7 +230,6 @@ class StoryGen:
         if next_type in forbidden_types:
             return False
 
-
         # Check if word has been used in the past 4 words, avoid repetition.
         if next_word in [x[0] for x in out[-4:]]:
             return False
@@ -253,6 +240,23 @@ class StoryGen:
 
         return True
 
+    def generate_tagged_choice(self, key, gram_count, num_choices):
+        """
+        :param key: the n-gram input
+        :param gram_count: how large the n-gram is
+        :param num_choices: how many candidate tokens should be returned
+        :return: a list of randomly chosen candidate tokens, sorted by probability in descending order
+        This method picks num_choices random tokens from the probability distribution and returns a list of
+        distinct tagged tokens.
+        """
+        prob_dist = self.estimates[gram_count][key]
+        choices = []
+        for i in range(0, num_choices):
+            token = prob_dist.generate()
+            if token not in choices:
+                choices.append(token)
+        tagged_choices = self.posTagger.tag(choices)
+        return tagged_choices
 
     def next_instance(self):
         logging.info("Generating story, please wait...")
@@ -279,7 +283,6 @@ class StoryGen:
                 logging.debug("Trying %i-grams" % gram_count)
 
                 dist = self.models[gram_count]
-                prediction_model = self.estimates[gram_count]
 
                 key = self.key_for_gram_count(out, gram_count)
                 print(key)
@@ -291,26 +294,22 @@ class StoryGen:
                     logging.debug("Too few choices, retrying with smaller gram")
                     continue
 
-                # Try 10 tokens. If none are OK, try smaller gram
-                choices = []
-                tagged_choice = []
-                for i in range(0, 10):
-                    choice = prediction_model[key].generate()
-                    # while choice in choices:
-                    #     choice = prediction_model[key].generate()
-                    choices.append(choice)
-                    logging.debug("Candidate word: %s" % choice)
 
-                    tagged_choice = self.posTagger.tag([choice])
+                # Try 10 or num_choices tokens. If none are OK, try smaller gram
+                for i in range(0, 10):
+                    tagged_choice = self.generate_tagged_choice(key, gram_count, 1)
                     next_word, next_type = tagged_choice[0]
+                    logging.debug("Candidate word: %s" % next_word)
 
                     if not self.isAllowed(next_word, next_type, last_word, out):
                         continue
                     else:
+                        succeeded = True
+                        out.append([next_word, next_type])
                         break
 
                 # If we have no choices and have reached 2-gram, then end.
-                if len(choices) == 0:
+                if not succeeded:
                     if gram_count > 2:
                         logging.debug("No valid choice found for %i-gram. Continuing" % gram_count)
                         continue
@@ -318,30 +317,34 @@ class StoryGen:
                         logging.debug("No valid choice found for 2-gram. Ending sentence.")
                         logging.info
                         out.append([".", "."])
-                        succeeded = True
-                        break
+                        break  # breaks out of the 'for gram_count' loop above
 
                 if succeeded:
                     break
-
-                out.append(list(tagged_choice[0]))
-                succeeded = True
 
         self.sentence_count += 1
         logging.debug("Sentence completed.")
         return embellish(out)
 
-def run(num, shortname):
-    x = StoryGen(shortname)
 
-    for i in range(0, num):
-        logging.debug("Starting to generate sentence %i" % i)
-        res = x.next_instance()
-        if "".join(res.lower().split()) in x.text:
-            # Alerts non-original sentences, we may not need this.
-            print(res + " NON-ORIGINAL")
-        else:
-            print(res)
+def run(num, shortname):
+    today = datetime.now().strftime("%Y-%m-%d")
+    with open("../output/tifu_%s.txt" % today, "a") as o:
+        o.write("\n\n\n\n")
+        o.flush()
+        x = StoryGen(shortname, min_grams=2, max_grams=4)
+
+        for i in range(0, num):
+            logging.debug("Starting to generate sentence %i" % i)
+            res = x.next_instance()
+            if "".join(res.lower().split()) in x.text:
+                # Alerts non-original sentences, we may not need this.
+                logging.debug("NON-ORIGINAL sentence generated")
+                logging.info(res + "    (NOT ORIGINAL)")
+            else:
+                logging.info(res)
+            o.write(res + " ")
+            o.flush()
 
 
 def main(argv):
@@ -351,8 +354,10 @@ def main(argv):
 
     setup_logging(verbose)
 
-    run(1, short_name)
+    run(5, short_name)
 
 
 if __name__ == "__main__":
     main(sys.argv[1:])
+
+
