@@ -4,6 +4,7 @@ import logging
 import math
 import nltk
 import random
+import search
 from itertools import chain
 from datetime import datetime
 
@@ -87,6 +88,7 @@ def parse_args():
             description="Generate text based on given corpus.",
             epilog='Example of use: storybot.py -n tifu')
     parser.add_argument("-n", "--name", help="Short name of corpus to load: {tifu}", )
+    parser.add_argument("-q", "--query", default = "", help="An intersection query to select a subset of documents.", )
     parser.add_argument("-v", "--verbose", action='store_true', help="Increase output verbosity")
     args = parser.parse_args()
 
@@ -145,7 +147,7 @@ class PosTagger:
 # Main body of code
 ############################
 class StoryGen:
-    def __init__(self, shortname, min_grams=2, max_grams=5):
+    def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         self.sentence_count = 0
         self.shortname = shortname
@@ -155,8 +157,13 @@ class StoryGen:
         (filepath, limits, startSeq, self.preferred, self.preferred_seq,
          self.term_except, smoothing_factory) = story_map[shortname]
         self.max_length, self.min_length, self.min_preferred = limits
-
-        raw = open(filepath, 'r', encoding="utf8").read().lower()
+        
+        # Either load the full corpus or just use the provided text string
+        # for story generation.
+        if(text == ""):
+            raw = open(filepath, 'r', encoding="utf8").read().lower()
+        else:
+            raw = text.lower()
         self.text = "".join(raw.split())
 
         # Split into sentences and tokenize
@@ -344,12 +351,12 @@ class StoryGen:
         return embellish(out)
 
 
-def run(num, shortname):
+def run(num, shortname, text=""):
     today = datetime.now().strftime("%Y-%m-%d")
     with open("../output/tifu_%s.txt" % today, "a") as o:
         o.write("\n\n\n\n")
         o.flush()
-        x = StoryGen(shortname, min_grams=2, max_grams=4)
+        x = StoryGen(shortname, min_grams=2, max_grams=4, text=text)
 
         for i in range(0, num):
             logging.debug("Starting to generate sentence %i" % i)
@@ -369,9 +376,26 @@ def main(argv):
     args = parse_args()
     short_name = args.name
     verbose = args.verbose
-
+    query = args.query
     setup_logging(verbose)
-    run(5, short_name)
+    # Generate a story from everything.
+    if(query == ""):
+        run(5, short_name)
+        return
+    # Retrieve documents by a user query and tell a story.
+    docs = search.testLoading(query)
+    if len(docs) < 1:
+        print("No documents match your query.")
+        return
+    print("Writing a story based on {} documents.".format(len(docs)))
+    text = ""
+    # Merge all retrieved documents.
+    for fn in docs:
+        text += search.file_content(fn)
+    run(5, short_name, text)
+
+    
+    
 
 
 if __name__ == "__main__":
