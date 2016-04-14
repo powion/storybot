@@ -69,6 +69,17 @@ story_map = {
                nltk.MLEProbDist]
 }
 
+# PosTagger class - make POS tagger changes easier.
+class PosTagger:
+    def __init__(self, tagger_type):
+        if(tagger_type == 'stanford'):
+            self.tagger = nltk.StanfordPOSTagger(pos_training_path, pos_jar_path)
+            self.tag = self.tagger.tag
+        elif(tagger_type == 'nltk'):
+            self.tag = nltk.pos_tag
+        else:
+            raise ValueError('Required POS tagger \"' + tagger_type + '\" is unknown.')
+
 class StoryGen:
     def __init__(self, shortname, min_grams=2, max_grams=5):
         self.shortname = shortname
@@ -105,7 +116,7 @@ class StoryGen:
             self.estimates[n] = nltk.ConditionalProbDist(dist,
                 smoothing_factory, bins=len(self.vocabulary))
 
-        self.posTagger = nltk.StanfordPOSTagger(pos_training_path, pos_jar_path)
+        self.posTagger = PosTagger('nltk')
         self.startPhrase = [[w, t] for (w,t) in self.posTagger.tag(startSeq)]
 
     def nextInstance(self):
@@ -327,6 +338,7 @@ def run(num, shortname):
             print(res)
 
 def main(argv):
+   #random.seed(123456789)
    shortname = ''
    try:
       opts, args = getopt.getopt(argv,"n:v",)

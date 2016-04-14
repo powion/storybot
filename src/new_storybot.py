@@ -3,6 +3,7 @@ import argparse
 import logging
 import math
 import nltk
+import random
 from itertools import chain
 from datetime import datetime
 
@@ -277,7 +278,7 @@ class StoryGen:
         dist = self.models[gram_count]
         key = self.key_for_gram_count(seq, gram_count)
         
-        print(key)
+        #print(key)
         logging.debug("Key: %s" % (key,))
 
         num_choices = len(dist[key])
@@ -364,6 +365,7 @@ def run(num, shortname):
 
 
 def main(argv):
+    #random.seed(123456789)
     args = parse_args()
     short_name = args.name
     verbose = args.verbose
