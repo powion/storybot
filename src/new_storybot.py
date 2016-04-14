@@ -186,6 +186,7 @@ class StoryGen:
             self.estimates[n] = nltk.ConditionalProbDist(dist, smoothing_factory, bins=len(self.vocabulary))
 
         self.startPhrase = [[w, t] for (w, t) in self.posTagger.tag(startSeq)]
+        
 
     def is_terminator(self, out):
         next_word, next_type = out[-1][0], out[-1][1]
@@ -269,6 +270,35 @@ class StoryGen:
                 choices.append(token)
         tagged_choices = self.posTagger.tag(choices)
         return tagged_choices
+    
+    # Add one word to the sequence seq, using gram_count ngrams model.
+    def extend_sequence(self, gram_count, seq):
+        succeeded = False
+        dist = self.models[gram_count]
+        key = self.key_for_gram_count(seq, gram_count)
+        
+        print(key)
+        logging.debug("Key: %s" % (key,))
+
+        num_choices = len(dist[key])
+        logging.debug("Available choices: %i" % num_choices)
+        if num_choices < min_amount and not gram_count == 2:
+            logging.debug("Too few choices, retrying with smaller gram")
+            return [succeeded, seq]
+            
+        # Try 10 or num_choices tokens. If none are OK, try smaller gram
+        for i in range(0, 10):
+            tagged_choice = self.generate_tagged_choice(key, gram_count, 1)
+            next_word, next_type = tagged_choice[0]
+            logging.debug("Candidate word: %s" % next_word)
+
+            if not self.isAllowed(next_word, next_type, seq[-1], seq):
+                continue
+            else:
+                succeeded = True
+                seq.append([next_word, next_type])
+                break
+        return [succeeded, seq]
 
     def next_instance(self):
         logging.info("Generating story, please wait...")
@@ -287,38 +317,12 @@ class StoryGen:
             assert min_grams <= max_grams, "min grams > max grams !"
 
             # Go backwards through the number of grams
-            last_word = out[-1]
             for gram_count in range(max_grams, min_grams - 1, -1):
                 if succeeded:
                     break
 
                 logging.debug("Trying %i-grams" % gram_count)
-
-                dist = self.models[gram_count]
-
-                key = self.key_for_gram_count(out, gram_count)
-                print(key)
-                logging.debug("Key: %s" % (key,))
-
-                num_choices = len(dist[key])
-                logging.debug("Available choices: %i" % num_choices)
-                if num_choices < min_amount and not gram_count == 2:
-                    logging.debug("Too few choices, retrying with smaller gram")
-                    continue
-
-
-                # Try 10 or num_choices tokens. If none are OK, try smaller gram
-                for i in range(0, 10):
-                    tagged_choice = self.generate_tagged_choice(key, gram_count, 1)
-                    next_word, next_type = tagged_choice[0]
-                    logging.debug("Candidate word: %s" % next_word)
-
-                    if not self.isAllowed(next_word, next_type, last_word, out):
-                        continue
-                    else:
-                        succeeded = True
-                        out.append([next_word, next_type])
-                        break
+                [succeeded, out] = self.extend_sequence(gram_count, out)
 
                 # If we have no choices and have reached 2-gram, then end.
                 if not succeeded:
@@ -365,7 +369,6 @@ def main(argv):
     verbose = args.verbose
 
     setup_logging(verbose)
-
     run(5, short_name)
 
 
