@@ -32,7 +32,7 @@
         <h2>
           <a class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
             <span aria-hidden="true" class="octicon octicon-link"></span>
-          </a>Stories written by Storybot
+          </a>Select a source to generate stories from.
         </h2>
 
         <!-- DROPDOWN MENU -->
@@ -41,7 +41,6 @@
                 ng-click="selectSource(x)">
         </select> -->
 
-        <h4>Select a source to generate stories from.</h4>
         <!-- DEFINE TABS -->
         <ul class="w3-navbar w3-light-grey">
           <li ng-repeat="x in sources">
@@ -61,13 +60,13 @@
 
           <!-- Make a paginator over all texts from selected source -->
           <ul class="w3-pagination">
-            <li><a href="#" class="w3-hover-grey">&laquo;</a></li>
+            <li><a href="#" class="w3-hover-grey" ng-click="selectNextText()">
+                &laquo;</a></li>
             <li ng-repeat="t in x.text">
               <a href="#" class="w3-hover-grey" ng-click="selectText($index)">
-                {{ $index + 1 }}
-              </a>
-            </li>
-            <li><a href="#" class="w3-hover-grey">&raquo;</a></li>
+                {{ $index + 1 }}</a></li>
+            <li><a href="#" class="w3-hover-grey"
+                   ng-click="selectPrevText()">&raquo;</a></li>
           </ul>
 
         </div>

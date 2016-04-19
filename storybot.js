@@ -19,15 +19,35 @@ try {
             $scope.selectText(0);
         };
 
+        $scope.currentTextIndex = 0;
+        $scope.selectNextText = function () {
+            $scope.currentTextIndex += 1;
+            $scope.selectText($scope.currentTextIndex);
+        }
+
+        $scope.selectPrevText = function () {
+            $scope.currentTextIndex -= 1;
+            $scope.selectText($scope.currentTextIndex);
+        }
+
         // Select a specific text from the current source
         $scope.selectText = function ($index) {
-          texts = document.getElementsByClassName(
-              $scope.currentSource.name + "-texts"
-          );
-          for (i = 0; i < texts.length; i++) {
-              texts[i].style.display = "none";
-          }
-          texts[$index].style.display = "block";
+            texts = document.getElementsByClassName(
+                $scope.currentSource.name + "-texts"
+            );
+
+            if ($index >= texts.length) {
+                $index = 0;
+            } else if ($index < 0) {
+                $index = texts.length - 1;
+            }
+
+            for (i = 0; i < texts.length; i++) {
+                texts[i].style.display = "none";
+            }
+
+            texts[$index].style.display = "block";
+            $scope.currentTextIndex = $index;
         };
 
         $scope.sources = [
