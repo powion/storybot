@@ -2,6 +2,9 @@ try {
     var app = angular.module('myApp', []);
 
     app.controller('myCtrl', function($scope) {
+
+        // Change stories based on source selected
+        // Called when tab items are clicked
         $scope.selectSource = function ($event, $source) {
             $scope.currentSource.hide = true;
             $scope.currentSource = $source;
@@ -9,11 +12,23 @@ try {
             // highligt the currently selected tab
             tabitems = document.getElementsByClassName("tabitems");
             for (i = 0; i < tabitems.length; i++) {
-                tabitems[i].className =
-                        tabitems[i].className.replace(" w3-dark-grey", "");
+                tabitems[i].className = tabitems[i].className
+                    .replace(" w3-dark-grey", "");
             }
             $event.currentTarget.className += " w3-dark-grey";
-        }
+            $scope.selectText(0);
+        };
+
+        // Select a specific text from the current source
+        $scope.selectText = function ($index) {
+          texts = document.getElementsByClassName(
+              $scope.currentSource.name + "-texts"
+          );
+          for (i = 0; i < texts.length; i++) {
+              texts[i].style.display = "none";
+          }
+          texts[$index].style.display = "block";
+        };
 
         $scope.sources = [
             {
