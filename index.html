@@ -44,7 +44,7 @@
         <!-- DEFINE TABS -->
         <ul class="w3-navbar w3-light-grey">
           <li ng-repeat="x in sources">
-            <a href="#" class="tabitems" ng-click="selectSource($event, x)">
+            <a class="tabitems" ng-click="selectSource($event, x)">
               {{ x.name }}
             </a>
           </li>
@@ -60,12 +60,12 @@
 
           <!-- Make a paginator over all texts from selected source -->
           <ul class="w3-pagination">
-            <li><a href="#" class="w3-hover-grey" ng-click="selectNextText()">
+            <li><a class="w3-hover-grey" ng-click="selectNextText()">
                 &laquo;</a></li>
             <li ng-repeat="t in x.text">
-              <a href="#" class="w3-hover-grey" ng-click="selectText($index)">
+              <a class="w3-hover-grey" ng-click="selectText($index)">
                 {{ $index + 1 }}</a></li>
-            <li><a href="#" class="w3-hover-grey"
+            <li><a class="w3-hover-grey"
                    ng-click="selectPrevText()">&raquo;</a></li>
           </ul>
 

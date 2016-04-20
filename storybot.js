@@ -77,7 +77,9 @@ try {
                 name:"Reddit: TIFU",
                 hide:true,
                 text:[
-                  "hello again...."
+                  "today i fucked up , not you . i know better then then to come up from behind on someone who has seen seen what you have seen . i am so relieved . . beyond relieved . my boyfriend now knows that sexy time time is done . so he starts cleaning up our bedroom bedroom . i asked him to help me remove it so so we could continue . mother of god ... it smelled smelled like an eviscerated decomposing body mixed with rotting broccoli , , sewage , and rotting eggs all in one . and and the smell did not go away . i threw out out the cup and its contents , but the stench of of 14 day old rotting blood and uterine gunk is not not one that fades easily . i could tell my squeamish dad , but he would make me call my mom and and tell her everything.i am still on his account and going going to subscribe to every gay porn subreddit i can find find .",
+
+                      "he opened his eyes and stood upright in the tub tub . its little brown head poking out and looking at at me in disappointment and fear . what was going to to happen . dan started looking around his sister 's room room . the alcohol intensified both of our libidos , so so we started making out and realized there was no obvious obvious place to continue but in the car itself . . . . so we did . i put the back seats seats down and we got to it . . . and and i 'm starting to put together in my mind , , and proudly proclaim , `` i fucked my horse ! ! '' . i rush downstairs into a kitchen billowing disgusting disgusting , black smoke , and see a skinny man , , crouched very low , scuttle around a parked car ."
                 ]
             }
         ];
