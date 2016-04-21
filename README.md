@@ -34,6 +34,5 @@ sudo python3
 ```
 and Whoosh, a search engine for Python.
 ```
-sudo pip install Whoosh
 sudo pip3 install Whoosh
 ```
