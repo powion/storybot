@@ -7,7 +7,7 @@ import random
 
 max_lstm_steps = 8
 draw_from = 20
-lstm = nn.Lstm("model5.ckpt","simple-examples/data/ptb.train.txt", max_lstm_steps)
+lstm = nn.Lstm("model5.ckpt","../../datasets/ptb/ptb.train.txt", max_lstm_steps)
 
 def random_lstm_story(start, count):
     text = start
