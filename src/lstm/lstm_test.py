@@ -6,7 +6,8 @@ import ptb_word_lm as nn
 import random
 
 max_lstm_steps = 8
-lstm = nn.Lstm("model3.ckpt","simple-examples/data/ptb.train.txt", max_lstm_steps)
+draw_from = 20
+lstm = nn.Lstm("model5.ckpt","simple-examples/data/ptb.train.txt", max_lstm_steps)
 
 def random_lstm_story(start, count):
     text = start
@@ -15,7 +16,10 @@ def random_lstm_story(start, count):
             roll_begin = max(0, len(text) - max_lstm_steps)
             pred = lstm.predict_sorted(text[roll_begin:])
             w, p = pred
-            text.append(w[random.randint(0,20)])
+            if(w[0] == "<eos>"):
+                text.append(w[0])
+            else:
+                text.append(w[random.randint(0, draw_from)])
             if(text[-1]=="<eos>"):
                 break
     return text
@@ -48,4 +52,4 @@ test_prediction(["have","you","ever","seen","the","rain"])
 
 print("And now stand by for a complete story...")
 
-print(random_lstm_story(["her", "friend"], 5))
+print(random_lstm_story(["the", "company"], 8))

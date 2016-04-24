@@ -155,7 +155,7 @@ class StoryGen:
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
-            self.lstm = nn.Lstm("../models/lstm/model3.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
+            self.lstm = nn.Lstm("../models/lstm/model5.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
         self.sentence_count = 0
         self.shortname = shortname
         self.min_grams = min_grams
