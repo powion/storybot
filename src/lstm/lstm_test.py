@@ -1,5 +1,5 @@
 import ptb_word_lm as nn
-lstm = nn.Lstm("model3.ckpt","simple-examples/data/ptb.train.txt")
+lstm = nn.Lstm("model3.ckpt","simple-examples/data/ptb.train.txt", 6)
 
 def test_prediction(text):
     pred = lstm.predict(text)

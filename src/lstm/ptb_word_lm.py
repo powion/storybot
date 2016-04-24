@@ -283,12 +283,35 @@ def get_config():
         raise ValueError("Invalid model: %s", FLAGS.model)
 
 class Lstm:
-    def __init__(self, model_file, train_file):
+    # Load a LSTM model from model_file.
+    # Construct the dictionary based on the train_file.
+    # Construct LSTM models up to max_steps words in an input sequence.
+    
+    def __init__(self, model_file, train_file, max_steps):
         # Dictionary.
         self.word2id = reader.build_vocab(train_file)
         # Inversed dictionary.
         self.id2word = {v: k for k, v in self.word2id.items()}
         self.model_file = model_file
+        
+        self.max_steps = max_steps
+        eval_config = get_config()
+        eval_config.batch_size = 1
+        eval_config.num_steps = 1
+        
+        self.session = tf.Session()
+        self.mtest = []
+        with tf.variable_scope("model", reuse=None):
+                self.mtest += [PTBModel(is_training=False, config=eval_config)]
+        for i in range(2,max_steps+1):
+            eval_config.num_steps = i
+            with tf.variable_scope("model", reuse=True):
+                self.mtest += [PTBModel(is_training=False, config=eval_config)]
+
+        # Add ops to save and restore all the variables.
+        saver = tf.train.Saver()
+        # Load the model variables from disk.
+        saver.restore(self.session, self.model_file)
     
     # Convert words (list of strings) to a list of integers based on preloaded vocabulary.
     def words2int(self, words):
@@ -302,25 +325,15 @@ class Lstm:
     # Predict for each vocabulary word the probability of following after text. 
     def predict(self, word_list):
         in_data = self.words2int(word_list)
+        assert(len(in_data) <= self.max_steps)
         
         config = get_config()
-        eval_config = get_config()
-        eval_config.batch_size = 1
-        eval_config.num_steps = len(in_data)
 
-        with tf.Graph().as_default(), tf.Session() as session:
-            with tf.variable_scope("model", reuse=None):
-                mtest = PTBModel(is_training=False, config=eval_config)
-
-            # Add ops to save and restore all the variables.
-            saver = tf.train.Saver()
-            
-            # Load the model variables from disk.
-            saver.restore(session, self.model_file)
-
-            m = mtest 
+        session = self.session
+        with session.as_default():
+            # Choose the right model, based on the word count in the input sequence.
+            m = self.mtest[len(in_data)-1] 
             state = m.initial_state.eval()
-            
             raw_data = np.array(in_data, dtype=np.int32)
             data = np.zeros([1, len(in_data)], dtype=np.int32)
             for i in range(len(raw_data)):
@@ -334,7 +347,7 @@ class Lstm:
             sorted_ids = np.argsort(logits, axis=1)
             sorted_ids = sorted_ids[-1].tolist()
             sorted_ids[:] = sorted_ids[::-1]
-            return self.int2words(sorted_ids), logits[-1][sorted_ids[:]]
+        return self.int2words(sorted_ids), logits[-1][sorted_ids[:]]
 
 def main(_):
     if not FLAGS.data_path:
