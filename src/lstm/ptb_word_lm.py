@@ -61,6 +61,9 @@ import time
 import numpy as np
 import tensorflow as tf
 
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 #from tensorflow.models.rnn.ptb import reader
 import reader
 
@@ -323,7 +326,7 @@ class Lstm:
         return [self.id2word[i] for i in ints]
         
     # Predict for each vocabulary word the probability of following after text. 
-    def predict(self, word_list):
+    def predict_raw(self, word_list):
         in_data = self.words2int(word_list)
         assert(len(in_data) <= self.max_steps)
         
@@ -344,12 +347,27 @@ class Lstm:
                                          {m.input_data: x,
                                           m.targets: y,
                                           m.initial_state: state})
-            sorted_ids = np.argsort(logits, axis=1)
-            sorted_ids = sorted_ids[-1].tolist()
-            sorted_ids[:] = sorted_ids[::-1]
+        return logits
+            
+    def predict_choice(self, word_list, word_choice):
+        logits = self.predict_raw(word_list)
+        ci = self.words2int(word_choice)
+        return [logits[-1][i] for i in ci]
+        
+    def predict_sorted(self, word_list):
+        logits = self.predict_raw(word_list)
+        sorted_ids = np.argsort(logits, axis=1)
+        sorted_ids = sorted_ids[-1].tolist()
+        sorted_ids[:] = sorted_ids[::-1]
         return self.int2words(sorted_ids), logits[-1][sorted_ids[:]]
+        
 
 def main(_):
+    preload_model = True
+    preloaded_epoch = 3
+    load_model_file = "model{}.ckpt".format(preloaded_epoch)
+    preloaded_epoch += 1
+    
     if not FLAGS.data_path:
         raise ValueError("Must set --data_path to PTB data directory")
 
@@ -374,8 +392,12 @@ def main(_):
 
         # Add ops to save and restore all the variables.
         saver = tf.train.Saver()
+        if(preload_model):
+            saver.restore(session, load_model_file)
 
-        for i in range(config.max_max_epoch):
+        for i in range(preloaded_epoch, config.max_max_epoch):
+            if(i>3):
+                config.learning_rate = 0.1
             lr_decay = config.lr_decay ** max(i - config.max_epoch, 0.0)
             m.assign_lr(session, config.learning_rate * lr_decay)
 

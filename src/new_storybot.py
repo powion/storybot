@@ -5,6 +5,7 @@ import math
 import nltk
 import random
 import search
+import lstm.ptb_word_lm as nn
 from itertools import chain
 from datetime import datetime
 
@@ -147,8 +148,14 @@ class PosTagger:
 # Main body of code
 ############################
 class StoryGen:
+    # LSTM enable/disable configuration.
+    lstm_enabled = True
+    # The longest sequence of words being sent to the LSTM. 
+    max_lstm_steps = 8
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
+        if self.lstm_enabled:
+            self.lstm = nn.Lstm("../models/lstm/model3.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
         self.sentence_count = 0
         self.shortname = shortname
         self.min_grams = min_grams
@@ -279,6 +286,23 @@ class StoryGen:
         tagged_choices = self.posTagger.tag(choices)
         return tagged_choices
     
+    # current_seq, choice_seq - tagged sequences of words
+    # returns a tagged word
+    def choose_lstm_word(self, current_seq, choice_seq):
+        # Run the LSTM when multiple choices available. Extract words of choice. 
+        # Substitute '<s>' for '<eos>' (end of sentence).
+        word_choice = [wt[0] if not wt[0] == '<s>' else '<eos>' for wt in choice_seq ] 
+        # Remove '.' from any possible word of choice. TODO: This is only a hotfix!
+        word_choice = [w if not w[-1] == '.' else w[:-1] for w in word_choice ]
+        # Extract up to the last self.max_lstm_steps words from the output
+        # sequence. This sequence will be sent to the LSTM as input. 
+        roll_begin = max(0, len(current_seq)-self.max_lstm_steps)
+        word_seq = [current_seq[i][0] for i in range(roll_begin, len(current_seq))]
+        word_seq = [w if not w=='<s>' else '<eos>' for w in word_seq]
+        # Run the LSTM. Append the word with the highest score.
+        wscore = self.lstm.predict_choice(word_seq, word_choice)
+        return choice_seq[wscore.index(max(wscore))]
+    
     # Add one word to the sequence seq, using gram_count ngrams model.
     def extend_sequence(self, gram_count, seq):
         succeeded = False
@@ -294,18 +318,32 @@ class StoryGen:
             logging.debug("Too few choices, retrying with smaller gram")
             return [succeeded, seq]
             
+        # Generate at most 10 tagged choices.
+        tagged_choices = self.generate_tagged_choice(key, gram_count, min(num_choices, 10))
+        
+        tmp_seq = []
         # Try 10 or num_choices tokens. If none are OK, try smaller gram
-        for i in range(0, 10):
-            tagged_choice = self.generate_tagged_choice(key, gram_count, 1)
-            next_word, next_type = tagged_choice[0]
+        for i in range(0, len(tagged_choices)):
+            next_word, next_type = tagged_choices[i]
             logging.debug("Candidate word: %s" % next_word)
-
             if not self.isAllowed(next_word, next_type, seq[-1], seq):
                 continue
             else:
                 succeeded = True
-                seq.append([next_word, next_type])
-                break
+                tmp_seq.append([next_word, next_type])
+        if(len(tmp_seq)<=0):
+            succeded = False
+            return [succeeded, seq]
+        # Only one choice -> no need for running the LSTM. TODO: This may not be a good idea!
+        if(len(tmp_seq)==1):
+            succeded = True
+            seq.append(tmp_seq[0])
+            return [succeeded, seq]
+
+        if self.lstm_enabled:
+            seq.append(self.choose_lstm_word(seq, tmp_seq))
+        else:
+            seq.append(tmp_seq[0])
         return [succeeded, seq]
 
     def next_instance(self):
