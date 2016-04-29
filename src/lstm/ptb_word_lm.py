@@ -325,6 +325,16 @@ class Lstm:
     def int2words(self, ints):
         return [self.id2word[i] for i in ints]
         
+    # Make all negative scores zero and normalize -> elements summing to one. 
+    def score2prob(self, scores):
+        sp = 0.0
+        for i in range(0, len(scores)):
+            scores[i] = max(scores[i], 0.0)
+            sp += scores[i]
+        for i in range(0, len(scores)):
+            scores[i] /= sp
+        return scores
+        
     # Predict for each vocabulary word the probability of following after text. 
     def predict_raw(self, word_list):
         in_data = self.words2int(word_list)

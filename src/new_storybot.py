@@ -16,7 +16,10 @@ pos_training_path = "../lib/tagged/english-bidirectional-distsim.tagger"
 pos_jar_path = "../lib/jar/stanford-postagger.jar"
 
 # Minimum amount of choices for next word (otherwise lower gram).
-min_amount = 3
+min_amount = 30
+
+# How many sentences per story shall we generate? 
+sentence_count = 10
 
 # Sentence terminators. We want flowing stories, so skipping these for now.
 terminator_types = ['.', ':']
@@ -148,10 +151,18 @@ class PosTagger:
 # Main body of code
 ############################
 class StoryGen:
+    # Enable/disable the POS tagger. Maybe not needed to have it enabled when using LSTM.
+    pos_tagger_enabled = False
     # LSTM enable/disable configuration.
     lstm_enabled = True
     # The longest sequence of words being sent to the LSTM. 
     max_lstm_steps = 8
+    # When the n-grams fail to find anything, generate at most max_random_words instead.
+    max_random_words = 400
+    # When the LSTM says "terminate the sentence", we "toss a coin" and terminate with 
+    # probability sure_terminate_prob.
+    sure_terminate_prob = 1.0
+    
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
@@ -268,7 +279,7 @@ class StoryGen:
 
         return True
 
-    def generate_tagged_choice(self, key, gram_count, num_choices):
+    def generate_tagged_choice(self, prob_dist, num_choices):
         """
         :param key: the n-gram input
         :param gram_count: how large the n-gram is
@@ -277,7 +288,7 @@ class StoryGen:
         This method picks num_choices random tokens from the probability distribution and returns a list of
         distinct tagged tokens.
         """
-        prob_dist = self.estimates[gram_count][key]
+        
         choices = []
         for i in range(0, num_choices):
             token = prob_dist.generate()
@@ -286,12 +297,17 @@ class StoryGen:
         tagged_choices = self.posTagger.tag(choices)
         return tagged_choices
     
-    # current_seq, choice_seq - tagged sequences of words
-    # returns a tagged word
-    def choose_lstm_word(self, current_seq, choice_seq):
-        # Run the LSTM when multiple choices available. Extract words of choice. 
+    def random_word_dict(self):
+        k = min(len(self.vocabulary), self.max_random_words)
+        words = random.sample(self.vocabulary, k)
+        wd = dict()
+        for w in words:
+            wd[w] = 1.0/len(words)
+        return wd    
+    
+    def filter_lstm_input(self, current_seq, choice_seq):
         # Substitute '<s>' for '<eos>' (end of sentence).
-        word_choice = [wt[0] if not wt[0] == '<s>' else '<eos>' for wt in choice_seq ] 
+        word_choice = [wt if not wt == '<s>' else '<eos>' for wt in choice_seq ] 
         # Remove '.' from any possible word of choice. TODO: This is only a hotfix!
         word_choice = [w if not w[-1] == '.' else w[:-1] for w in word_choice ]
         # Extract up to the last self.max_lstm_steps words from the output
@@ -299,52 +315,104 @@ class StoryGen:
         roll_begin = max(0, len(current_seq)-self.max_lstm_steps)
         word_seq = [current_seq[i][0] for i in range(roll_begin, len(current_seq))]
         word_seq = [w if not w=='<s>' else '<eos>' for w in word_seq]
-        # Run the LSTM. Append the word with the highest score.
-        wscore = self.lstm.predict_choice(word_seq, word_choice)
-        return choice_seq[wscore.index(max(wscore))]
+        return [word_seq, word_choice]
+        
     
-    # Add one word to the sequence seq, using gram_count ngrams model.
-    def extend_sequence(self, gram_count, seq):
-        succeeded = False
-        dist = self.models[gram_count]
-        key = self.key_for_gram_count(seq, gram_count)
+    # Return the union of dict1 and dict2, summing values present in both dicts.
+    # Values of dict1 are pre-multiplied by 0.5 before adding dict2 values.
+    def sum_dicts(self, dict1, dict2):
+        for k, v in dict2.items():
+            if k in dict1:
+                dict1[k] = dict1[k] * 0.5 + v
+            else:
+                dict1[k] = v
+        return dict1
+    
+    # Multiply probabilities of words in wpdict dictionary by LSTM predictions.    
+    def lstm_prob(self, word_seq, wpdict):
+        in_words = list(wpdict.keys())
+        word_seq, word_choice = self.filter_lstm_input(word_seq, in_words)
+        wscore = self.lstm.predict_choice(word_seq, word_choice)
+        top_word = word_choice[wscore.index(max(wscore))]
+        wprob = self.lstm.score2prob(wscore)
+        ndict = dict()
+        for i in range(0, len(in_words)):
+            wpdict[in_words[i]] *= wprob[i]
+        return [wpdict, top_word]
         
-        #print(key)
-        logging.debug("Key: %s" % (key,))
-
-        num_choices = len(dist[key])
-        logging.debug("Available choices: %i" % num_choices)
-        if num_choices < min_amount and not gram_count == 2:
-            logging.debug("Too few choices, retrying with smaller gram")
-            return [succeeded, seq]
-            
-        # Generate at most 10 tagged choices.
-        tagged_choices = self.generate_tagged_choice(key, gram_count, min(num_choices, 10))
         
-        tmp_seq = []
-        # Try 10 or num_choices tokens. If none are OK, try smaller gram
+    # Build a dictionary from the specified probability distribution.
+    def prob_dict(self, key, gram_count):
+        samples = list(self.estimates[gram_count][key].samples())
+        d = dict()
+        for s in samples:
+            d[s] = self.estimates[gram_count][key].prob(s)
+        return d
+        
+    def first_good_choice(self, tagged_choices, seq):
         for i in range(0, len(tagged_choices)):
             next_word, next_type = tagged_choices[i]
             logging.debug("Candidate word: %s" % next_word)
             if not self.isAllowed(next_word, next_type, seq[-1], seq):
                 continue
             else:
-                succeeded = True
-                tmp_seq.append([next_word, next_type])
-        if(len(tmp_seq)<=0):
-            succeded = False
-            return [succeeded, seq]
-        # Only one choice -> no need for running the LSTM. TODO: This may not be a good idea!
-        if(len(tmp_seq)==1):
-            succeded = True
-            seq.append(tmp_seq[0])
-            return [succeeded, seq]
+                return [next_word, next_type]
+        return None
+    
+    # Add one word to the sequence seq, using between min_ and max_grams ngrams model.
+    # Return [succeeded = False/True, (extended) sequence].
+    def extend_sequence(self, min_grams, max_grams, seq):
+        gram_count = max_grams
+        num_choices = 0
 
-        if self.lstm_enabled:
-            seq.append(self.choose_lstm_word(seq, tmp_seq))
+        # Decide the range of ngram models required for obtaining enough choices. 
+        while gram_count >= min_grams and num_choices < min_amount:
+            dist = self.models[gram_count]
+            key = self.key_for_gram_count(seq, gram_count)
+            num_choices += len(dist[key])
+            if num_choices < min_amount:
+                gram_count -= 1
+
+        logging.debug("Available choices: %i" % num_choices)
+        pdict = dict()
+        # Use random words from the input documents or the n-grams if there is enough of them.
+        if(num_choices < min_amount):
+           pdict = self.random_word_dict()
         else:
-            seq.append(tmp_seq[0])
-        return [succeeded, seq]
+            # Merge all required probability distributions into one.
+            for ng in range(gram_count, max_grams+1):
+                key = self.key_for_gram_count(seq, ng)
+                pd = self.prob_dict(key, ng)
+                pdict = self.sum_dicts(pdict, pd)
+        
+        # Add the end of sentence as a choice.
+        pdict['<eos>'] = 0.001
+            
+        # Update the distribution by LSTM. May terminate the sentence when LSTM thinks it is good to do so.
+        if(self.lstm_enabled):
+            pdict, top_word = self.lstm_prob(seq, pdict)
+            if(top_word == '<eos>' and random.uniform(0.0,1.0) < self.sure_terminate_prob):
+                logging.debug('<eos> is the top word.')
+                seq.append(['.','.'])
+                return [True, seq]
+        probs = nltk.DictionaryProbDist(pdict, normalize = True)
+        
+        # Choose the next word. Filter by POS or not.
+        if(self.pos_tagger_enabled):
+            tagged_choices = self.generate_tagged_choice(probs, min(num_choices, 20))
+            c = self.first_good_choice(tagged_choices, seq)
+            if c is None:
+                return [False, seq]
+            seq.append(c)
+        else:
+            c = probs.generate()
+            if(c == '<eos>'):
+                tc = [['.','.']]
+            else:
+                tc = self.posTagger.tag([c])
+            seq.append(tc[0])
+        return [True, seq]
+
 
     def next_instance(self):
         logging.info("Generating story, please wait...")
@@ -354,7 +422,6 @@ class StoryGen:
 
         # Keep building a sentence until we hit a terminator
         while not self.is_terminator(out):
-            succeeded = False
             num_tokens = len(out)  # Number of tokens in current sentence
             logging.debug("Length: %s" % len(out))
 
@@ -362,28 +429,15 @@ class StoryGen:
             min_grams = min(self.min_grams, num_tokens + 1)
             assert min_grams <= max_grams, "min grams > max grams !"
 
-            # Go backwards through the number of grams
-            for gram_count in range(max_grams, min_grams - 1, -1):
-                if succeeded:
-                    break
+            [succeeded, out] = self.extend_sequence(min_grams, max_grams, out)
 
-                logging.debug("Trying %i-grams" % gram_count)
-                [succeeded, out] = self.extend_sequence(gram_count, out)
-
-                # If we have no choices and have reached 2-gram, then end.
-                if not succeeded:
-                    if gram_count > 2:
-                        logging.debug("No valid choice found for %i-gram. Continuing" % gram_count)
-                        continue
-                    else:
-                        logging.debug("No valid choice found for 2-gram. Ending sentence.")
-                        logging.info
-                        out.append([".", "."])
-                        break  # breaks out of the 'for gram_count' loop above
-
-                if succeeded:
-                    break
-
+            # If we have no choices and have reached 2-gram, then end.
+            if not succeeded:
+                logging.debug("No valid choice found. Ending sentence with an ERROR.")
+                logging.info
+                out.append([".ERROR-no_choice", "."])
+                break
+                
         self.sentence_count += 1
         logging.debug("Sentence completed.")
         return embellish(out)
@@ -418,7 +472,7 @@ def main(argv):
     setup_logging(verbose)
     # Generate a story from everything.
     if(query == ""):
-        run(5, short_name)
+        run(sentence_count, short_name)
         return
     # Retrieve documents by a user query and tell a story.
     docs = search.testLoading(query)
@@ -430,7 +484,7 @@ def main(argv):
     # Merge all retrieved documents.
     for fn in docs:
         text += search.file_content(fn)
-    run(5, short_name, text)
+    run(sentence_count, short_name, text)
 
     
     
