@@ -359,10 +359,16 @@ class Lstm:
                                           m.initial_state: state})
         return logits
             
-    def predict_choice(self, word_list, word_choice):
+    # Return probabilities of words from word_choice following after an input sequence word_list.
+    # Unknown words will instead get top_word_score * unknown_score.
+    def predict_choice(self, word_list, word_choice, unknown_score=0.1):
         logits = self.predict_raw(word_list)
         ci = self.words2int(word_choice)
-        return [logits[-1][i] for i in ci]
+        unk_int = self.word2id["<unk>"]
+        # unk_score = 0 means no unknown words.
+        unk_score = max(logits[-1]) * unknown_score
+        # Get scores for word_choice but give a low score to unknown words.
+        return [unk_score if (i==unk_int) else logits[-1][i] for i in ci]
         
     def predict_sorted(self, word_list):
         logits = self.predict_raw(word_list)

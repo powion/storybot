@@ -15,8 +15,11 @@ from datetime import datetime
 pos_training_path = "../lib/tagged/english-bidirectional-distsim.tagger"
 pos_jar_path = "../lib/jar/stanford-postagger.jar"
 
-# Minimum amount of choices for next word (otherwise lower gram).
-min_amount = 30
+# Minimum amount of choices for the next word (otherwise lower gram).
+# This configures the focus on the real documents. 
+# A wide choice gives more freedom to the LSTM -> more general (or financial) English.
+# A smaller choice forces more real document content in the story (the n-grams dominate). 
+min_amount = 10
 
 # How many sentences per story shall we generate? 
 sentence_count = 10
@@ -156,7 +159,7 @@ class StoryGen:
     # LSTM enable/disable configuration.
     lstm_enabled = True
     # The longest sequence of words being sent to the LSTM. 
-    max_lstm_steps = 8
+    max_lstm_steps = 30
     # When the n-grams fail to find anything, generate at most max_random_words instead.
     max_random_words = 400
     # When the LSTM says "terminate the sentence", we "toss a coin" and terminate with 
@@ -319,11 +322,11 @@ class StoryGen:
         
     
     # Return the union of dict1 and dict2, summing values present in both dicts.
-    # Values of dict1 are pre-multiplied by 0.5 before adding dict2 values.
+    # Values of dict1 are pre-multiplied by 0.2 before adding dict2 values.
     def sum_dicts(self, dict1, dict2):
         for k, v in dict2.items():
             if k in dict1:
-                dict1[k] = dict1[k] * 0.5 + v
+                dict1[k] = dict1[k] * 0.2 + v
             else:
                 dict1[k] = v
         return dict1
@@ -448,7 +451,7 @@ def run(num, shortname, text=""):
     with open("../output/tifu_%s.txt" % today, "a") as o:
         o.write("\n\n\n\n")
         o.flush()
-        x = StoryGen(shortname, min_grams=2, max_grams=4, text=text)
+        x = StoryGen(shortname, min_grams=2, max_grams=5, text=text)
 
         for i in range(0, num):
             logging.debug("Starting to generate sentence %i" % i)
