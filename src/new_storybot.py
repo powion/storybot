@@ -149,6 +149,32 @@ class PosTagger:
             raise ValueError('Required POS tagger \"' + tagger_type + '\" is unknown.')
     
 
+def vocabulary_stats(words):
+    print("Wait for the stats...")
+    text_size = len(words)
+    vocabulary = set(words)
+    vocab_size = len(vocabulary)
+    print("Vocabulary size is {} words.".format(vocab_size))
+    words_stat = dict()
+    for w in words:
+        if w in words_stat:
+            words_stat[w] += 1
+        else:
+            words_stat[w] = 1
+    word_counts = sorted(words_stat.values())
+    # Invert sorting order.
+    word_counts[:] = word_counts[::-1]
+    assert(vocab_size == len(word_counts))
+    top_n = [1000, 2000, 3000, 4000, 5000, 10000, 20000]
+    cum_sum = 0
+    idx = 0
+    for top in top_n:
+        while(idx < min(vocab_size, top)):
+            cum_sum += word_counts[idx]
+            idx += 1
+        print("{} top vocabulary words cover {:.2f}% of the text.".format(idx, 100.0*cum_sum/text_size))
+    
+
 
 ############################
 # Main body of code
@@ -195,6 +221,7 @@ class StoryGen:
         # Vocabulary
         words = [word for sentence in tokenized_sentences for word in sentence]
         self.vocabulary = set(words)
+        vocabulary_stats(words)
 
         logging.debug("Creating corpus...")
         self.models = [None] * (max_grams + 1)
