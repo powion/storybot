@@ -26,6 +26,8 @@ sentence_count = 10
 
 # Sentence terminators. We want flowing stories, so skipping these for now.
 terminator_types = ['.', ':']
+terminator_words = ['<eos>']
+s_terminator = '<eos>'
 
 # E.g. adjectives can not end sentences (it tends to give bad results).
 forbidden_type_sequences = {
@@ -39,6 +41,7 @@ forbidden_type_sequences = {
 }
 
 forbidden_types = ["``", "''", "CD", ":", "(", ")"]
+forbidden_tokens = set(["(", ")", "[", "]", ",", "'", "\"", ";", "``","“", "?", "!", ".", "へ", "‿", "_"])
 
 ''' Here we may want parameters for different story datasets.
 I'm leaving it as-is for example purposes. The parameters we want to tune will
@@ -73,7 +76,7 @@ story_map = {
     "tifu": [
         "../datasets/tifu/storybot.txt",
         [1000, 0, 0],
-        ["<s>", "today"],
+        ["today", "i"],
         [],
         [],
         [],
@@ -130,7 +133,7 @@ def setup_logging(verbose):
 
 
 def embellish(tokens):
-    if tokens[0][0] == "<s>":
+    if tokens[0][0] == s_terminator:
         tokens.pop(0)
     first = tokens[0][0].capitalize()
     middle = " ".join([x[0] for x in tokens[1:-1]])
@@ -190,7 +193,7 @@ class StoryGen:
     max_random_words = 400
     # When the LSTM says "terminate the sentence", we "toss a coin" and terminate with 
     # probability sure_terminate_prob.
-    sure_terminate_prob = 1.0
+    sure_terminate_prob = 0.5
     
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
@@ -201,9 +204,10 @@ class StoryGen:
         self.min_grams = min_grams
         self.max_grams = max_grams
 
-        (filepath, limits, startSeq, self.preferred, self.preferred_seq,
+        (filepath, limits, self.startSeq, self.preferred, self.preferred_seq,
          self.term_except, smoothing_factory) = story_map[shortname]
         self.max_length, self.min_length, self.min_preferred = limits
+        self.out = ""  # self.out contains all the text we have generated.
         
         # Either load the full corpus or just use the provided text string
         # for story generation.
@@ -213,13 +217,24 @@ class StoryGen:
             raw = text.lower()
         self.text = "".join(raw.split())
 
-        # Split into sentences and tokenize
+        words = []
         tokenized_sentences = nltk.sent_tokenize(raw)
         for i, sentence in enumerate(tokenized_sentences):
-            tokenized_sentences[i] = nltk.tokenize.word_tokenize(sentence)
+            tokenized_sentence = nltk.tokenize.word_tokenize(sentence)
 
-        # Vocabulary
-        words = [word for sentence in tokenized_sentences for word in sentence]
+            while tokenized_sentence[-1] in forbidden_tokens:
+                tokenized_sentence = tokenized_sentence[:-1]
+                if len(tokenized_sentence) == 0:
+                    break
+
+            if len(tokenized_sentence) == 0:
+                continue
+
+            tokenized_sentence.append(s_terminator)
+            for tok in tokenized_sentence:
+                if not tok in forbidden_tokens:
+                    words.append(tok)
+
         self.vocabulary = set(words)
         vocabulary_stats(words)
 
@@ -227,11 +242,10 @@ class StoryGen:
         self.models = [None] * (max_grams + 1)
         self.estimates = [None] * (max_grams + 1)
 
+         # create n-grams on unbroken sequences of text.
         logging.debug("Creating {0}-{1} grams models...".format(min_grams, max_grams))
         for n in range(min_grams, max_grams + 1):
-            ngrams = [nltk.ngrams(sentence, n, pad_left=True, left_pad_symbol="<s>")
-                      for sentence in tokenized_sentences]
-            ngrams = list(chain.from_iterable(ngrams))
+            ngrams = nltk.ngrams(words, n)
             formatted = []
             for grams in ngrams:
                 prev = grams[:-1]
@@ -241,12 +255,12 @@ class StoryGen:
             self.models[n] = dist
             self.estimates[n] = nltk.ConditionalProbDist(dist, smoothing_factory, bins=len(self.vocabulary))
 
-        self.startPhrase = [[w, t] for (w, t) in self.posTagger.tag(startSeq)]
+        self.startPhrase = [[w, t] for (w, t) in self.posTagger.tag(self.startSeq)]  # TODO: Change anything here?
         
 
     def is_terminator(self, out):
         next_word, next_type = out[-1][0], out[-1][1]
-        if next_type in terminator_types and next_word not in self.term_except:
+        if next_word == s_terminator:
             logging.debug("Found terminator: %s " % out[-1][0][0])
             return True
         return False
@@ -262,7 +276,7 @@ class StoryGen:
         """
         words_in_key = gram_count - 1
         key = [x[0] for x in out[-words_in_key:]]
-        # If the current key is shorter than the gram count then pad with <s>
+        # If the current key is shorter than the gram count then pad with <s> # TODO: Remove this code path
         if len(out) < words_in_key:
             for _ in range(0, words_in_key - len(out)):
                 key.insert(0, "<s>")
@@ -337,14 +351,15 @@ class StoryGen:
     
     def filter_lstm_input(self, current_seq, choice_seq):
         # Substitute '<s>' for '<eos>' (end of sentence).
-        word_choice = [wt if not wt == '<s>' else '<eos>' for wt in choice_seq ] 
+        #word_choice = [wt if not wt == '<s>' else '<eos>' for wt in choice_seq ]
         # Remove '.' from any possible word of choice. TODO: This is only a hotfix!
-        word_choice = [w if not w[-1] == '.' else w[:-1] for w in word_choice ]
+        #word_choice = [w if not w[-1] == '.' else w[:-1] for w in word_choice ]
         # Extract up to the last self.max_lstm_steps words from the output
-        # sequence. This sequence will be sent to the LSTM as input. 
+        # sequence. This sequence will be sent to the LSTM as input.
+        word_choice = choice_seq
         roll_begin = max(0, len(current_seq)-self.max_lstm_steps)
         word_seq = [current_seq[i][0] for i in range(roll_begin, len(current_seq))]
-        word_seq = [w if not w=='<s>' else '<eos>' for w in word_seq]
+        #word_seq = [w if not w=='<s>' else '<eos>' for w in word_seq]
         return [word_seq, word_choice]
         
     
@@ -416,14 +431,14 @@ class StoryGen:
                 pdict = self.sum_dicts(pdict, pd)
         
         # Add the end of sentence as a choice.
-        pdict['<eos>'] = 0.001
+        pdict[s_terminator] = 0.001
             
         # Update the distribution by LSTM. May terminate the sentence when LSTM thinks it is good to do so.
         if(self.lstm_enabled):
             pdict, top_word = self.lstm_prob(seq, pdict)
-            if(top_word == '<eos>' and random.uniform(0.0,1.0) < self.sure_terminate_prob):
+            if(top_word == s_terminator and random.uniform(0.0,1.0) < self.sure_terminate_prob):
                 logging.debug('<eos> is the top word.')
-                seq.append(['.','.'])
+                seq.append([s_terminator,'.'])
                 return [True, seq]
         probs = nltk.DictionaryProbDist(pdict, normalize = True)
         
@@ -436,8 +451,8 @@ class StoryGen:
             seq.append(c)
         else:
             c = probs.generate()
-            if(c == '<eos>'):
-                tc = [['.','.']]
+            if(c == s_terminator):
+                tc = [[c,'.']]
             else:
                 tc = self.posTagger.tag([c])
             seq.append(tc[0])
@@ -446,31 +461,35 @@ class StoryGen:
 
     def next_instance(self):
         logging.info("Generating story, please wait...")
-        out = self.startPhrase if self.sentence_count == 0 else [["<s>", "NN"]]
 
-        logging.info(" ".join([o[0] for o in out]))
+        if self.sentence_count == 0:
+            self.out = self.startPhrase
+
+        logging.info(" ".join([o[0] for o in self.out]))
 
         # Keep building a sentence until we hit a terminator
-        while not self.is_terminator(out):
-            num_tokens = len(out)  # Number of tokens in current sentence
-            logging.debug("Length: %s" % len(out))
+        while True:
+            num_tokens = len(self.out)  # Number of tokens in current sentence
+            logging.debug("Length: %s" % len(self.out))
 
             max_grams = min(self.max_grams, num_tokens + 1)
             min_grams = min(self.min_grams, num_tokens + 1)
             assert min_grams <= max_grams, "min grams > max grams !"
 
-            [succeeded, out] = self.extend_sequence(min_grams, max_grams, out)
+            [succeeded, self.out] = self.extend_sequence(min_grams, max_grams, self.out)
 
             # If we have no choices and have reached 2-gram, then end.
             if not succeeded:
                 logging.debug("No valid choice found. Ending sentence with an ERROR.")
                 logging.info
-                out.append([".ERROR-no_choice", "."])
+                self.out.append([".ERROR-no_choice", "."])
+                break
+            if self.is_terminator(self.out):
                 break
                 
         self.sentence_count += 1
         logging.debug("Sentence completed.")
-        return embellish(out)
+        return embellish(self.out)
 
 
 def run(num, shortname, text=""):
