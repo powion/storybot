@@ -13,9 +13,9 @@ from scipy.spatial.distance import cdist
 K = 25
 alpha = 0.3
 beta = 0.3
-conv_iterations = 400
-samples = 50
-sample_interval = 5
+conv_iterations = 1
+samples = 1
+sample_interval = 1
 
 # Current time in format [HH:MM]
 def timestr():
@@ -23,9 +23,9 @@ def timestr():
 
 # Create W matrix
 def create_W():
-  if(os.path.isfile('tmp/Wmatrix.npy')):
-    return np.load('tmp/Wmatrix.npy')
-  file = open('tmp/parsed.txt')
+  if(os.path.isfile(outname + '_tmp/Wmatrix.npy')):
+    return np.load(outname + '_tmp/Wmatrix.npy')
+  file = open(outname + '_tmp/parsed.txt')
   W = np.zeros((1,2))
   document = 0
   for line in file:
@@ -39,9 +39,9 @@ def create_W():
         W = np.vstack((W, row))
     document = document + 1
     if document%100 == 0:
-      print('Parsed ' + document + 'documents.')
+      print('Parsed ' + str(document) + ' documents.')
   W = np.delete(W, 0, axis = 0)
-  np.save('tmp/Wmatrix', W)
+  np.save(outname + '_tmp/Wmatrix', W)
   return W
 
 def init_matrices():
@@ -93,36 +93,65 @@ def gibbs(iterations):
             " Iteration {} out of {}, changes: ".format(it, iterations) + 
             "{:.0%}".format(changes/Z.size))
     if (changes/Z.size < 0.35):
-      if(convergence_counter > 10):
-        np.save('tmp/convergedZ', Z)
+      if(convergence_counter > 70):
+        np.save(outname + '_tmp/convergedZ', Z)
         return
       convergence_counter += 1
     else:
       convergence_counter = 0
-    np.save('tmp/convergedZ', Z)
+    np.save(outname + '_tmp/convergedZ', Z)
 
 def sample(n, interval):
   DT_copy = np.array(DT)
+  VT_copy = np.array(VT)
   for i in range (0, n-1):
     gibbs(interval)
     DT_copy += DT
+    VT_copy += VT
     print(timestr() +
             " Sample {} out of {}.".format(i, n))
-  np.save('tmp/DT', DT_copy)
+  np.save(outname + '_tmp/DT', DT_copy)
+  np.save(outname + '_tmp/VT', VT_copy)
   DT_copy = DT_copy/n
   DT_copy = DT_copy/sum(DT_copy)
-  return DT_copy
+  VT_copy = VT_copy/n
+  VT_copy = VT_copy/sum(VT_copy)
+  return DT_copy, VT_copy
+
+def parse_dictionary():
+  file = open(outname + '_tmp/dict.txt')
+  voc = np.zeros(1)
+  for line in file:
+    voc = np.append(voc, line.rstrip())
+  voc = np.delete(voc, [0])
+  return voc
+
+def topic_vocab(VT_samples):
+  voc = parse_dictionary()
+
+  for i in range (0, VT_samples.shape[1]):
+    vsum = sum(VT_samples[:,i])
+    if vsum > 0:
+      VT_samples[:,i] = VT_samples[:,i] / vsum
+
+  with open(outname + '_tmp/topic_vocab.txt', 'w') as file:
+    for i in range(0, K):
+      ind = np.argpartition(VT_samples[:,i], -30)[-30:]
+      ind = ind[np.argsort(VT_samples[ind, i])][::-1]
+      [file.write(voc[index]+', ') for index in ind]
+      file.write('\n\n')
 
 def main(inputfile, outputname):
-  global Z, W, V, D, VT, TW, DT, DW
+  global Z, W, V, D, VT, TW, DT, DW, outname
+  outname = outputname
   # Create necessary dirs
-  if not os.path.exists('tmp'):
-    os.makedirs('tmp')
+  if not os.path.exists(outname + '_tmp'):
+    os.makedirs(outname + '_tmp')
   if not os.path.exists('matrices'):
     os.makedirs('matrices')
 
   # V: Vocabulary size, D: Number of documents
-  V, D = vocabparser.parseall(inputfile)
+  V, D = vocabparser.parseall(inputfile, outname)
   # W: For each word, one entry [document index, word index]
   W = create_W()
   # Most probable topic for each word
@@ -140,7 +169,10 @@ def main(inputfile, outputname):
   print(timestr() + " Running {} iterations, please wait.".format(conv_iterations))
   gibbs(conv_iterations)
   print(timestr() + " Sampling {} times, please wait.".format(samples))
-  DT_samples = sample(samples, sample_interval)
+  DT_samples, VT_samples = sample(samples, sample_interval)
+
+  # List the words for each topic
+  topic_vocab(VT_samples)
 
   # Calculate distance matrix
   dists = cdist(DT_samples, DT_samples)

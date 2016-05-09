@@ -24,20 +24,20 @@ def parseline(line):
         output += str(index) + ':' + str(count) + ' '
     return output
 
-def parseall(filename):
+def parseall(filename, outname):
     n_docs = 0
-    with open('tmp/parsed.txt', 'w') as o:
+    with open(outname + '_tmp/parsed.txt', 'w') as o:
         with open(filename) as f:
              for n, line in enumerate(f):
                  n_docs += 1
                  o.write(str(n+1)+ ' ' + parseline(line) + '\n')
-    with open('tmp/dict.txt', 'w') as d:
+    with open(outname + '_tmp/dict.txt', 'w') as d:
         for word in dictionary:
             d.write(word+'\n')
     return next_index, n_docs
 
 def main(argv):
-    parseall(argv[0])
+    parseall(argv[0], argv[1])
 
 if __name__ == "__main__":
        main(sys.argv[1:])
