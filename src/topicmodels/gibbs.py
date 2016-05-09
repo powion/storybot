@@ -13,9 +13,9 @@ from scipy.spatial.distance import cdist
 K = 25
 alpha = 0.3
 beta = 0.3
-conv_iterations = 1
-samples = 1
-sample_interval = 1
+conv_iterations = 400
+samples = 50
+sample_interval = 5
 
 # Current time in format [HH:MM]
 def timestr():
