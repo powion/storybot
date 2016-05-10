@@ -380,8 +380,8 @@ class Lstm:
 
 def main(_):
     ##### Configure these based on current situation. #####
-    preload_model = True   # Shall we preload preloaded_epoch or train it from scratch?
-    preloaded_epoch = 4     # The epoch to load (if required). Counting from 0.
+    preload_model = False   # Shall we preload preloaded_epoch or train it from scratch?
+    preloaded_epoch = 0     # The epoch to load (if required). Counting from 0.
     #######################################################
     if preload_model:
         load_model_file = "model{}.ckpt".format(preloaded_epoch)
