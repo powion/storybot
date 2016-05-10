@@ -193,7 +193,7 @@ class SmallConfig(object):
     num_layers = 2
     num_steps = 20
     hidden_size = 200
-    max_epoch = 4
+    max_epoch = 5
     max_max_epoch = 13
     keep_prob = 1.0
     lr_decay = 0.5
@@ -379,10 +379,15 @@ class Lstm:
         
 
 def main(_):
-    preload_model = True
-    preloaded_epoch = 3
-    load_model_file = "model{}.ckpt".format(preloaded_epoch)
-    preloaded_epoch += 1
+    ##### Configure these based on current situation. #####
+    preload_model = True   # Shall we preload preloaded_epoch or train it from scratch?
+    preloaded_epoch = 4     # The epoch to load (if required). Counting from 0.
+    #######################################################
+    if preload_model:
+        load_model_file = "model{}.ckpt".format(preloaded_epoch)
+        preloaded_epoch += 1
+    else:
+        preloaded_epoch = 0
     
     if not FLAGS.data_path:
         raise ValueError("Must set --data_path to PTB data directory")
@@ -412,6 +417,7 @@ def main(_):
             saver.restore(session, load_model_file)
 
         for i in range(preloaded_epoch, config.max_max_epoch):
+            # Some simple learning rate scheduling. :-)
             if(i>3):
                 config.learning_rate = 0.1
             lr_decay = config.lr_decay ** max(i - config.max_epoch, 0.0)
