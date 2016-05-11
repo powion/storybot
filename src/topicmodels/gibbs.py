@@ -115,7 +115,6 @@ def sample(n, interval):
   DT_copy = DT_copy/n
   DT_copy = DT_copy/sum(DT_copy)
   VT_copy = VT_copy/n
-  VT_copy = VT_copy/sum(VT_copy)
   return DT_copy, VT_copy
 
 def parse_dictionary():
