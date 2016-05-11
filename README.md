@@ -11,6 +11,8 @@ python storybot.py -n [pride|tolkien]
 to have storybot start writing stories at about 0.5 wps. 
 Optionally -v can be added for verbose output, specifying what options the program chooses from for each word.
 
+The script ptb_word_lm.py in src/lstm can be executed when training a new LSTM model. src/create_lstm_dataset.py preprocesses any text file and creates a dataset folder. ptb_word_lm.py can then run training on this dataset.
+
 # Install Dependencies in Ubuntu
 
 

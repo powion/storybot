@@ -140,6 +140,7 @@ def embellish(tokens):
     end = tokens[-1][0]
     return first + " " + middle + end
     
+
 # PosTagger class - make POS tagger changes easier.
 class PosTagger:
     def __init__(self, tagger_type):
@@ -178,6 +179,26 @@ def vocabulary_stats(words):
         print("{} top vocabulary words cover {:.2f}% of the text.".format(idx, 100.0*cum_sum/text_size))
     
 
+def text2words(text):
+    words = []
+    tokenized_sentences = nltk.sent_tokenize(text)
+    for i, sentence in enumerate(tokenized_sentences):
+        tokenized_sentence = nltk.tokenize.word_tokenize(sentence)
+
+        while tokenized_sentence[-1] in forbidden_tokens:
+            tokenized_sentence = tokenized_sentence[:-1]
+            if len(tokenized_sentence) == 0:
+                break
+
+        if len(tokenized_sentence) == 0:
+            continue
+
+        tokenized_sentence.append(s_terminator)
+        for tok in tokenized_sentence:
+            if not tok in forbidden_tokens:
+                words.append(tok)
+    return words
+
 
 ############################
 # Main body of code
@@ -198,7 +219,8 @@ class StoryGen:
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
-            self.lstm = nn.Lstm("../models/lstm/model5.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
+            #self.lstm = nn.Lstm("../models/lstm/ptb/model5.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
+            self.lstm = nn.Lstm("../models/lstm/tifu/model4.ckpt","../datasets/tifu_lstm/ptb.train.txt", self.max_lstm_steps)
         self.sentence_count = 0
         self.shortname = shortname
         self.min_grams = min_grams
@@ -217,23 +239,7 @@ class StoryGen:
             raw = text.lower()
         self.text = "".join(raw.split())
 
-        words = []
-        tokenized_sentences = nltk.sent_tokenize(raw)
-        for i, sentence in enumerate(tokenized_sentences):
-            tokenized_sentence = nltk.tokenize.word_tokenize(sentence)
-
-            while tokenized_sentence[-1] in forbidden_tokens:
-                tokenized_sentence = tokenized_sentence[:-1]
-                if len(tokenized_sentence) == 0:
-                    break
-
-            if len(tokenized_sentence) == 0:
-                continue
-
-            tokenized_sentence.append(s_terminator)
-            for tok in tokenized_sentence:
-                if not tok in forbidden_tokens:
-                    words.append(tok)
+        words = text2words(raw)
 
         self.vocabulary = set(words)
         vocabulary_stats(words)
