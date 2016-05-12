@@ -383,7 +383,7 @@ class StoryGen:
     def lstm_prob(self, word_seq, wpdict):
         in_words = list(wpdict.keys())
         word_seq, word_choice = self.filter_lstm_input(word_seq, in_words)
-        wscore = self.lstm.predict_choice(word_seq, word_choice)
+        wscore = self.lstm.predict_choice(word_seq, word_choice, 0.0)
         top_word = word_choice[wscore.index(max(wscore))]
         wprob = self.lstm.score2prob(wscore)
         ndict = dict()
