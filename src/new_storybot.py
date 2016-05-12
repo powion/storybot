@@ -133,12 +133,18 @@ def setup_logging(verbose):
 
 
 def embellish(tokens):
-    if tokens[0][0] == s_terminator:
-        tokens.pop(0)
-    first = tokens[0][0].capitalize()
-    middle = " ".join([x[0] for x in tokens[1:-1]])
-    end = tokens[-1][0]
-    return first + " " + middle + end
+    """
+    :param tokens: a 2D list of token and POS tag for the entire text generated up until now.
+    :return: Capitalized most recent sentence generated.
+    """
+    ret = []
+    for token in tokens[-2::-1]:
+        if token[0] == '<eos>':
+            break
+        ret.insert(0, token[0])
+    ret[0] = ret[0].capitalize()
+    ret = " ".join(ret)
+    return ret + "."
     
 
 # PosTagger class - make POS tagger changes easier.
@@ -470,8 +476,6 @@ class StoryGen:
 
         if self.sentence_count == 0:
             self.out = self.startPhrase
-
-        logging.info(" ".join([o[0] for o in self.out]))
 
         # Keep building a sentence until we hit a terminator
         while True:
