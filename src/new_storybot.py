@@ -216,6 +216,11 @@ class StoryGen:
     # probability sure_terminate_prob.
     sure_terminate_prob = 0.5
     
+    ngrams_terminator_probability = 0.02
+    
+    # How much will higher n-grams dominate the ranking? 10 - a lot, 1.2 - much less
+    ngrams_decay_base = 1.2
+    
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
@@ -369,14 +374,12 @@ class StoryGen:
         return [word_seq, word_choice]
         
     
-    # Return the union of dict1 and dict2, summing values present in both dicts.
-    # Values of dict1 are pre-multiplied by 0.2 before adding dict2 values.
-    def sum_dicts(self, dict1, dict2):
+    # Return the union of dict1 and dict2, adding only non-present values to dict1 from dict2.
+    # Values of dict2 are pre-multiplied by c before adding to dict1.
+    def merge_dicts(self, dict1, dict2, c):
         for k, v in dict2.items():
-            if k in dict1:
-                dict1[k] = dict1[k] * 0.2 + v
-            else:
-                dict1[k] = v
+            if k not in dict1:
+                dict1[k] = v * c
         return dict1
     
     # Multiply probabilities of words in wpdict dictionary by LSTM predictions.    
@@ -399,6 +402,12 @@ class StoryGen:
         for s in samples:
             d[s] = self.estimates[gram_count][key].prob(s)
         return d
+        
+    def normalize_pdict(self, pdict):
+        psum = sum(pdict.values())
+        for k, v in pdict.items():
+            pdict[k] = pdict[k]/psum
+        return pdict
         
     def first_good_choice(self, tagged_choices, seq):
         for i in range(0, len(tagged_choices)):
@@ -431,13 +440,16 @@ class StoryGen:
            pdict = self.random_word_dict()
         else:
             # Merge all required probability distributions into one.
-            for ng in range(gram_count, max_grams+1):
+            for ng in range(max_grams, gram_count-1, -1):
+                c = self.ngrams_decay_base ** (ng - gram_count)
                 key = self.key_for_gram_count(seq, ng)
                 pd = self.prob_dict(key, ng)
-                pdict = self.sum_dicts(pdict, pd)
+                pd = self.normalize_pdict(pd)
+                pdict = self.merge_dicts(pdict, pd, c)
         
         # Add the end of sentence as a choice.
-        pdict[s_terminator] = 0.001
+        pdict[s_terminator] = max(pdict.values()) * self.ngrams_terminator_probability
+        pdict = self.normalize_pdict(pdict)
             
         # Update the distribution by LSTM. May terminate the sentence when LSTM thinks it is good to do so.
         if(self.lstm_enabled):
