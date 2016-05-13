@@ -41,7 +41,7 @@ forbidden_type_sequences = {
 }
 
 forbidden_types = ["``", "''", "CD", ":", "(", ")"]
-forbidden_tokens = set(["(", ")", "[", "]", ",", "'", "\"", ";", "``","“", "?", "!", ".", "へ", "‿", "_"])
+forbidden_tokens = set(["(", ")", "[", "]", ",", "'", "\"", ";", "``","“", "?", "!", ".", "へ", "‿", "_", "''"])
 
 ''' Here we may want parameters for different story datasets.
 I'm leaving it as-is for example purposes. The parameters we want to tune will
@@ -224,8 +224,9 @@ class StoryGen:
     
     ngrams_terminator_probability = 0.02
     
-    # How much will higher n-grams dominate the ranking? 10 - a lot, 1.2 - much less
-    ngrams_decay_base = 1.2
+    # How many times is n-gram score larger than (n-1)-gram score? 10 - a lot, 1.2 - much less
+    # This should be always larger than 1.
+    ngrams_decay_base = 3.0
     
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
@@ -440,6 +441,8 @@ class StoryGen:
                 gram_count -= 1
 
         logging.debug("Available choices: %i" % num_choices)
+        
+        assert(self.ngrams_decay_base > 1)
         pdict = dict()
         # Use random words from the input documents or the n-grams if there is enough of them.
         if(num_choices < min_amount):
