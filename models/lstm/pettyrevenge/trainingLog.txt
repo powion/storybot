@@ -1,0 +1,183 @@
+Epoch: 1 Learning rate: 1.000
+0.012 perplexity: 5499.451 speed: 943 wps
+0.112 perplexity: 1141.215 speed: 972 wps
+0.211 perplexity: 856.610 speed: 978 wps
+0.311 perplexity: 687.679 speed: 919 wps
+0.411 perplexity: 585.423 speed: 903 wps
+0.510 perplexity: 516.593 speed: 903 wps
+0.610 perplexity: 471.535 speed: 909 wps
+0.709 perplexity: 433.131 speed: 906 wps
+0.809 perplexity: 402.796 speed: 903 wps
+0.909 perplexity: 379.992 speed: 908 wps
+Epoch: 1 Train Perplexity: 361.749
+Epoch: 1 Valid Perplexity: 186.881
+Model saved in file: model0.ckpt
+Epoch: 2 Learning rate: 1.000
+0.012 perplexity: 219.318 speed: 978 wps
+0.112 perplexity: 203.262 speed: 957 wps
+0.211 perplexity: 202.227 speed: 950 wps
+0.311 perplexity: 198.130 speed: 959 wps
+0.411 perplexity: 196.365 speed: 964 wps
+0.510 perplexity: 193.627 speed: 967 wps
+0.610 perplexity: 191.649 speed: 970 wps
+0.709 perplexity: 188.101 speed: 961 wps
+0.809 perplexity: 185.020 speed: 943 wps
+0.909 perplexity: 182.928 speed: 927 wps
+Epoch: 2 Train Perplexity: 180.610
+Epoch: 2 Valid Perplexity: 150.776
+Model saved in file: model1.ckpt
+Epoch: 3 Learning rate: 1.000
+0.012 perplexity: 161.528 speed: 971 wps
+0.112 perplexity: 148.998 speed: 977 wps
+0.211 perplexity: 150.467 speed: 979 wps
+0.311 perplexity: 148.785 speed: 979 wps
+0.411 perplexity: 149.134 speed: 976 wps
+0.510 perplexity: 148.075 speed: 977 wps
+0.610 perplexity: 147.487 speed: 977 wps
+0.709 perplexity: 145.527 speed: 977 wps
+0.809 perplexity: 143.822 speed: 978 wps
+0.909 perplexity: 142.790 speed: 978 wps
+Epoch: 3 Train Perplexity: 141.434
+Epoch: 3 Valid Perplexity: 139.410
+Model saved in file: model2.ckpt
+Epoch: 4 Learning rate: 1.000
+0.012 perplexity: 132.330 speed: 970 wps
+0.112 perplexity: 121.862 speed: 976 wps
+0.211 perplexity: 123.211 speed: 979 wps
+0.311 perplexity: 121.969 speed: 979 wps
+0.411 perplexity: 122.837 speed: 975 wps
+0.510 perplexity: 122.358 speed: 135 wps
+0.610 perplexity: 122.016 speed: 157 wps
+0.709 perplexity: 120.646 speed: 178 wps
+0.809 perplexity: 119.272 speed: 197 wps
+0.909 perplexity: 118.463 speed: 216 wps
+Epoch: 4 Train Perplexity: 117.250
+Epoch: 4 Valid Perplexity: 137.134
+Model saved in file: model3.ckpt
+Epoch: 5 Learning rate: 0.100
+0.012 perplexity: 111.832 speed: 999 wps
+0.112 perplexity: 102.941 speed: 991 wps
+0.211 perplexity: 102.305 speed: 992 wps
+0.311 perplexity: 100.243 speed: 991 wps
+0.411 perplexity: 99.401 speed: 989 wps
+0.510 perplexity: 97.771 speed: 988 wps
+0.610 perplexity: 95.993 speed: 989 wps
+0.709 perplexity: 93.233 speed: 987 wps
+0.809 perplexity: 90.243 speed: 987 wps
+0.909 perplexity: 87.304 speed: 987 wps
+Epoch: 5 Train Perplexity: 83.990
+Epoch: 5 Valid Perplexity: 128.214
+Model saved in file: model4.ckpt
+Epoch: 6 Learning rate: 0.100
+0.012 perplexity: 94.402 speed: 988 wps
+0.112 perplexity: 87.426 speed: 991 wps
+0.211 perplexity: 87.526 speed: 989 wps
+0.311 perplexity: 86.288 speed: 988 wps
+0.411 perplexity: 86.091 speed: 989 wps
+0.510 perplexity: 84.988 speed: 989 wps
+0.610 perplexity: 83.773 speed: 989 wps
+0.709 perplexity: 81.719 speed: 989 wps
+0.809 perplexity: 79.459 speed: 989 wps
+0.909 perplexity: 77.345 speed: 989 wps
+Epoch: 6 Train Perplexity: 75.012
+Epoch: 6 Valid Perplexity: 128.630
+Model saved in file: model5.ckpt
+Epoch: 7 Learning rate: 0.050
+0.012 perplexity: 86.883 speed: 973 wps
+0.112 perplexity: 80.930 speed: 52 wps
+0.211 perplexity: 80.989 speed: 92 wps
+0.311 perplexity: 79.848 speed: 129 wps
+0.411 perplexity: 79.681 speed: 161 wps
+0.510 perplexity: 78.591 speed: 189 wps
+0.610 perplexity: 77.416 speed: 215 wps
+0.709 perplexity: 75.477 speed: 237 wps
+0.809 perplexity: 73.357 speed: 261 wps
+0.909 perplexity: 71.385 speed: 283 wps
+Epoch: 7 Train Perplexity: 69.270
+Epoch: 7 Valid Perplexity: 128.821
+Model saved in file: model6.ckpt
+Epoch: 8 Learning rate: 0.025
+0.012 perplexity: 83.022 speed: 660 wps
+0.112 perplexity: 77.531 speed: 743 wps
+0.211 perplexity: 77.602 speed: 779 wps
+0.311 perplexity: 76.532 speed: 816 wps
+0.411 perplexity: 76.418 speed: 830 wps
+0.510 perplexity: 75.356 speed: 821 wps
+0.610 perplexity: 74.221 speed: 829 wps
+0.709 perplexity: 72.346 speed: 830 wps
+0.809 perplexity: 70.306 speed: 831 wps
+0.909 perplexity: 68.407 speed: 828 wps
+Epoch: 8 Train Perplexity: 66.392
+Epoch: 8 Valid Perplexity: 128.530
+Model saved in file: model7.ckpt
+Epoch: 9 Learning rate: 0.013
+0.012 perplexity: 81.017 speed: 901 wps
+0.112 perplexity: 75.744 speed: 861 wps
+0.211 perplexity: 75.834 speed: 901 wps
+0.311 perplexity: 74.809 speed: 903 wps
+0.411 perplexity: 74.730 speed: 879 wps
+0.510 perplexity: 73.694 speed: 889 wps
+0.610 perplexity: 72.580 speed: 879 wps
+0.709 perplexity: 70.735 speed: 875 wps
+0.809 perplexity: 68.736 speed: 870 wps
+0.909 perplexity: 66.876 speed: 874 wps
+Epoch: 9 Train Perplexity: 64.909
+Epoch: 9 Valid Perplexity: 128.076
+Model saved in file: model8.ckpt
+Epoch: 10 Learning rate: 0.006
+0.012 perplexity: 79.924 speed: 915 wps
+0.112 perplexity: 74.777 speed: 886 wps
+0.211 perplexity: 74.887 speed: 828 wps
+0.311 perplexity: 73.893 speed: 822 wps
+0.411 perplexity: 73.836 speed: 823 wps
+0.510 perplexity: 72.823 speed: 827 wps
+0.610 perplexity: 71.722 speed: 847 wps
+0.709 perplexity: 69.894 speed: 863 wps
+0.809 perplexity: 67.916 speed: 869 wps
+0.909 perplexity: 66.077 speed: 875 wps
+Epoch: 10 Train Perplexity: 64.137
+Epoch: 10 Valid Perplexity: 127.759
+Model saved in file: model9.ckpt
+Epoch: 11 Learning rate: 0.003
+0.012 perplexity: 79.349 speed: 959 wps
+0.112 perplexity: 74.260 speed: 970 wps
+0.211 perplexity: 74.386 speed: 890 wps
+0.311 perplexity: 73.409 speed: 889 wps
+0.411 perplexity: 73.364 speed: 850 wps
+0.510 perplexity: 72.366 speed: 836 wps
+0.610 perplexity: 71.273 speed: 852 wps
+0.709 perplexity: 69.456 speed: 867 wps
+0.809 perplexity: 67.490 speed: 879 wps
+0.909 perplexity: 65.661 speed: 874 wps
+Epoch: 11 Train Perplexity: 63.735
+Epoch: 11 Valid Perplexity: 127.597
+Model saved in file: model10.ckpt
+Epoch: 12 Learning rate: 0.002
+0.012 perplexity: 79.062 speed: 966 wps
+0.112 perplexity: 73.994 speed: 977 wps
+0.211 perplexity: 74.128 speed: 978 wps
+0.311 perplexity: 73.160 speed: 979 wps
+0.411 perplexity: 73.120 speed: 980 wps
+0.510 perplexity: 72.131 speed: 980 wps
+0.610 perplexity: 71.043 speed: 981 wps
+0.709 perplexity: 69.232 speed: 981 wps
+0.809 perplexity: 67.272 speed: 982 wps
+0.909 perplexity: 65.449 speed: 982 wps
+Epoch: 12 Train Perplexity: 63.530
+Epoch: 12 Valid Perplexity: 127.526
+Model saved in file: model11.ckpt
+Epoch: 13 Learning rate: 0.001
+0.012 perplexity: 78.920 speed: 993 wps
+0.112 perplexity: 73.862 speed: 986 wps
+0.211 perplexity: 73.999 speed: 986 wps
+0.311 perplexity: 73.035 speed: 986 wps
+0.411 perplexity: 72.997 speed: 986 wps
+0.510 perplexity: 72.011 speed: 985 wps
+0.610 perplexity: 70.926 speed: 983 wps
+0.709 perplexity: 69.118 speed: 979 wps
+0.809 perplexity: 67.162 speed: 980 wps
+0.909 perplexity: 65.341 speed: 980 wps
+Epoch: 13 Train Perplexity: 63.426
+Epoch: 13 Valid Perplexity: 127.493
+Model saved in file: model12.ckpt
+Test Perplexity: 124.659
