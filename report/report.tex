@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper,utf8]{article}
+\usepackage{enumerate, amsmath, amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[bibencoding=utf8,style=numeric,firstinits=true,hyperref,backend=biber]{biblatex}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\addbibresource{refs.bib}
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{lipsum}
+\pagestyle{empty}
+
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=red,opacity=0.1]\node{DRAFT};}
+\newwatermark*[
+  allpages,
+  angle=45,
+  scale=6,
+  xpos=-20,
+  ypos=15
+]{\usebox\mybox}
+
+\newcommand\todonote[1]{\textcolor{red}{#1}}
+
+
+\title{Tell Me a Story}
+\author{Project for DD2476 Spring 2016\\\\Edward Grippe, grippe@kth.se\\Jakob Hallmer, hallmer@kth.se\\Kristófer Hannesson, hannesso@kth.se\\Paulina Hensman, phensman@kth.se\\Ondrej Holesovský, ondrejh@kth.se\\\\ Examiner: Hedvig Kjellström, hedvig@kth.se}
+
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+\pagebreak
+
+
+\pagestyle{plain}
+\pagenumbering{Roman}
+\tableofcontents
+\cleardoublepage
+\pagebreak
+
+
+%\pagestyle{plain}
+%\pagenumbering{Roman}
+%\listoftables
+%\pagebreak
+%\listoffigures
+%\pagebreak
+
+
+\setcounter{page}{1}
+\pagenumbering{arabic} 
+\setcounter{secnumdepth}{3}
+
+\section{Background/Introduction}
+A quite recent development in the industry is using algorithms to generate text from other text or data. This is a growing and useful application of information retrieval which is used more and more each year as the technology improves. Applications include summarizing long texts to save time for the reader and generating whole news articles and thus streamlining the story generating process\autocite{RobotJournalist}.\\
+
+The task for our project was to generate inspiring stories of a given theme which a reasonable person could believe were created by an actual person.
+
+\section{Previous/Related Work}
+Perhaps the most common use of this technology is within the realm of journalism. It's clearly the domain where the average person encounters it most often as many stories nowadays are by varying degrees already written by a computer. Interestingly researchers have found that in some cases there are no significant differences in how generated text and text written by a human is perceived by the reader\autocite{RobotJournalist}. This is obviously mostly true for genuinely objective news articles and not so much for op-ed style content. In this case an algorithm could theoretically even do a better job than a human as a computer by definition has no underlying bias and has a clear speed advantage which is essential for live reporting on events such as sports or terrorist attacks.\\
+
+Another interesting use case which has improved dramatically in the last few years is text summarizing. Companies such as Apple and Smmry use this to try to help the end user to "provide an efficient manner of understanding long text by reducing it to only the most important sentences"\autocite{Smmry}. In the case of Smmry they achieve this by running an algorithm that
+\begin{enumerate}
+\item Associate words with their grammatical counterparts.
+\item Calculate the occurrence of each word in the text.
+\item Assign each word with points depending on their popularity.
+\item Detect which periods represent the end of a sentence.
+\item Split up the text into individual sentences.
+\item Rank sentences by the sum of their words' points.
+\item Return X of the most highly ranked sentences in chronological order.
+\end{enumerate}
+The summary can usually be set to a specific number of sentences or paragraphs which allows the user to test what fits his source text best. The end result is usually surprisingly accurate even on fairly advanced texts.\\
+
+The latter of these two use cases is often used in conjunction with the former to try to differentiate from other outlets when using text written by a wholesale news agencies such as the global Reuters or the Swedish TT (Tidningarns Telegrambyrå). It's also not uncommon to have an algorithm generate the story and then having a journalist revise and improve it before publishing the piece, thus capitalizing on the advantages of both technology and "the human touch"\autocite{RobotJournalist}.
+
+\section{Method}\label{sec:method}
+The user created content from the community of Reddit, the 9th most visited website in America and 30th in the world\autocite{alexa}, was used to get a good sample of interesting human written stories. We identified the subreddit "Today I Fucked Up" (\url{https://www.reddit.com/r/tifu}) as a perfect initial source of data as it contains short and funny stories written by humans in a somewhat casual language. The subreddit with over 6 million subscribers describes itself as \begin{quote}
+A community for the dumbass in all of us. We all have those moments where we do something ridiculously stupid. Share your stories and laugh along with the internet\autocite{tifu}.
+\end{quote} \todonote{Expand on this if we add more subreddits!}
+
+\subsection{Getting the data}
+As the content on Reddit is voted on by the users the crawler was built to exploit that fact and thus download from top to bottom score wise to get a selection of high quality stories where the relative quality level is crowdsourced from the community. Reddit makes it easy to download the data via their API\autocite{redditAPI}. The downloaded data contains the stories in addition to meta data such as \todonote{what metadata?}. The data is then parsed\todonote{is it?} and put into a database \todonote{needs elaboration!}.
+
+\subsection{Creating our story}
+The stories are created by \todonote{Need more info!!!}.
+
+This is sent through a n-gram model with n=X... Then LSTM? Or before...? We also use some kind of open source dictionary from some university which defines our words as adjectives etc.
+
+A LSTM (long short term memory) model is trained and implemented which is an RNN (recurrent neural network) with word embeddings. Traditional neural networks throw away everything in each iteration which the RNN improves on by essentially adding loops to the network and thus allowing information to persists\autocite{LSTM}. An LSTM is a special kind of RNN which was first introduced by \textcite{LSTMarticle} and works tremendously well on a large variety of problems\autocite{LSTM}.
+
+\subsection{Presentation}
+The generated stories were presented in a user friendly manner by creating a website alongside the full source code on Github (\url{http://powion.github.io/storybot/}). Here the user can select from the different subreddits described in \autoref{sec:method} and get a selection of generated stories for that theme. \todonote{If we do some kind of voting system then elaborate on that!}.
+
+\section{Experiments/Results}
+\lipsum[2] \todonote{Possibly do a short trial with friends/family to see what they think of our stories as a way of evaluating our method!} \todonote{Add a few examples of the best and worst cases!}
+
+\section{Conclusions/Discussion}
+\lipsum[3]
+\todonote{Obviously expand on this when we have our final results!}
+
+\printbibliography[heading=bibnumbered]
+%\bibliography{refs}{}
+
+\end{document}
