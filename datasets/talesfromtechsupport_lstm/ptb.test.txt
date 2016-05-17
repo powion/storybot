@@ -1,0 +1,1864 @@
+ -- -- bonus 
+ here is the email 
+ & gt & gt warning 
+ & gt & gt your mailbox has <unk> the storage limit which is 5gb as set by your administrator you are currently running on <unk> to <unk> your mailbox click here & lt -- url edited out -- & gt to increase your mailbox size or you lose your account within 24 hours 
+ & gt & gt system admin -- -- tl dr - boss fails to follow basic security gets caught and has to go back to school 
+ i love security audits they prove some people are <unk> or that they are <unk> <unk> 
+ **edit** - formatting 
+ <unk> sorry guys i just need to clear something up here 
+ i know it 's 24 hours later nearly however when the vp mentioned opening the email that itself was not the failure 
+ the failure was logged through the users opening that link to increase their mailbox size as each link was specifically generated for each users email 
+ i know it 's not very clear but that is manglement many <unk> ago i was working on the family printer 
+ like most of these <unk> at the time they would seemingly quit for no reason only to work again for no reason when someone started looking at the problem 
+ in this tale i had one of the few times it just would not work 
+ i had <unk> the inside with canned air <unk> and <unk> everything and even replaced the cartridges 
+ it still sat there error light blinking 
+ after much frustration i was <unk> my hand from the depths of the foul device when i cut my hand on the cartridge assembly 
+ frustrated after an hour of work on this pos i slammed the printer shut and yelled : there 
+ a blood sacrifice 
+ happy '' 
+ and a test page started to print 
+ tl dr : blood for the print god i used to work tech support for my college before they had the resources to actually hire people who knew what they were doing 
+ at the time they were limited to what students they could <unk> who they felt were <unk> 
+ apparently i was one such student though i felt like a fish out of water being an education major working with computer science and it <unk> 
+ <unk> ... i am a somewhat fast <unk> and apparently i have logic so i was able to figure out a fair number of issues on my own that were simple 
+ one later evening i was the poor <unk> who pulled the short straw to close that night 
+ i get a call from one of the faculty 
+ we 'll call him prof '' & gt me : hello client services this is <unk> how can i help you 
+ & gt prof : yeah hi listen do you know where i can buy a bigger mouse pad 
+ cue alarm bells ... & gt me : uh sorry a bigger what now 
+ & gt prof : mouse pad 
+ i need to move the cursor over more but the mouse is at the very edge 
+ & gt me : *facepalm* you do n't really need one sir 
+ & gt prof : really 
+ & gt me : yes try this for me 
+ oh are you trying to move the mouse left or right 
+ & gt prof : to the right 
+ & gt me : ok fine just go with me on this 
+ pick the mouse <unk> up then move it to the left then put it down on the <unk> again 
+ now try moving it to the right again 
+ & gt prof : ahhh 
+ thanks 
+ that was easy 
+ & gt me : have a good night sir ... this is a man with a <unk> here is a tale from a previous job i had in outsourced it 
+ i worked for a small company and handled all of the incoming commercial client calls 
+ on this day i was out at another small business installing their new server 
+ i had everything packed and ready to head out the door and the phone rings 
+ it was one of our biggest clients 
+ they were having all sorts of strange issues 
+ after listening to the complaints it took me 5 minutes to determine there was something on the network fighting with the dhcp server 
+ i told my boss the owner what was going on and that i need him to help them figure out what it is 
+ i told him it is likely a wireless router in one of these two geeks offices 
+ they were the types to get new toys and want to play 
+ then i head off to the server install i have scheduled 
+ i do n't get any updates on the situation so i check in with him the next morning to see how things are going 
+ apparently it was much more serious then i thought 
+ after taking a look he decided to hire an outside consultant who has done some shady work for us from time to time 
+ the consultant <unk> they are being hacked from china and he changed their internal ip <unk> to <unk> their hacking <unk> 
+ of course this brought their network to a screeching halt 
+ dozens of servers printers etc on static ip addresses abandoned and alone 
+ i <unk> my way out there ... oh yeah im doing all this on <unk> with a broken foot btw ... and start to work on changing the static addresses 
+ after doing this for awhile i notice im still having weird issues ... what is this address i keep getting assigned 
+ let 's go to the gateway 
+ netgear ... hmm ... they have a <unk> wall 
+ i <unk> my way up the stairs to the first of the two nerds that i asked my boss to check with yesterday 
+ he is <unk> at his desk 
+ i <unk> around him without saying a word amd unplug the damn router behind him 
+ do n't plug this in '' 
+ i go back downstairs 
+ problem solved 
+ it was a full week before the last of the <unk> issues were fixed from the ip structure change 
+ to this day the client thinks china attacked them 
+ that was the day i updated my resume and <unk> to get a new <unk> 's one on the lighter side of tfts ... so i was dealing with an employee for one of my client offices having trouble connecting to their terminal server from home 
+ he stated it was n't the normal error he 's seen before and i taught him very patiently how to take a screenshot paste to blank email then send it to myself so i could resolve the issue for him we went through the process multiple times and i thought he had it down pat 
+ the next day while i 'm out at their office he comes up and hands me his <unk> of the error 
+ turns out he could n't figure out the <unk> screenshot key at home and decided to draw this fine error out for me i mean look at the detail in the x on the left 
+ anyway i wish all employees gave at least half this <unk> efforts when they come across an error or problem really helped me resolve his issue quickly with little hassle 
+ screenshot '' here = long time reader first time poster 
+ so this story happened to me yesterday and i thought you all would love this 
+ i work at a <unk> technology help desk 
+ we have computers that we <unk> to students 
+ so this one student let’s call him macbook <unk> comes up to the desk and checks out a mac laptop 
+ he comes back a few minutes later 
+ & gt macbook <unk> : this charger doesn’t work 
+ & gt me : okay i’ll swap it out 
+ our chargers get abused a lot so i thought nothing of it when he said it didn’t work 
+ about 15 minutes later he comes back again this time with the computer 
+ & gt macbook <unk> : hey this computer doesn’t charge and it won’t turn on 
+ & gt me : huh okay 
+ let’s swap the computer out 
+ & gt macbook <unk> : yeah i opened the mac to make sure the battery was connected and everything 
+ i had not had enough time to check the charger so i figured it was just the mac that wasn’t working and that the original charger was fine 
+ at the time i didn’t hear that he said he opened our mac to make sure the battery was connected 
+ i realize i should have said something at this point 
+ so i checked out another mac to him 
+ about 40 minutes later he comes back to return the equipment 
+ & gt macbook <unk> : so listen 
+ i spilled water on my personal laptop and i wanted to use one of yours to test my components to see if they still work 
+ so i took apart two of your macs 
+ but when i put this one back together the keyboard stopped working 
+ so… he told me all of this and i was at a loss for words 
+ i really didn’t know what to say 
+ i was more surprised that someone would do this to equipment that they don’t own 
+ & gt me : you’re not supposed to do this 
+ you’re not allowed to open up the <unk> equipment 
+ & gt macbook <unk> : oh 
+ i didn’t know that 
+ wtf 
+ why would you think it’s okay to open up a laptop that you don’t own and then mess it up 
+ even if he didn’t tell me i would have caught on to what happened since our <unk> system keeps track of who the last person was to get the equipment 
+ hope he enjoys paying for 2 macs 
+ edit 1 ... tech looked at the second mac that had the messed up keyboard 
+ looks like the ribbon cable was bent 
+ he fixed it and now the keyboard works 
+ but wifi is not working correctly 
+ not sure if its hardware or software so im going to just <unk> it and see if that fixes it 
+ still waiting to see whats up with the first laptop 
+ edit 2 ... the second laptop the client took apart is working fine now 
+ <unk> fixed wifi issues 
+ the first one on the other hand is fried 
+ waiting to see what the cost is to fix it 
+ <unk> : ** i work as a sysadmin for a <unk> of <unk> onsite and offsite users 
+ at any one time we may have roughly half of that in our <unk> building 
+ any desk may have either a desktop or laptop depending on the users job description and if they may work offsite 
+ today our power went out which is unusual 
+ all the laptops were fine but obviously all the desktops lost power 
+ each floor has a local ups to support the networking switches and in turn the <unk> wifi <unk> as does the server room 
+ the <unk> implication of this is only those with desktops were really affected - although it was a little <unk> than usual with only the emergency lighting 
+ when the power failed we started moving through the floors checking our users were okay - <unk> already told us the rest : wifi still running for those who rely on it <unk> hosts and routers are online internet accessible 
+ no stress 
+ <unk> with $ user : ** myself : everything okay over here '' 
+ $ user : no 
+ it 's all down 
+ i ca n't do anything '' 
+ myself : what do you mean 
+ everything should be running fine you have a laptop '' 
+ $ user : no one is on skype 
+ look 
+ $ receptionist is n't online '' 
+ myself : that 's because $ receptionist has a desktop which is n't running because of the power outage 
+ look $ <unk> is online '' 
+ $ user : oh 
+ true '' 
+ **tl dr : ** <unk> : put receptionist 's skype <unk> into <unk> my younger days during the golden age of it <unk> 90 's i was called in as the citrix consultant to a major ad agency in <unk> <unk> 
+ seems their citrix server had gone <unk> as a result no one across the enterprise was able to login to <unk> 
+ i get the call from my boss please go <unk> he just got off the phone with their cfo and was really concerned 
+ cfo had already contacted compaq was a <unk> server and microsoft 
+ two consultants <unk> had been there all morning and could n't bring the server back online 
+ i was to build a citrix server asap if the original server could n't be <unk> 
+ i walk into a server room with 2 older <unk> cfo and sysadmin staring at a black screen displaying os loader loader not found '' or whatever was the windows nt <unk> <unk> message back then '' i ask them is there a floppy in there 
+ the consultants of course chuckle we are way beyond that kid '' 
+ i asked if i can take a look 
+ let this punk kid through '' said the ms consultant 
+ pretty unprofessional i thought 
+ in any event i make my way to the server reboot it and notice only one hot plug drive is flashing with drive activity 
+ raid 1 
+ i shut down the server partially slide out the drive without activity and power on 
+ boom ... a few minutes later we have a booting server 
+ i turn to the compaq guy and tell him to get a replacement drive 
+ turn to the ms guy and tell him something to the effect an nt bootable floppy would have probably got the server booted 
+ i made these <unk> look bad in front of the cfo and sysadmin got more business for my it company and was given the rest of the afternoon off 
+ so a couple years ago a local business was turned to me to <unk> a server on the advice of a local consultant 
+ when i asked the office manager why they did n't go with the consultant for the work he said that he felt like the price was <unk> and he declined 
+ fair enough i suppose 
+ so i asked him what the consultant recommended and was handed the sheet 
+ apparently this office was using local accounts on <unk> for authentication no backups and no network <unk> they used simple file sharing to share files in the office 
+ ugh 
+ so the consultant recommended a server for ad running <unk> 2008 with 20 <unk> so they had room to grow and it had volume shadow copy so if something got deleted it could be recovered easily 
+ the owner was also recommended to buy tapes for backup but he <unk> this idea saying he did n't want to have to deal with tapes ... <unk> 
+ whatever he wants to take it in the <unk> once his drives fail that 's on him 
+ then he hands me a sheet of paper with his requirements 
+ i found this odd since he is not technically capable of using his computer much less <unk> hardware requirements 
+ but lets see what he has ... 2 <unk> core <unk> 32gb ram <unk> <unk> drive with no raid ummm wat 
+ so i first ask him if he 'd rather use raid in case of drive failures nope 
+ ok then what about the machine are you planning on running virtual machines 
+ hosting your own email internally 
+ running a busy sql server 
+ nope nope and nope 
+ huh 
+ ok so i tell him that for his purposes a single <unk> core <unk> would be more than enough with 8gb of ram 
+ nope he is <unk> that it has to be that exact specs 
+ i ask him if he got those specs from the consultant 
+ nope but i know that 's what we need 
+ your money guy 
+ so i go out and spec the server with the <unk> 2008 license and <unk> print it out with an invoice for $ <unk> 
+ <unk> he flips his shit 
+ manager : so why is this so expensive 
+ <unk> : ** there 's an <unk> on there <unk> the price of everything 
+ i would n't be able to cut the price in half but i 'd be able to reduce the cost by $ <unk> if we went with a single <unk> solution with 8gb of ram which is more than enough for what you 're using it for <unk> : ** no it has to be the exact specs i stated <unk> : ** if you do n't mind me asking who gave you those specs 
+ it seems like someone at least a little familiar with it work since the specifically <unk> <unk> <unk> etc 
+ <unk> : ** look i do n't know what you 're getting at 
+ we 've already hired a consultant just do your damn job 
+ i would like to point out that this is typically where i 'd nope 
+ right out but i wanted the money so whatever 
+ i got the manager to approve the budget ordered the kit and left 
+ i get a call a week and a half later saying the order is there and asking if i could drop by to get it setup 
+ sure 
+ so i get there toss in my <unk> and start building the server 
+ get it <unk> plug in monitor mouse and keyboard and begin the <unk> install 
+ as i 'm about to grab another refill of water and hit the can the manager comes in with some kid that 's about 17 or 18 
+ <unk> : ** hey <unk> this is jeremy <unk> : ** hey jeremy what 's up 
+ <unk> : ** <unk> i 'm just coming to help 
+ <unk> : ** help with what 
+ <unk> : ** well jeremy has got software he needs to install on the server once the server is up 
+ <unk> : ** what software 
+ if it 's <unk> and was installed from the old server i can do the migration for you once i find the media 
+ <unk> : ** this is something only jeremy can do 
+ just let him know once you 're done 
+ hmmm ... <unk> 
+ whatever i do n't have time for this crap 
+ so i go around getting the names of all the employees get ad setup create accounts with default passwords for everyone and go around joining their computer to the domain 
+ there 's a few <unk> of how the new system is slower '' and why did we have to change if the old system worked '' worked huh 
+ if by worked you mean no way to remotely manage accounts easily no way to easily apply security permissions no easy way to reset a password if you forgot yours ... <unk> well of course you will have to use a password to get in 
+ so after everyone is logged into their domain accounts and the computers are on the domain i set about setting up shared network folders when jeremy comes into the closet 
+ <unk> : ** are you almost done 
+ <unk> : ** umm in a bit 
+ what did you need 
+ <unk> : ** well i wanted to get this software setup 
+ <unk> : ** what software 
+ <unk> : ** <unk> dedicated server <unk> : ** umm what 
+ are you the one that gave the manager the server specs 
+ <unk> : ** yea i went on a forum and asked this group what server stuff they had so i could get it too and host my own server i walk into the manager 's office and explain what was just told to me 
+ he told me that it was n't my <unk> and to finish the install 
+ so i go back get shares setup to match what was <unk> setup <unk> 's added the users with correct levels had users reboot and test 
+ copied all the files over after configuring <unk> 
+ i <unk> the manager and explain that it 's done but that i wo n't be offering any support to this network in the future if he 's going to let his kid host a <unk> server on the domain controller 
+ after about 15 minutes of yelling saying i 'm unprofessional and how he knows more about it than me and that a <unk> server wo n't affect the server or it 's security he begrudgingly cut me a check for my hours 
+ his number is now on my <unk> block list because fuck that 
+ edit wow 
+ front page thank you so much : <unk> yesterday since this was a somewhat popular post i decided to reach out to the consultant who referred the customer to me and ask if he ever heard from them again 
+ of course he has where else was the customer going to go <unk> 
+ anyway i know this post is getting long in the <unk> and if this should be a new posting feel free to let me know mods 
+ first thing 's first it was <unk> not <unk> he was hosting off this new server 
+ my apologies for the confusion i 've never setup a server for either so i was n't aware of the <unk> <unk> has for servers 
+ so after i left jeremy tried downloading his shiny new server software if what i 'm being told is correct it 's run through steam but anyone that has logged into a windows server with an administrative account knows that ie runs in hardened mode '' to protect <unk> admins from doing something stupid 
+ but jeremy would n't be <unk> by some geek engineers from ms oh no 
+ he went back to the forums asking how to get the software on his machine and the internet being incredibly helpful suggested he download firefox on another machine put the installer on a flash drive and plug it into the server 
+ so there was jeremy with an unrestricted browser downloading whatever he wanted 
+ oh boy 
+ and i know what you 're going to ask ... '' but what about his firewall 
+ would n't that block him '' 
+ i 'm glad you asked 
+ when the network was setup the contractor was quite <unk> about using private <unk> ip <unk> but the ladies did n't want to have to deal with <unk> vpn to rdp into their machines and could n't be bothered to change ports that <unk> to each of the workstations 
+ nope instead every machine in the office has public <unk> ip addresses 
+ this of course includes their network printer and the server 
+ oh joy 
+ and they do n't <unk> inbound or <unk> traffic in any way 
+ after a week network shares were unavailable jeremy stopped all services that the helpful <unk> forum did n't recognize ... <unk> 're gamers so they should know all things it right ... <unk> included volume shadow copy service so backups were n't being done 
+ oh and the ladies or jeremy found some way to enable c $ shares on all workstations so after jeremy started to get the scary '' <unk> virus warnings on his machine the entire office got it as well 
+ this is a real estate office so hippa does n't apply but i 'm sure there are some <unk> 
+ so my friend got called in to quote a price to fix it 
+ he said he would n't fix '' it except to <unk> and <unk> all workstations all servers and that he would n't hand over administrative credentials until a paid it staffer contacted him 
+ they politely declined 
+ i 'm guessing the manager tried my phone was told there are call <unk> in place '' and moved on 
+ either way i have securely <unk> my way out of this 
+ hello <unk> long time reader first time posting i do n't speak native english so please bear with me 
+ first of all i 'm a developer light your <unk> and <unk> your <unk> and my job is all about <unk> new business <unk> software for the company i work for 
+ here 's the deal when my team <unk> a new piece of software 
+ we like to do one week or so of help desk to get to know how the users feel about the software and what could be improved 
+ we did this the last week and it was my first time doing it 
+ i get a call from a middle management guy and as soon i pick up the phone he starts shouting : $ <unk> = angry middle manager $ me = me & gt $ <unk> : this new software is a piece of crap 
+ it broke my computer fix it now 
+ & gt $ me trying to be polite : are you sure 
+ we have been getting some feedback saying the software works great and is a really nice tool to have 
+ & gt $ <unk> still shouting : of course i 'm sure 
+ do you think i 'm stupid or what 
+ i 'm reporting you to the cto for this you incompetent 
+ this were his exact words & gt $ me : no sir i do n't think you are stupid i 'm saying that we have no errors or <unk> reported until now from the people that received the software 
+ i will go to your office to see if we can figure out what 's the problem 
+ & gt $ <unk> : get here now 
+ i ca n't waste time because of other people ignorance i have real work to do 
+ i hung up the phone head out to his office and knock on the door he tells me to come in 
+ when i entered the room it felt like going to war i was really nervous 
+ & gt $ <unk> : it 's about time you guys do something fix my computer now 
+ so i get to his computer and the first thing that hits me is that the computer is turned off 
+ so i pressed the power button and nothing happens 
+ & gt $ me : this is weird it seems your computer does n't want to turn on 
+ maybe ... & gt $ <unk> interrupts me : of course it does n't you guys broke it 
+ & gt $ me : that 's is really unlikely sir 
+ let me check something 
+ it was time to convert all the knowledge i gather from <unk> into real life so i went to check if everything is plugged in 
+ lo and behold the power cord is missing 
+ & gt $ me : sir it seems your computer does n't have a power cord do you know anything about that 
+ & gt $ <unk> : i removed it yesterday because i tripped on it when i was leaving the office 
+ & gt $ me : the computer does n't work without a power cord ... & gt $ <unk> shouting for some reason : yeah 
+ what about the battery 
+ & gt $ me : it 's a desktop it does n't have a battery 
+ & gt $ <unk> : you should tell people about that 
+ i wasted most of my day on this 
+ & gt $ me in the most soul crushing way to say it : no ... i turned my back to him and went back to my office suffering from a mild <unk> later that day i got a call from the cto 
+ the <unk> actually reported me to the cto when i was heading to his office i told him what happened we laugh about it and he says he is going to call $ <unk> to give him a word '' 
+ never heard of $ <unk> again 
+ edit : in the title it should be time '' instead of ticket '' 
+ one word 
+ edit2 : <unk> - & gt cord <unk> : oh god the errors 
+ bare with me - & gt bear with <unk> <unk> my flair is '' how should i know if it 's plugged in 
+ im not an engineer 
+ story : it started when someone said that their keyboard <unk> <unk> so i checked it out 
+ when i arrived their keyboard was already disconnected and waiting for me to take it so i brought it to my area where i plugged it in and smashed my face on it a few times not <unk> i noticed that it was working so i brought it back and asked if it was plugged in before i took it 
+ the answer i was met with was how should i know if it 's plugged in 
+ im not an engineer 
+ **edit : holy <unk> batman 
+ <unk> upvotes in 1 day 
+ ** update : user claims keyboard is still broken after showing that it <unk> sit down at my desk and search for coffee 
+ it isn’t around 
+ i’m sad 
+ a new radio sits on my desk a reward for becoming head of security 
+ not a reward i wanted 
+ i get a call 
+ its an it intern he’s helping our head of sales with her computer and apparently it’s causing trouble 
+ & gt intern : hey this lady is asking for you 
+ she says she needs the boss 
+ & gt me : okay put her on the phone 
+ & gt sales : hey airz heard about the new promotion 
+ congratulations 
+ she said this entire line with such <unk> i could hear <unk> dripping off every word 
+ & gt sales : i need you to get up here and fix this machine 
+ the tech you sent up can’t handle it 
+ & gt me : i’m sure he can 
+ put him back on 
+ & gt intern : yep im back 
+ & gt me : whats wrong with the machine 
+ & gt intern : nothing major just a hard disk error 
+ it probably needs replacing 
+ & gt me : okay pack it up and bring it down 
+ as i wonder how far i can stretch a budget for hdd that currently sits at zero i hear through the phone an argument <unk> 
+ & gt sales : you can’t take it give me the phone i want to talk to your boss 
+ we need this machine 
+ & gt intern : it needs replacing im <unk> 
+ you know what 
+ okay here 
+ i hear the phone <unk> as it passes between the two 
+ & gt sales : you need to get up here now and sort this issue out 
+ he keeps trying to take the desktop away 
+ & gt me : yes unfortunately i think it’ll need replacing 
+ it’ll be back soon though don’t worry 
+ & gt sales : no 
+ & gt me : no 
+ & gt sales : no 
+ & gt me : okay 
+ no 
+ it’ll stay as it is 
+ & gt sales : no 
+ you get up here and fix it 
+ i look out over the department 
+ i see other techs doing work 
+ i feel bad for the intern who’s at sales dealing with this lady 
+ i give in 
+ & gt me : fine 
+ ill be up in a sec 
+ i get up to the floor 
+ i can see intern looking glad to see me i send him back downstairs with a smile and an order for coffee 
+ i sit at the computer 
+ the hdd is corrupted 
+ & gt me : this computer will have to come with me i’m afraid 
+ & gt sales : no it stays 
+ & gt me : i can’t fix it here 
+ & gt sales : you’ll stay here till its fixed 
+ & gt me : no 
+ & gt sales : im going to call the vp 
+ & gt me : okay 
+ we waited around till the vp arrived he gave me a big smile 
+ i knew he <unk> the feet of sales however 
+ its where the money comes from 
+ & gt vp : it does seem like you’ll have to fix it here 
+ i must insist 
+ i sigh and look around for any coffee 
+ there wasn’t any 
+ im getting out my screwdrivers and staring intently at the back of the vp’s head 
+ it didn’t explode 
+ i was sad 
+ it was at this point that my radio <unk> to life 
+ & gt radio : all security please report to main desk immediately 
+ i smile <unk> across my features 
+ & gt me : oh dear 
+ im afraid i have to go… security head and all 
+ turns out security had been given a box of <unk> 
+ i took one 
+ it was nice 
+ perks of the job i guess 
+ next old stories one two three four five six seven eight i used to work helpdesk for a 200 plus organisation in west london 
+ the company was spread across three sites and this was in the days before teamviewer etc so i actually lost weight during the two years i worked there 
+ anyway one day we get a ticket from someone at the site half a mile up the road saying my mouse has got reversed '' 
+ i immediately thought someone had got into the control panel and reversed the <unk> mouse clicks for a joke 
+ i tried to talk him through fixing it on the phone but it was clearly beyond his <unk> so i put my coat on and stepped out into a wet <unk> 
+ when i got there i looked at the laptop and saw that the mouse buttons had not been reversed 
+ i pointed this out and the guy said 
+ oh no it 's not the clicks it 's the mouse itself 
+ it 's on the wrong side '' 
+ it used to be here '' he indicated the left side of his <unk> '' and now it 's here '' he indicated the right 
+ someone had used his machine and put the mouse on the right hand side and he had raised a ticket to have it come out and pick the mouse up and put it back where it was before 
+ i did it <unk> and walked away 
+ not even a thank you '' 
+ <unk> # define <unk> <unk> <unk> # define <unk> <unk> i work in a very <unk> industry and so the office ends up being closed <unk> months out of the year 
+ and opening the office after months of <unk> can sometimes be an <unk> 
+ server and computer software and hardware to update 
+ what have you 
+ the fun comes when we start trying to print out reports when the printer starts beeping <unk> 
+ responding to the cry i went to check the printer out 
+ not saying it 's out of paper 
+ not saying it 's out of toner 
+ a jam 
+ and then i open the paper drawer to horror 
+ during the months the office had been closed <unk> decided that the paper would <unk> their <unk> as well as wood would and had turned the ream that had been left in the printer into their nest 
+ & gt **me : ** boss 
+ printer 's bugged 
+ help me clean it out '' 
+ & gt **boss : ** wait what 
+ oh @ # * $ <unk> % '' 
+ edit : after cleaning the printer worked just fine and never gives any problems 
+ normal alerts for being out of toner or paper are not problems 
+ <unk> dr : <unk> like paper raid is n't just for hard <unk> work as senior tech staff at a telco and a few days ago got a call from a dispatch manager asking me to call a field tech who could n't activate several cable boxes while out on the road 
+ rather unusual unless there 's a problem with the tool itself this is usually resolved by frontline staff 
+ & gt bytewave : this is bytewave from tsss 
+ a dispatch manager asked us to get in touch regarding <unk> activation issues out in the field '' 
+ & gt roadtech : oh thank god 
+ yeah i need a full test <unk> profile on a cable box and i 'm in the middle of nowhere and my tool is n't working 
+ i tried calling both dispatch and tech frontline - twice - but they could n't figure why and neither can <unk> i 'm going through the wireless provisioning software as usual 
+ tried three different boxes 
+ put in the mac addresses as usual this one is <unk> 
+ they all gave me a <unk> error no specific error code 
+ can you tell me why it 's not working 
+ the ticket software does n't say there 's any provisioning issues right now ... '' the system he 's trying to use is pretty simple 
+ generally not something we use much as devices are usually <unk> 
+ since he gave me the mac address of his cable box i could have activated it for him in ten seconds on my end but i wanted to figure out why he was getting errors first though 
+ ran a quick check and there were no obvious reasons why it should n't be possible for him to activate this box remotely 
+ the system that allows field techs to do that on the road uses our mobile network to ensure that even if there 's no physical access to the cable network a tech out there with nothing but his phone can put a valid profile on any modem or <unk> box stored in their truck remotely 
+ it 's handy and simple 
+ you plug the device in your truck 's wireless system put in your employee id in a portal your truck 's id the device 's mac address or serial number and boom you have whatever profile you select from a basic cable package to a unlimited test profile 
+ there 's very little that can go wrong besides the box being unauthorized on the network clearly not the case after three different tries or putting in the wrong data 
+ & gt bytewave : okay i can confirm there 's no issue with the tool you 're using just ran a quick test 
+ clearly you have wireless coverage otherwise you would n't have even gotten to the screen where the system lets you input device data 
+ and i 'm going to assume you did n't <unk> macs and <unk> three times in a row and that you know your employee number '' 
+ & gt roadtech : yes obviously 
+ which is why nobody can figure out what 's wrong out here '' 
+ & gt bytewave : that leaves us with the truck number being the only option left 
+ you sure you typed it right '' 
+ & gt roadtech : yes of course 
+ i double checked 
+ and you know we use license plate numbers for this right 
+ pretty hard to get it wrong 
+ but in case you need it this truck has <unk> <unk> <unk> <unk> '' 
+ ... every and each of our trucks out there is remotely <unk> with tools escalation staff has unless somebody physically remove their gps 
+ so i ran a quick <unk> on the plate just to make sure it 's comms were working fine 
+ they were 
+ it 's in downtown <unk> everything looks green 
+ except ... there 's no reason to try and provision equipment over wireless if you 're literally standing 25 meters away from a key headend and tech depot ... & gt bytewave : uhh please confirm your location '' 
+ & gt roadtech : <unk> out north of <unk> east <unk> the ... '' ... oh ffs 
+ & gt bytewave : you 're typing in the wrong license plate 
+ that 's why the system is <unk> your requests 
+ no modem or cable box in the truck will be <unk> unless you know what plate number it 's <unk> to have 
+ the truck which <unk> to have this plate is in downtown <unk> according to gps data 
+ i 'm provisioning the mac you gave me right now 
+ as soon as you 're done with your job drive to the nearest depot and call dispatch 
+ and you probably should n't speed because right now i 'm <unk> the insurance papers in the glove <unk> do not match the <unk> on your truck '' 
+ & gt roadtech : ... 
+ <unk> ... 
+ uh thanks 
+ but how the hell did this happen '' 
+ & gt bytewave : you 'll have to sort that out on your end 
+ do let me know if you find out '' 
+ tl : dr : road tech out there could n't remotely activate cable boxes because the system that allows them to do so ties each box to a truck 's license plate and the <unk> physically present on his truck were supposed to be on a different company truck <unk> hundreds of <unk> from there 
+ all of bytewave 's tales on tfts 
+ after the <unk> success of my last story i thought i 'd share another one from a couple of years ago 
+ it 's a bit unusual for this sub but i think it still fits 
+ i was out on the town with some friends one night and we were about to head home 
+ we all got in the car the driver turned the key and ... nothing 
+ not even the normal dash lights the thing was completely dead 
+ praying it was n't the battery we got out and popped the hood 
+ now i know quite a bit about computers 
+ i know almost nothing about cars 
+ normally in this situation i 'd be happy to step back and let someone else figure it out 
+ however it quickly became clear that everyone else in the group was equally clueless 
+ <unk> <unk> i thought <unk> 's put our heads together and see if we can think this through 
+ it has to be an electrical problem right 
+ so the logical place to start is the fuse box 
+ * i found the fuse box and <unk> of neatly arranged and <unk> labeled <unk> greeted me 
+ my years of <unk> ram <unk> cables and blowing on <unk> cartridges told me the proper course of action was to pull each one out and put it back in 
+ what have i got to lose 
+ either it works and i 'm a hero magician or it does n't and we 're no more stuck than before 
+ five minutes later we get back in it turns over like nothing happened and i get high <unk> all <unk> years ago i had a user decide it would be a good idea to play games at work specifically world of warcraft 
+ when he played at work it created a few security <unk> that made the network send me lots of e-mails 
+ during my employment there several <unk> home computers became a thing for certain members of management 
+ the guy was n't too <unk> savvy himself and i 'm pretty sure he used a home computer to do it but i do n't know exactly how he installed wow as he would n't tell me saying <unk> you do n't deserve your job if you cant figure it out 
+ he kept yelling and sending me pretty nasty e-mails 
+ after talking to higher management about what happened and forwarding them the e-mails they literally said & gt '' well he does n't deserve his job if he is n't going to work do us the favor of telling him <unk> fired '' 
+ & gt '' r -- really '' 
+ & gt '' yeah '' 
+ my next e-mail to the guy was hey i 'm being told to fire you '' 
+ he replied you cant do that 
+ i 'm <unk> you '' 
+ i replied not anymore i 'll be down to your office shortly to take all the electronic equipment '' 
+ to make a long story short he was escorted out he broke his laptop at home as he did n't have it at work and he kept telling me i was the one who was <unk> fired not him 
+ all while security was forcing him out 
+ i was later told that i was to inform everyone in the next meeting that they would be fired for intentionally violating policy 's surrounding computer security and that i would be the one to send the <unk> the phone call 
+ i did n't enjoy firing anyone else which was only one other person 
+ i got a very small raise out of it because i was super polite to him not sarcastically so the entire time 
+ undoubtedly my most <unk> day at work ever 
+ it felt like justice was served 
+ as stated in an earlier post i work for a company that issues <unk> to employees who have no business being issued a blackberry 
+ here is another fine example why 
+ *ring ring ring ring 
+ * **me -** this is the robot i know more than you 
+ what did you break 
+ **luser -** my blackberry is n't loading the screen when i push the power button anymore 
+ **me -** does it do anything or does not even power on anymore 
+ **luser -** it powers on but then it just shows a red screen forever 
+ **me -** when did this start happening 
+ **luser -** after i pulled the battery out 
+ **me -** why did you pull out the battery 
+ **luser -** it started to erase everything and i did n't want it to 
+ **me -** hang on let me start piecing this together to make sure i understand 
+ were you trying to enter your password to unlock the device 
+ **luser -** yes 
+ **me -** did you get a message that you were entering the incorrect password and were now on your last attempt 
+ **luser -** yes but i was entering the correct ... **me -** <unk> <unk> <unk> 
+ did you try to enter the password on the last attempt after being warned that your data would be <unk> on the last failed attempt 
+ **luser -** yes 
+ **me -** did the device start to wipe your data 
+ **luser -** yes 
+ **me -** did you then proceed to remove the battery despite the message on the screen that said warning do not power off device or remove the battery during security wipe '' 
+ **luser -** yes i did n't want it to wipe my data 
+ did that mess it up 
+ congratulations on your new device 
+ -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- i wrote this while on an hour long call this morning 
+ it 's not art but i amused myself 
+ the guys at work thought it was worth sharing 
+ so i share 
+ enjoy 
+ edit : holy crap wow 
+ thanks all 
+ -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- look 
+ you 're in a hole 
+ i do not know if you fell or jumped in the hole 
+ i 'm not here to judge 
+ and i honestly do n't care i do know these things 
+ i did not dig the hole 
+ you do not want to be in the hole 
+ i responded to your <unk> for help 
+ i have a ladder 
+ if you do not like this ladder i can not help that 
+ it 's not my ladder personally so no offense taken 
+ if you want i can try and find another ladder 
+ but it will take time if you do n't want this particular ladder 
+ it makes little difference to me 
+ i 'm not the one in the hole 
+ i 'd like to help you out of the hole 
+ however it is ultimately on you 
+ but i 'll help you however i can as best i can until you are out of the hole 
+ all i ask really is that you just stop fucking <unk> weeks ago the hr manager asked me if i could do a favour for her 
+ they had got all of the <unk> or so staff records scanned by an external company who had given them back a folder with named .pdf files all of these files are in different folders about 7 or so per folder 
+ moving all of them by hand is going to take a very long time so could i write a program to do it automatically 
+ each file is named with the users name they have staff folders in the hr network share named the same as the staff name 
+ the mission : move all the pdf files into their <unk> folder 
+ i request access to the folder to work on it from group it 
+ two weeks later i follow it up after getting no response 
+ a couple of days later i email the team leader over there to ask what is happening no response 
+ eventually i get a garbled response from group asking for <unk> i point them to the hr manager 's email further up the chain 
+ nothing happens 
+ by this point the hr manager is getting a bit annoyed at waiting so i write the code to move the files test it and try and find a time when i can go to her desk and run it to move the files 
+ finding a time that she is free takes another two days 
+ eventually we manage to find a time to do it and i go across run the application and successfully move about half the files 
+ hr managers immediate response was what can you do about the rest of the files 
+ why ca n't you move the rest '' 
+ i had to explain that the program is only going to get the files that are named exactly it will also not <unk> any file with the same name because these files are very important and i 'm not taking any <unk> 
+ the rest of the files will have to me moved manually and i do n't have the time to do that 
+ all the rest of the files did not move because they either had a same named file in the <unk> folder already the staff had left or the file had been named incorrectly by hr 
+ i have now spent : 3 hours chasing group to follow process try and get access officially at least 3-4 hours in meetings with different people to try and get the actual requirements and full file paths 2 hours coding and debugging 1 hour explaining why the program does what it does and why after all that i get in to have to explain to my boss why there is now a complaint about me only doing half a job 
+ this was me going well outside my job description doing you a favour and saving you hours of manual <unk> hell 
+ no thanks just complaints 
+ was reading this pair of <unk> and was reminded of a story that happened years ago when i was attending a global game jam event in my town 
+ for the <unk> you show up on friday evening make a team of several people they give you a topic and you got 48 hours to make a game then present it to everyone 
+ so sunday evening rolled around and all the teams were getting their stuff ready 
+ the guys who were up first all <unk> around the projector and were taking their sweet times setting up 
+ apparently nobody thought to bring an hdmi cable 
+ not just these guys almost nobody in the entire building - <unk> and <unk> <unk> - brought an hdmi cable 
+ as if by miracle one of the guys on my team let 's call him frank was there to save the day 
+ he groaned <unk> and sighed then produced a spare cable he had packed along with his laptop 
+ it 's a good thing computers do n't get <unk> because that cable got passed around an obscene amount that night 
+ that was not the end of it though 
+ most of the guys doing their presentations had various problems - their game would crash or refuse to load the resolution would be fucked up the sound stops for no reason etc 
+ frank had the brilliant idea of <unk> our game instead of doing it live and our own presentation went off without a hitch 
+ throughout the whole thing he kept repeating the mantra in the tl dr **tl dr : do not anger the demo gods their fury is swift and <unk> back <unk> the phones as tech senior staff at my telco i got a panicked escalation call from a field tech who had to <unk> as per protocol as he had been threatened with <unk> for trying to gain access to a <unk> to disconnect service to a non-paying customer 
+ of course we can remotely kill any cable boxes modems and cellphones but we still got ta send a guy out to disconnect your analog cable access physically as it can almost never be done remotely except in huge towers with special panels 
+ we err on the safe side when it comes to threats to employees you do n't exactly need to point a gun in our techs faces for them to go away and leave your analog alone a strong 'no a closed fist and a death stare will get them to <unk> and return with 6 cops later 
+ but in this case the tech was slightly shaken the non-paying customer had been <unk> aggressive 
+ normally recoveries handle these situations but it was outside their office hours and as the only senior <unk> department tsss <unk> a few <unk> 're in charge of this random mess now calls like this now and then 
+ only thing surprising was that the house 's <unk> and <unk> were still online despite a clear disconnect order something i was able to <unk> in seconds with the kill list 
+ in <unk> the explanation why will seem quite obvious below & gt bytewave : okay do n't worry we 're handling it 
+ you seem pretty shook up - i recommend once we 're done you give a quick call to the emergency employee hotline just in case get everything written down and sent to the health & amp safety board as a <unk> 
+ they will <unk> hear all about how you feel and recommend options if you wish 
+ as for this address do n't worry i 'm on it 
+ i ca n't disconnect analog remotely but they 're not going to be browsing reddit after treating you like that 
+ <unk> place is now on the kill list 
+ ** '' the <unk> list is simply the top tool we had to deny service to customers who we determine should never be in business with us ever again 
+ it scraps provisioning of every digital device in a file of course faster than we could through the standard process but most importantly it scans everything we know about the account the customer and the potential all the way down to who has been listed as authorized to the account what email addresses they used mother <unk> names <unk> security questions competition profiles and more - then adds all the data deemed relevant to a special list that makes it quite likely any new attempt to register a new account with us under a false name will get picked up by an <unk> which <unk> who you truly are and <unk> a full profile to recoveries and then black marks to credit rating agencies if <unk> 
+ its the best tool we have to keep disconnected customers from lying and getting a clean <unk> and when our recoveries department is closed senior tech support often has to make these calls 
+ the original name was intended to mean <unk> 're dead to us now 
+ the tech felt <unk> and happier and i thought the matter closed 
+ everyone working the field or tech support knew what the kill list was and what it meant 
+ he knew techs would go back there <unk> by 6 cops in a few days to disconnect the analog line by force if necessary and that this customer would never again have an account with us 
+ all ought to be well matter closed 
+ except for one thing 
+ though i had no way to guess or know that this house turned out to be under some kind of surveillance by <unk> of some kind 
+ perhaps it was city police <unk> <unk> a <unk> us <unk> on foreign <unk> i do n't know 
+ the single point of contact for them with the telco is a department known as internal security in my tales whose primary tasks are to make anything happen if you have a warrant while largely ignoring a flood of <unk> claims that almost inevitably reference the <unk> even though we 're in canada 
+ is is also a fellow union department and we quietly share <unk> about most things except truly sensitive details 
+ but unlike techs is had no idea what the <unk> list was there are too many tools for everyone to track of - and nobody has access to them all 
+ one day i got to work and there was an alert from internal it that the kill list had been <unk> to <unk> <unk> tool and that there were no <unk> <unk> but that employees were to use the new <unk> from now on 
+ it had a whole new skin and logo within the hour 
+ i shrugged it off typical <unk> nonsense they shuffle names around sometimes even if its rare for <unk> tools 
+ month later downstairs an is friend of mine tells me about what happened once it was a fully closed matter 
+ & gt is : so yeah back then we got a priority call from the <unk> with paperwork in order - wo n't say which exactly - and they said we were then technically failing to comply with a live warrant and to fix service to that location at all costs by yesterday '' 
+ ... & gt is : so i went to have a look at all the tickets about that place and since they were n't all that clear i listened to a call between you and some field guy 
+ i decided to <unk> verbatim what you said 
+ but the guy panicked a tad even after i added some context about how it 's certainly something more mundane than it sounds and how we do n't have any <unk> of hired <unk> that go around <unk> terrible customers 
+ had to let him listen to the recording 
+ then he put me on hold for half an hour '' 
+ i might have been sweating had i heard that in a timely fashion but it was a month after the tool was <unk> and nothing had been said to me so i knew it was a big misunderstanding 
+ i explained what the <unk> list / <unk> is to him and he laughed his ass off 
+ & gt is : no i swear to you they took it that seriously 
+ i tried my best to <unk> it but cya is strong when you have a badge too 
+ i was told once he finally came back on the line <unk> is no longer a matter which will be handled at our level i have to send this <unk> 
+ someone with a really good suit will get a call from someone else here later tonight 
+ i argued it was already well past business hours but it still happened anyway 
+ the next day at dawn 's light we got the same email you did from systems <unk> the kill list to <unk> a month ago '' 
+ i was chuckling pretty hard it meant an <unk> in law enforcement woke up one of our <unk> in the middle of the night to discuss whether or not our telco was operating a <unk> list and what it meant - and that said upper manager then spent part of the night ensuring we immediately <unk> a tool to deal with the confusion 
+ all of bytewave 's tales on tfts 
+ tl : dr - a <unk> tool meant to ensure we can internally shut down end-user modems and <unk> really quickly in a <unk> scared law enforcement into <unk> up key upper management 
+ to make sure our telco was n't running a shady program on the <unk> to <unk> out our worst customers or anything of the <unk> supported remote sites including <unk> <unk> 
+ one of them called and stated the network goes out every day at exactly the same time 
+ it comes back after about an hour '' 
+ the <unk> get all their connectivity from a <unk> satellite dish on a <unk> 
+ all their it stuff is contained on that <unk> for portability and ease of use by <unk> <unk> 
+ this seems odd but he called at <unk> so i troubleshoot a few things and watch his connection 
+ at <unk> exactly it went offline 
+ no warning nothing 
+ just gone 
+ the phone is voip so i lose him too 
+ an hour later he calls back and everything tests perfectly 
+ he <unk> me that they do not lose power all his boxes have the right <unk> lights 
+ i ask him to call back tomorrow i want to see it again and prepare tests 
+ he does and all tests show it offline and at his end 
+ a cell call from the <unk> manager <unk> that the site is dead and it is always down '' 
+ so i load up the company pickup with tools and spare parts and start the long <unk> out to the <unk> site 
+ i time it to arrive at 2pm and give me time to test check and try to find the culprit while still <unk> the outage if nothing turns up 
+ it is all good everything is in perfect condition 
+ then promptly at <unk> as he does every day the <unk> manager pulls up and <unk> his pickup right in front of the satellite <unk> the holiday i was visiting some family out of state which includes my <unk> <unk> that i rarely get to see 
+ being a baby in the year 2014 she has many toys that light up talk <unk> and move and/or dance 
+ one of these toys is a stuffed <unk> with buttons in the hands feet belly etc 
+ when turned on it says let 's <unk> and play '' 
+ when turned off bye bye '' 
+ one afternoon we 're sitting around watching tv when i start hearing ... let 's <unk> and play '' 
+ short pause bye bye '' 
+ let 's <unk> and play '' 
+ short pause bye bye '' 
+ ... in a continuous loop 
+ i look over and there 's my <unk> turning on her toy pressing a different foot and getting no sound then turning it off and back on again 
+ i was so proud i almost cried 
+ <unk> for <unk> support at a large <unk> : a user was having problems with her laptop shutting down randomly 
+ i assumed it may be a <unk> battery as we had seen a few of those from a past batch of laptops 
+ i asked her if it was plugged in 
+ is what plugged in '' 
+ she said 
+ is the <unk> plugged in '' i replied 
+ after a long pause she responded how do i determine if it is plugged in 
+ as the <unk> touched down with an audible <unk> i couldn’t help but feel the <unk> of my life changing 
+ <unk> had <unk> into my mind even as i tried to force it down 
+ i had accepted a job to help a company <unk> a new <unk> system 
+ i remembered the words of my boss as i left my home country <unk> cares that you don’t speak the language confidence talks 
+ you’ve got <unk> 
+ internally i questioned my ability to lead a team i’d never met in the deployment of software i had never even heard of before 
+ i decided to just shake if off as the famous song goes 
+ * whilst simultaneously questioning the <unk> of advice from a pop song * luckily my home company had supplied its own <unk> for the trip my boss seemed to suspicious of the entire deal so this was his attempt at getting another man in play 
+ the <unk> waited for me as i exited the terminal she was a tall professional looking woman who <unk> drove me to the office we’d be working at 
+ i tried pleasantries but eventually i had to get down to business 
+ & gt me : so what are we working on 
+ just the roll out of this database 
+ & gt <unk> : i am sorry mr. airz 
+ i do not know 
+ remember i work for you this is my first day as well 
+ i slumped in my chair as we arrived at a soviet inspired <unk> office block 
+ a man with a <unk> smile ran to the door and opened it 
+ his <unk> seemed to contrast nicely with his <unk> in what i can only assume was a <unk> 
+ & gt <unk> : mr. airz you’ve arrived 
+ & gt me : you <unk> 
+ <unk> gave me a big smile 
+ he opened his arms wide for a <unk> 
+ & gt <unk> : but of course 
+ although the others are a little <unk> 
+ <unk> waved me inside eager to give me a tour of the <unk> 
+ in all honestly it was just one massive <unk> slab of a building every floor was the same 
+ <unk> eventually started to explain what i had <unk> all this way for 
+ & gt <unk> : we’re doing a national roll out 
+ all at once 
+ swiftly like a <unk> 
+ you’re here to make sure it all runs <unk> 
+ as he said the word smoothly he gestured his hands <unk> as if feeling the word 
+ & gt me : and what exactly are you rolling <unk> & gt <unk> : it’s the <unk> of this office 
+ we built it from scratch 
+ i’m <unk> well … they tell me it works <unk> 
+ would you like a <unk> 
+ <unk> introduced me to the entire team that had been working on the project 
+ i asked them to show me the database which a young worker <unk> did after <unk> 
+ he produced a web form which you would fill our with various details then showed off the <unk> <unk> data seemingly correctly 
+ & gt me : so it’s just getting roll out to the areas that need new terminals a quick lesson with how to use the forms for query and logging new data and… easy money i thought 
+ as i smiled at the team assembled 
+ as soon as they saw the smile they seemed to all <unk> relax some even sat back down and stopped paying attention 
+ & gt <unk> : that’s all it is… so how long 
+ & gt me : how… er… long 
+ the question seemed to come out of nowhere 
+ & gt <unk> : two weeks 
+ & gt me : well how many people are we teaching 
+ how many users do we roll out too 
+ whats the server situation 
+ & gt <unk> : i’m afraid those questions are bit too technical for me 
+ i leave the details to you 
+ <unk> walked away seemingly unconcerned with the fate of “the <unk> of his <unk> 
+ the team assembled was a <unk> of various people none of whom seemed to be currently doing actual work 
+ i looked around for direction it took me about a minute to <unk> i was here to direct <unk> 
+ i decided i’d get a better <unk> with the system they’d developed 
+ i walked over to the same young worker as before and got him to show me the program some <unk> the <unk> had to translate <unk> 
+ i wondered what <unk> meant by a bit rough with my language when he clearly meant to say they’d none 
+ after getting a general overview i decided to <unk> a little more closely 
+ & gt me : show me the feature *you* worked specifically worked on 
+ & gt <unk> through <unk> : my feature 
+ age <unk> 
+ updates automatically 
+ <unk> through a translator seemed to be talking very excitedly and <unk> about his feature however <unk> didn’t seem to bother <unk> 
+ & gt <unk> : he’s saying how he’s even included days in the <unk> 
+ something about on your birthday it will update 
+ i thought the phase <unk> <unk> was an odd one for a translator to use 
+ surely you’d know 
+ i decided to just leave it and look at the code more carefully 
+ it seemed to take the date of birth and calculate the age 
+ & gt me : can i see your test data so i can pick a name for a <unk> 
+ after a few moments of <unk> <unk> finally seemed to understand 
+ i was fairly sure the code looked solid 
+ it wasn’t until <unk> pressed a freshly printed sheet into my hands that i started getting worried 
+ i must have frowned because <unk> started pointing at various names on the single sheet of paper 
+ & gt <unk> : he says this is the test data 
+ which one do you want to check 
+ & gt me : this paper has five names on it 
+ the <unk> looked at me oddly but dutifully translated the message 
+ & gt <unk> : he doesn’t seem to understand 
+ he wants you to pick a name to test the code 
+ & gt me : ask him if this is all the names in the test data 
+ & gt <unk> : he says yes 
+ thats the test data 
+ my internal <unk> was <unk> up slowly like a <unk> train gathering speed and much like a <unk> train i could do nothing to stop it 
+ <unk> seemed to be frantically tapping at his keyboard providing proof that all five names did <unk> work 
+ seemingly declaring to the entire office his success 
+ & gt me : when this rolls out how many customers will be on it 
+ <unk> said a number 
+ that number was not 5. in fact it was a multiple quite a lot larger then five 
+ & gt me : okay tell everyone we’re <unk> all the code with at least that many customers 
+ there was a general <unk> nothing you could pinpoint on a single individual just a bunch of voices whispering 
+ & gt <unk> : they’re saying if it works for five six and seven data points it will work for a million 
+ & gt me : will it 
+ after the <unk> translated that phrase everyone seemed to stop whispering 
+ i ordered new test data be made up orders of magnitude larger then the <unk> 5 
+ & gt <unk> : they’re complaining it’ll take days or weeks to input that much data 
+ & gt me : it’s made up <unk> data 
+ should take minutes 
+ blank stares were thrown around the room 
+ & gt me : google it 
+ apparently those words do not need <unk> as soon as i’d <unk> the words they all seemed to turn to there terminals and start typing 
+ i decided to let them get on with it and made it to the break room for a coffee 
+ ***** whilst trying to <unk> the coffee machine into making something that didn’t <unk> black <unk> i was <unk> by a man inexplicably holding a plate 
+ & gt plate : new man 
+ & gt me : <unk> plate smiled at my <unk> and watched as i attempted to beat the coffee maker into submission 
+ & gt plate : new guy you must come to a party this weekend 
+ & gt me : i errr… have other plans 
+ personally i loved the phrase <unk> <unk> 
+ it could literally mean anything in this case it meant anything <unk> <unk> 
+ & gt plate : this is okay 
+ we party friday 
+ friday is a good day no 
+ what do you say to that 
+ no 
+ yes 
+ & gt me : the coffee machine do you know how to get it to work 
+ & gt plate : coffee 
+ no 
+ friday 
+ yes 
+ & gt me : sorry who are you 
+ he seemed very <unk> 
+ & gt plate : you me we’re the same 
+ you <unk> 
+ i <unk> 
+ we go like brothers into the night would be… 
+ <unk> 
+ i wasn’t sure <unk> 
+ or… 
+ he didn’t <unk> but… 
+ in my confused state i decided to go back to the computers without answering 
+ ***** a few hours later the team had managed to <unk> some data <unk> hit the enter key to test the data 
+ the computer froze then hung then crashed 
+ we checked the server 
+ it had hung 
+ it had crashed 
+ a few minutes later <unk> managed to arrive as if summoned by some force 
+ he wore and <unk> smile as if completely <unk> the situation however all the workers seemed to be smiling now with him 
+ & gt me : i’m afraid you aren’t ready for roll out yet 
+ you’ve got to do a whole bunch of testing and bug fixing 
+ & gt <unk> : you’ve two weeks 
+ a few of the programmers started to subtly whisper at <unk> 
+ to be honest it wasn’t exactly subtle but they seemed to want to all avoid eye contact with me 
+ <unk> was still smiling even after i’d told him two weeks wasn’t enough 
+ & gt <unk> : go back to your hotel you’ve had a long flight over here and a long day 
+ go <unk> i couldn’t be bothered to fight it 
+ i walked away 
+ the whispering between the <unk> and <unk> only seemed to get louder as i left 
+ my <unk> <unk> to catch up with me 
+ & gt <unk> : they’re saying you broke the code 
+ one of them said you’d given them a virus 
+ & gt me : wha.. but i… my head had filled with rage 
+ i’d almost completely turned around when the <unk> grabbed my arm firmly and walked me out the door to the car 
+ & gt <unk> : no 
+ dont 
+ you won’t win like that 
+ & gt me : but they’re <unk> 
+ they know nothing about database <unk> 
+ & gt <unk> : just get in the car 
+ ***** ***** thanks for all the emails while i was <unk> <unk> my <unk> <unk> 
+ they really helped me get back to writing 
+ as senior tech staff at my telco part of my job description is having to review frontline technical performance whenever management asks me to 
+ that usually means sitting down for an entire day listening to the recorded calls of a tech with <unk> performance and then taking an hour to write a <unk> of their <unk> and <unk> 
+ my analysis is then used to prepare a training plan to help get them up to speed 
+ in extreme cases if a union employee fails to improve after training they 're <unk> to what we call an <unk> position 
+ formally it 's called <unk> <unk> under our work contract 
+ a <unk> union job where they keep their pay but might be required to do nothing but sort mail all day long because they can no longer do what they were hired for 
+ it means you 're a lost cause and your boss hates you but you get to keep a job because we have a strong union - not an <unk> situation to say the least 
+ the work contract clause about this was meant to give an out to <unk> older employees who have trouble <unk> to major technological changes 
+ but management sees the whole thing as a <unk> to get rid of employees they no longer want 
+ any employee forced into an <unk> position no longer falls under their budget and they can easily blame it on the work contract - almost as good as being able to fire them 
+ & gt frontline manager : i 'd like you to review a frontline union tech 's calls and send me a report 
+ name 's <unk> 
+ emailed you a time range and general metrics it <unk> that he 's <unk> below average performance 
+ we tried already to give him additional training and things have not improved 
+ takes less than three calls per hour even though we expect six 
+ does n't seem like bad faith on his part so we think it 's just incompetence 
+ we 're considering mandatory <unk> at this point and the union has been notified that unless we witness improvements after whatever measures you recommend we 're going there '' 
+ i knew who he was talking about <unk> <unk> is an uncommon name these days 
+ pretty damn decent tech as far as i knew so it seemed odd he got to the point where they considered mandatory <unk> 
+ either way writing up a report about any employee 's performance falls under my job description - and a day listening to someone else 's calls is nothing to <unk> at 
+ & gt bytewave : sure thing 
+ i can take friday off to listen to his calls 
+ expect a report by end of business week '' 
+ the performance data that the manager sent me was minimal but i had full recordings at least 
+ so come friday i listened to max calls for an entire day 
+ he was outstanding 
+ he was able to solve difficult problems without unnecessary escalations 
+ i listened to a call where he swiftly dealt with a major mobile <unk> issue that could have had some techs in my own department tsss <unk> 
+ there 's no way this guy only takes three calls an hour on average so i started digging 
+ according to all recordings and tickets max was a <unk> employee 
+ of all the times i 've been asked to do a full review of a frontline tech 's performance this one was downright ridiculous and entirely <unk> 
+ so i wrote him a glowing review and even threw in that given enough seniority i believed he might be <unk> tsss material too 
+ formally added that the metrics mailed to me did not match the quality of calls i listened to at all and that i was recommending no additional training measures 
+ come monday i was hastily summoned to a meeting with my manager and <unk> 's manager 
+ and a union steward was called in too - usually that means they are going to <unk> you of something serious and want to follow protocol in case there 's a grievance 
+ max manager looked like he was about to hand me a letter of reprimand 
+ my boss looked like he was annoyed to have to attend a useless impromptu meeting 
+ & gt frontline manager : please first tell us on record what <unk> if any you have with frontline tech employee <unk> <unk> '' 
+ ... by then i could tell something went seriously wrong but when i do n't know what i just go through the <unk> until i figure it out 
+ & gt bytewave : formal professional relationship only 
+ as tsss i help him on recorded lines whenever he needs our team 's assistance 
+ i sometimes have mild <unk> with him in formal break rooms and at office parties 
+ outside these settings no contact whatsoever 
+ now unless i 'm told what the hell this is about i might walk out with the stew for union advisory and we 'll resume in an hour with max in <unk> '' 
+ the manager seemed taken aback and confused 
+ but he kept <unk> & gt frontline manager : i guess you 're allowed but the statistics do n't lie 
+ this guy has a hard time taking three calls an hour under half of average 
+ your whole review <unk> over that and we paid you for a full day for this '' 
+ & gt bytewave : as i 'm well aware 
+ i 've listened to all calls in the time range you asked me to and looked at your metrics 
+ i said they do n't match - in writing 
+ cc 'd to my boss here and everybody involved in his training plan 
+ i stand by that '' 
+ & gt frontline manager accusatory tone : exactly you sent that to everybody without explaining the discrepancy '' 
+ & gt bytewave : as i was supposed to 
+ i did n't file your team 's <unk> either 
+ that would be entirely outside the mandate and.. '' & gt union steward : .. outside his job description 
+ i read his report it 's complete and exceptionally professional 
+ anything more would be grounds for a grievance over a union employee being ordered to do managerial work without union authorization 
+ tsss is only allowed to review technical expertise not metrics '' 
+ the stew was right but truth to be told i still had no knowledge of what went wrong - did n't have the data to figure it out yet 
+ just knew the calls i listened to for an entire day did not match at all that of a <unk> employee 
+ this much i was certain of so i kept a calm face as usual but i was more than mildly annoyed to be put on the spot like this for no valid reason whatsoever 
+ the frontline manager started to sweat 
+ the steward had noticed too so i decided to press the advantage 
+ & gt bytewave : given the tone this far unless this <unk> is over perhaps it would be proper for the union to order we continue this under a full disciplinary board '' 
+ while that might seem like a bad thing whenever a manager is <unk> this is one of our <unk> tools 
+ according to our work contract whenever either party demands it it simply means two managers two union stewards and all parties concerned and respective lawyers if parties believe it 's <unk> have to get in a room and fully discuss differences with recordings <unk> in arbitration 
+ it 's a step up over filing a grievance 
+ previously featured in a tale about listening to the wrong music if a manager is in the wrong it gets them in hot water really quickly to have it put on formal record as their powerful legal department reviews full recordings of each instance 
+ the frontline manager 's sweating intensified 
+ the union stew was just about to call it as i <unk> 
+ then my boss who had been sitting there quietly finally spoke up 
+ & gt my manager : this meeting is more than over 
+ from now on i want all requests to my team for frontline personnel performance reviews to be <unk> <unk> through me 
+ i will be reviewing them directly 
+ floor director will be notified in writing by noon 
+ thank you for your time '' 
+ no manager below <unk> is as powerful on support floors than the ones in charge of either senior staff teams even though officially <unk> managers are all equal 
+ could have ended there 
+ but i 'm never happy unless i know what really happened 
+ & gt bytewave : it 's not quite over not after this 
+ i want the whole file you have on this employee full detailed metrics included cc 'd to the union too 
+ we 'll get to the bottom of this and figure out who screwed up and why cause it sure was n't me and we do n't take proceedings like this lightly '' 
+ the steward nodded 
+ i expected it to be this specific frontline manager 's fault and thought that by reviewing records i 'd be able to prove it and get him in hot water for being an ass without due cause 
+ he <unk> just as my boss agreed and soon after i was at my desk reviewing everything 
+ the whole analysis took an entire minute 
+ with just a glance at the full data i could tell the person barely taking 3 calls per hour was n't max 
+ & gt bytewave : **boss 
+ ** there 's a contractor with the same employee number as max '' 
+ internal employee numbers and contractor employee numbers are tracked separately in the same database 
+ it turns out max a union internal employee was blamed for the terrible performance of a contractor with the same damn number 
+ it was n't supposed to be possible but obviously was - max manager was looking at the wrong performance metrics all along 
+ soon after every contractor 's employee number was <unk> to ensure it does n't happen again 
+ all of bytewave 's tales on tfts 
+ tl dr - good frontline tech was blamed for poor metrics because he shared an employee number with a <unk> contractor and i almost got into trouble for giving him an <unk> performance review 
+ strong union and a good boss ensured i did n't get in hot water and could figure out what was going on 
+ college tale again 
+ i was working hard to wire in a new network segment 10 cables at around an 80 metre run per cable against a deadline when my <unk> went off it was the 90s 
+ report to the it suite email down 
+ first port of call was the server room but the mail server was <unk> away happily sending and receiving messages so i thought that it would be an easy fix - a config issue on outlook 
+ i get down to the it suite to find a student waiting at the desk for me 
+ i follow her to her pc and she explains that she 's trying to send an email to her friend and it wo n't go 
+ i check the address it 's internal so it should n't be stopped by any of the <unk> rules 
+ the name <unk> so there 's a connection to the mail server 
+ then i check her mailbox 
+ it 's just over the limit 
+ we delete around a hundred or so emails empty deleted items and try again 
+ still not sending 
+ i check again and she 's an it student which means she 's on a different server that we were having issues with 
+ it 's also her last day as the exams are over and she 'll be going off to university next year 
+ she 's telling me this as i attempt to manually edit her user profile so that the correct settings are <unk> 
+ after a quick edit of the mail profile and purge of the old data we send a test message and it 's successful 
+ she <unk> the message and sends it as i watch 
+ it successfully sends 
+ not bad - 40 minutes to get the message sent but now i 'm 40 minutes behind schedule on a more important job 
+ on the way out she sees the friend that she was emailing 
+ & gt girl 1 : i just sent you an email 
+ & gt girl 2 : what did it say 
+ & gt girl 1 : *proceeds to repeat entire message she just emailed to girl 2 <unk> making my 40 minute fix <unk> my coffee looked expectantly at me 
+ it was the first cup of the day the it break room door having been <unk> near moments ago 
+ i looked down at the black swirling <unk> its warm colour <unk> my happiness at the thought of a <unk> break room 
+ i took a sip 
+ tasted like triumph 
+ a knock at the door woke me from my <unk> <unk> 
+ it was the sales manager 
+ who had just been made temporary building manager 
+ she was smiling 
+ & gt sales : how are you today 
+ feeling well 
+ just here to do a quick measure of this office 
+ she produced a tape measure clutched in her hand 
+ & gt sales : also the vp would like to see you 
+ i stared at her for a full minute 
+ i got up and put down my mug 
+ my hand felt cold without it 
+ as i made my way towards the door i hear the sales manager clear her throat 
+ & gt me : i won’t get in your way 
+ i better pop up to see the vp now 
+ i just wanted to get out of the room 
+ away from the <unk> that is the sales manager being odd 
+ nothing good can come of odd 
+ & gt sales : actually i was hoping you could help me measure this before you leave 
+ & gt me : measure this 
+ & gt sales : just this room i went to find the building plans for the <unk> but they aren’t where i expected 
+ & gt me : why are we <unk> this room again 
+ & gt sales : oh just building maintenance stuff 
+ i wouldn’t worry about it 
+ & gt me : feels like i should <unk> we quickly went around the room 
+ it’s <unk> so it was very fast 
+ & gt sales : thanks for the help actually one more thing 
+ how big is your desk 
+ & gt me : no idea 
+ & gt sales : a man should always know the size of his desk 
+ she proceeded to <unk> the <unk> tape around and bang it down on the desk 
+ as the <unk> tape <unk> back from its <unk> it caught the lip of my mug 
+ coffee was spilt 
+ it felt like the first blood of a war 
+ i made my way to the vp’s office only on half a coffee… but thats all i’d need 
+ or so i thought 
+ next old stories one two three four five six seven eight nine ten - vp saga one eleven - vp saga two <unk> - vp saga three <unk> - vp saga four <unk> - vp saga five thanks to anyone who managed to get this far 
+ a small bit of background i work as the is manager for a small company with about six branches and under 100 employees 
+ about a week ago we had an issue where one of our scsi hdd 's burned out in our mail server 
+ it was raid 5 so i replaced it and let it rebuild but i began to closely monitor the server in case anything odd began to happen 
+ i say this because i normally do n't monitor our mail logs all that closely otherwise unless people are having problems 
+ our company <unk> a team of third shift workers to pull product for trucks that <unk> in the morning 
+ most of these employees have been with the company for over ten years and are mostly all over the age of fifty 
+ they 're all good guys just not the most tech savvy which is fine 
+ they 're also <unk> all night for the most part 
+ we also do n't run any content filtering software so all websites are open for browsing 
+ our ceo 's thoughts are that if we hire someone we expect them to be adult enough to know when it 's appropriate to browse websites for personal use and when not to and what sites are appropriate to begin with ... which is okay for people who legitimately are n't going to download the worst viruses imaginable on accident but i <unk> 
+ one employee in particular we 'll call him stew does n't like *not* being savvy and every morning he 'll <unk> over to my desk with a <unk> of questions that i 'm more than happy to answer for him 
+ they 're usually things about which phone he should look at buying or how to do something with the computer he had never done before so it 's nice to just shoot the shit before getting on with my day 
+ well a few days ago stew walks over to my desk and begins asking me some questions about <unk> 
+ his issue was that when he clicks on an email address on <unk> to email someone it opens a bunch of options that i have no idea what to do with '' 
+ i think on it for a second and then figure it 's probably because the computers in the warehouse have no default email client they all use web based email because so many people share the computers out there 
+ so i tell him that if he just copies and <unk> the email address that will work <unk> <unk> can just type it by <unk> 
+ which is what i believe he did because ... ... the next morning i walk into work and begin searching through email logs 
+ we have a queue of bad emails that could n't be delivered for one reason or another and more often than not it 's because someone sent an email to the wrong address by <unk> a letter or some such thing 
+ so was the trouble with poor stew 
+ you see as i found out that morning stew was using <unk> at work to <unk> <unk> from people creating <unk> posts 
+ there was a message from stew stuck in the bad message queue to whoever @ <unk> '' instead of <unk> and it had been <unk> 
+ both the subject and message were there in all of their glory describing in detail what this 55 year old man wanted to do to this supposedly 22 year old <unk> blonde college girl 
+ i lost it and absolutely could not stop laughing 
+ i legitimately felt bad more than anything else 
+ i was n't going to tell his boss or call him out on it because he needs his job but it was obviously not appropriate so before he left that morning i met him in the warehouse 
+ i pulled him off to the side and let him know that regarding his question yesterday i 'd appreciate it he not use his work email for <unk> if that 's what he planned on doing as sometimes it results in increased spam for the company 
+ it 's only been a day now and i have n't seen another email go out but i just absolutely had to tell someone because i really do n't have a team at work and i do n't think anyone else could appreciate it as much as you <unk> 's been awhile but i finally have something that 's tfts worthy 
+ a little background : i work as a tier <unk> not quite tier 2 permissions but i do more than the usual tier 1 support <unk> at $ <unk> 
+ $ <unk> is quite large for our area about <unk> users supported so we get a good <unk> of the general <unk> calling in 
+ now onto the story 
+ we recently moved from office 2007 to an office <unk> environment 
+ during the <unk> everyone was instructed <unk> times over to move their .pst <unk> over to their new mailbox because we were going to delete everyone 's stuff at $ <unk> 
+ <unk> 's <unk> presentations training sessions and anything else you could think of was done to communicate this 
+ i was part of the <unk> committee that created all these different <unk> for the project so i had a sense of <unk> behind our creation 
+ of course there 's a large number of people that ignored everything we sent out which you would have had to be under a rock to not notice 
+ fast forward to today we send out another round of notifications telling everyone the day of pst <unk> is upon us in a couple of weeks 
+ the calls i 've been dealing with today so far about 200 have been exactly like this : & gt me : thanks for calling support how can i help you 
+ & gt $ user : i do n't understand this .pst email thingy that i just got 
+ can you help me 
+ & gt me : have you read the links in the email 
+ it 'll show you how to prepare complete with pictures and video 
+ & gt $ user : no i have n't 
+ can you just show me 
+ <unk> it for <unk> & gt me : please try <unk> those links first and call back if you need further assistance 
+ & gt $ user : but i ca n't read it 
+ & gt me : have you even tried reading the info in the links 
+ *i already know the answer but at least i can tell my boss i <unk> & gt $ user : i ca n't read it 
+ how some of these users continue to breathe and walk at the same time <unk> my mind sometimes 
+ edit : spelling edit # 2 : holy upvotes ... thanks everybody i 'm in college right now and i like to hang out with my friends at the <unk> student center that 's across the street from campus 
+ the center has fun activities that usually include food and it has lots of room to spread out and do homework 
+ it also has a pretty fast wireless internet connection 
+ this school year the wireless connection has been very unreliable 
+ we 've had a local it specialist come out many times and had our router sent off for repairs once 
+ my friend thinks the dhcp lease time is too long 
+ though recently the connection has been pretty reliable 
+ so last week i was doing homework on a large table with my girlfriend and her wireless connection kept going in and out while my computer was staying constantly connected 
+ she was getting frustrated so i thought hey i 'll just bridge connections with my laptop like i used to do with my old <unk> <unk> that did n't have a wireless card '' 
+ then i looked around a little bit found and ethernet cable and connected our laptops together 
+ she was really happy that her internet was working again 
+ a few days later my girlfriend mentioned to the <unk> monk who runs the center that we were in a relationship we were keeping it on the down low for a couple weeks 
+ he said you know i suspected something when i saw <unk> sharing internet '' 
+ following it with now that 's an appropriate pda 
+ i am a semi retired semi burnt out old tech who retired to a small rural town to spend my declining years supporting small businesses and rural clients 
+ i had a customer who had lost their internet connection 
+ they where a long way out of town like over <unk> of <unk> dirt track out of town so i started out fairly early in the morning to get there by <unk> 
+ their internet was down and this far away from anyone they <unk> in a satellite connection 
+ no sync 
+ i checked the connections to the modem and even climbed on the roof to see if the dish had moved due to the recent strong <unk> 
+ no visible problems but when i tested the modem it was faulty 
+ a satellite modem was not an item i kept in my spares kit so i called the service provider and waited for the tech to organize a replacement 
+ now i do n't know how you are treated as a field tech where you are from but in country <unk> australia every visitor is offered at least a coffee or tea 
+ this place pulled out all the stops 
+ coffee fresh <unk> cookies and two different types of home made cake where laid out while i was finishing up the call 
+ i gave the client the news that it would take a couple of days for the replacement modem to arrive and that i would have to come back then to install and configure it 
+ the <unk> thanked me for my effort and paid for the service call 
+ i apologized that i could n't fix the issue in one call and that i would have to come out again before they would have internet access 
+ he smiled and said that i was welcome any time and suggested i try to be there for lunch next time 
+ tl/dr happy clients that pay promptly <unk> <unk> and an <unk> to lunch i love the life of a country tech 
+ so i recently finished a <unk> contract with a very large company with an internal it helpdesk 
+ i was on the helpdesk and took 1st level calls basic issues computer wo n't turn on internet connectivity is bad etc 
+ while i was there it was basically 6 months in <unk> which is why i went for it and 6 months <unk> the phones 
+ so whilst i was in infrastructure we were rolling out a massive roughly 2000 clients <unk> system using citrix 
+ this was a really cool project and was a lot of fun 
+ so anyway to the meat of the story 
+ we 're rolling it out starting with a group of people in the retail department to trial the new <unk> environment 
+ this went well and we went live with it 
+ everyone who did n't need a dedicated desktop went over to <unk> and things were great 
+ the network was handling it pretty well at a local level 
+ the hardware for this was freaking unbelievable btw a lot of effort went into this and for the most part it went swimmingly well 
+ i 'm sure a lot of you here could <unk> with how much of a pain a massive rollout can be 
+ at this company we had our main office then we had remote sites 
+ a lot of these sites were on 3g <unk> back to our <unk> which was <unk> at best 
+ 3 offices were on microwave <unk> which was almost as fast as being local 
+ one of these sites let 's call it $ <unk> was on such a connection and was also our <unk> 
+ i got a call from one of the floor managers at $ <unk> 
+ she had asked for the <unk> to be set up at $ <unk> which just so happened to be a 5 hour drive each way away 
+ & gt me : it this is <unk> how can i help you today '' 
+ & gt floor manager : yes could i please speak to the helpdesk manager '' 
+ & gt me : i 'm sorry he 's in a meeting in the moment 
+ is there anything i can help you with '' 
+ & gt fm : i do n't think you 'd understand what i am talking about i want to get the <unk> set up at $ <unk> '' 
+ it took me a few seconds to understand exactly what it was she was talking about when i clicked 
+ & gt me : oh <unk> 
+ well you 're in luck i was on the team which set that up 
+ your office happens to be on the microwave <unk> so i ca n't see any reason why we ca n't do that for you guys 
+ i 'll have a chat with my manager and get the <unk> from him and give you a call back after 12 if that 's okay '' 
+ & gt fm : yeah well i guess that will have to do '' 
+ she hangs up 
+ she was known for being ... 
+ <unk> 
+ * my manager gets back i run the idea by him he says it 's a good idea as it will allow us to test the network with it 
+ i call fm back 
+ & gt me : hi fm it 's <unk> from it here just ringing to follow up on the <unk> install '' 
+ & gt fm : it 's called <unk> by the way 
+ and yes what did you need to follow up for '' 
+ i let this one pass 
+ & gt me : just wanted to book in a date for me and a few of the guys to come over and set up your new computers for you 
+ is tomorrow okay 
+ we actually have 3 guys available to come out '' 
+ & gt fm : * ... <unk> yes i guess tomorrow would have to do wo n't it '' 
+ at this point i 'm already <unk> answering the phone earlier 
+ & gt me : okay great 
+ myself and the others will leave here tomorrow at 7am so we can be with you at around <unk> '' 
+ & gt fm : alright do i need to do anything '' 
+ & gt me : nope we 'll transfer all of your local files across to the server during the day and have it all ready to be plugged in and go tomorrow 
+ is there anything else i can help you with while i 've got you on the phone here '' 
+ & gt fm no 
+ see you '' 
+ *click* my manager was listening to the call and when it ended he looked up at me and gave me that oh boy you 're gon na have a good time tomorrow '' grin 
+ i rounded up the other guys we transferred data across got everything ready and went home at 5 in no way expecting the complete shitstorm which was to ensue the next day 
+ <unk> am the next morning 
+ we arrive at $ <unk> <unk> sign the log book and go about setting up new computers 
+ everything is actually going pretty smoothly until fm gets out of her meeting 
+ she <unk> into her office where i currently am setting up her new <unk> desktop 
+ now i ca n't really explain what exactly happened here as i honestly have no idea 
+ she flips out into this <unk> rage picks up the <unk> desktop and <unk> it against the polished <unk> desk 
+ dells are tough as nails a bit of case damage but that 's pretty much it 
+ her desk however has a nice three inch <unk> in it 
+ she gives it another go this time on the floor 
+ computer <unk> into pieces i see ram and fans flying in all directions 
+ she storms out screaming i did n't ask for this '' 
+ over and over gets her <unk> <unk> her neck caught on the door handle as she scans herself out falls over <unk> herself <unk> and kinda lies there for a while 
+ meanwhile i 'm standing in this room with a broken computer holding a keyboard in one hand and a mouse in the other my mouth wide open completely flabbergasted 
+ one of my coworkers quietly walks in asks what the hell happened and kinda stands there with me 
+ she eventually comes to and has a coworker help her up 
+ she sits up against the wall the exec gets called in she explains that i was stealing '' her computer and that i do n't even work for $ company 
+ police are n't called but she was put on three months leave with pay 
+ turns out her husband had just up and left out of nowhere completely disappeared 
+ she must have had some of <unk> episode from stress 
+ anyway finished up as best as we could in $ <unk> got in the car and headed back to head office 
+ by the time we got there word had spread and we were met with cake and beers 
+ i loved that job 
+ **tl dr : woman asks me to install a new computer for her flips out when she sees me doing what she requested <unk> me of stealing her pc falls over goes away for 3 months 
+ i get cake and beer 
+ ** **edit : ** jesus almost 800 upvotes 
+ thanks for reading everyone i 've got more stories if you 're interested in hearing them 
+ most of them are n't as interesting as this but they 're still pretty cool 
+ thanks for all the love : the old boss quit under the stress created by our <unk> female manager who always backed the customer not the service desk tech 
+ i interviewed for the position but <unk> missed the grade 
+ a new guy who had only been working there 8 months got the job and made my life a living <unk> 
+ we were all told that desktops team were the only ones to go out to a users computer 
+ us on the service desk were <unk> to <unk> like status 
+ despite being the only one with any <unk> experience on the service desk i was constantly denied opportunities 
+ it was a thursday 
+ as a first <unk> i had attended the mandatory meeting which <unk> any <unk> nonsense 
+ off the back of that i had a fire <unk> meeting in the same room 
+ my boss had put me up for both roles 
+ as i got back to my desk after 90 minutes i <unk> into my work 
+ first call to install a card reader 
+ ca n't do it remotely as the machine has to be logged in as an admin and logging off the user <unk> my session 
+ it 's a 3 minute fix and the machine is 30 seconds walk away 
+ desktop support are so busy that their lead time is 4 days 
+ i sneak off to the toilet '' and fix it 
+ director has a faulty monitor 
+ sure he 's on my way home so i can replace it after i leave at 4. i get procurement to <unk> me one and schedule desktops to collect the faulty one 
+ i take a few cables just to be sure 
+ local <unk> ca n't connect to the internet 
+ he lives opposite the offices 
+ ten minutes to determine if it 's machine config or faulty internet and the isps problem 
+ i 'll do that as i 'm waiting for the bus to see the director 
+ <unk> team need software removing and <unk> 
+ they 're based 3 minutes from my house 
+ i 'll drop in before i get home 
+ i got did all of that then got chewed out by my boss on friday for doing the work that other people should have done 
+ he said i was doing it for the glory and refused to understand that these people deserved better than a simple fix will take 4 days '' 
+ worse the manager backed him as she thought i was <unk> the team 
+ i never claimed overtime <unk> or any extra for that work i just completed the work for the good of the customers and in the most efficient manner possible 
+ i quit the following <unk> hey look 
+ a call from corporate and it 's actually daylight outside 
+ let 's see what they 're up to ... fm : hello 
+ <unk> : hey <unk> it 's <unk> 
+ well this is n't good 
+ i explained in another post <unk> was one of the group of people <unk> known as the four <unk> of the apocalypse 
+ if a case got to <unk> something had gone seriously wrong at a customer site and whoever <unk> was talking to was about to have a <unk> long day 
+ fm : hey <unk> you 're calling to make me cry are n't you 
+ <unk> : not my fault what some end-users do ... speaking of end-users i need you to go onsite 
+ $ customer went ahead and deleted root on the backup server 
+ fm : you mean <unk> 
+ <unk> : no i mean root 
+ *sigh* background on the customer : this was during the <unk> days someone came up with a brilliant business idea and their business plan called for a windows environment 
+ one of the large unix providers did n't particularly like hearing they were being cut out of the order based on windows so they gave a major discount to the customer for buying their unix machines 
+ management had already hired a bunch of windows admins but the discount was good enough that they decided windows <unk> unix and purchased the servers 
+ the backup servers we sold ran on unix but did n't host any of their business apps '' their words not mine so the windows admins took to testing things on the backup server ... now back to our story 
+ fm : how bad is it 
+ <unk> : you 're talking to me after i 've spent three hours trying to <unk> this out of the <unk> how bad do you think 
+ yes <unk> knew the <unk> we had for him and the three other <unk> he <unk> in it 
+ fm : bare metal recovery it is 
+ so i drive the two hours to the <unk> site to meet the customer and he shows me to the server 
+ it 's sitting at an ok & gt prompt about where you would expect a dead server to be sitting 
+ on the plus side he 's already got the os disks sitting on the server 
+ i throw disk one in and start the reinstall 
+ fm : so what happened 
+ customer : well we logged into the server and saw a message that this <unk> file system was full i did n't have anything in there that i 'd needed so i went ahead and did an rm <unk> <unk> to clean it up when suddenly the server panicked 
+ <unk> in front of a customer is never a good idea especially when you get to explain something to them again that you 've already had this conversation three times previously 
+ fm : <unk> 
+ customer : yeah not sure why that would have affected the server 
+ fm : remember the last couple of times i was here and asked you who 'd <unk> <unk> : / to <unk> then mounted it back to itself on the backup server 
+ customer : yeah 
+ fm : do you remember me telling you not to do that 
+ customer : i remember but i do n't remember why it was bad 
+ fm : well when you did that you 'd <unk> the root file system via <unk> then mounted it back to <unk> 
+ as i 'd said before anything you did in <unk> was going to affect root 
+ by doing that rm <unk> you deleted the root file system 
+ customer : 
+ fm : you <unk> everything under c : <unk> then hit the <unk> key 
+ customer : <unk> ... fm : you want to find the person who did this and beat them preferably with something heavy 
+ customer : but we never did that 
+ sure the server just decided to randomly do it to itself again ... fm : did you ever lock down the box as i recommended with individual user accounts and sudo requirements 
+ export logs to a log server 
+ customer service is allowed to recommend we do n't setup 
+ if they want us to setup something that 's a professional services engagement which costs money ... no one wants to spend money to get something setup for them 
+ customer : well no 
+ fm : ok then you 're not really going to be able to figure who did this 
+ i 'm going to need the disaster recovery report from the last backup so we can do the recovery when the os <unk> finishes 
+ we had this great report that ran at the end of every backup of the local machine 
+ all of the information you need to perform a bare metal recovery of the backup server in the event something goes horribly wrong ... like when you delete the root file system ... customer : that email report 
+ yeah we stopped the server from mailing those to us 
+ fm : ... customer : we did n't like receiving the email every day 
+ fm : so you do n't know what the last tape id used by the server for the self backup was 
+ customer : well it 's in the library 
+ looking at the <unk> tapes in the library unit ... fm : well you have <unk> tapes there which specific tape is it 
+ customer : how would i know 
+ fm : well it 's listed in the disaster report ... customer started to figure out exactly how sad of a day he was going to have at that point 
+ he was able to find a copy of one of the reports it was only six months old 
+ fortunately the tape from that backup was still in the library so we were able to use that 
+ the customer then got to manually <unk> the 100 or so tapes that were created after that report so they had the ability to restore files from other machines 
+ only took a week or so to <unk> them <unk> this happened 2 months ago ... i was playing with my laptop at home and my 1 year old little <unk> <unk> hit my laptop hard actually she hit the <unk> connected in the usb port and bang i saw a <unk> <unk> <unk> on lower half of my screen 
+ i was worried very much because the laptop has passed the accidental warranty period months ago and i was am just a <unk> 22 year old 
+ i immediately called the hp tech support and they asked me to come to the service center thats the procedure in india which is 200 <unk> away from my home roughly a 4 1/2 hour travel on bus 
+ also they said to me that it would cost around <unk> roughly $ 120 to change the display 
+ and then i was really worried not only because i have to travel 200 <unk> but also <unk> 
+ <unk> is far fetched at that point of time for me 
+ so i was worried for two days and then went to a local pc <unk> shop 
+ and i explained to the techie there that i ca n't really afford <unk> at that time 
+ he listened to me with cool head and asked me to power on the laptop 
+ and then when the pink <unk> part showed up on the screen he just placed his hands on the edge of the monitor like *this* on the exact point where the top of the pink layer starts and pressed his thumbs hard 
+ and bang my screen became normal 
+ and he did n't charge me for anything which was so nice 
+ i am not sure whether he saved me $ 120 which is more likely because the hp techies always try to charge money for simple problems but he definitely saved me 9 hours of travel 
+ thank you techie ... edit : fixed lap to laptop after <unk> comment edit 2 : typo 
+ previously referred <unk> to <unk> & gt tl dr local techie repairs my laptop with his magical thumbs i always regretted not thanking him on that day as he was very busy 
+ but for him i thank you all techies ... & lt <unk> it 's <unk> on a monday 
+ i 'm sitting at my desk <unk> on <unk> <unk> <unk> and browsing tfts when my phone rings 
+ & gt ** $ <unk> : hi $ manager wants to know what her fax number is 
+ i do n't have it either 
+ do you know 
+ & gt * $ manager is not known for her <unk> 
+ * & gt **me** : uh ... no 
+ i can find out for you though 
+ & gt ** $ <unk> : thanks that would be great 
+ so i log into the hosted <unk> solution and <unk> around the <unk> that passes for a <unk> but the number and the email to which it 's <unk> just wo n't appear 
+ i <unk> excel spreadsheets <unk> back to the time we implemented the solution but turn up <unk> 
+ eventually i find the data i need in a report buried deep within the <unk> <unk> of the hosted service 's <unk> 
+ & gt **me** : ah here we go 
+ the number is <unk> 
+ & gt ** $ <unk> : thanks 
+ she 'll want to know why it is n't on $ <unk> - can you help with putting it there 
+ & gt **me** : well ... sure but nobody has requested that ... & gt ** $ <unk> : well she 'll want to know where she can find it 
+ you know $ manager 
+ indeed i do 
+ most questions from $ manager always seem to open a can of <unk> 
+ she will definitely want to know where she can find it and why it is n't <unk> how come she does n't know what it is why is a <unk> etc 
+ suddenly a light comes on in my brain 
+ i check out my hunch and yep ... & gt **me** : it 's in her email signature right there next to fax : '' 
+ the general <unk> of having customers undo your hard work is n't new i know but this one just broke my goddamn heart because it was so <unk> 
+ a laptop had a failed hdd 
+ i failed to <unk> surprise 
+ the customer had n't backed up any of their thousands of photos from the last 8 years 
+ i did n't even try to <unk> surprise 
+ instead i upgraded it to an ssd <unk> windows 7 stuck all the usual free useful software on there activated it by <unk> because the <unk> had worn beyond <unk> and when he brought his camera 's sd card in did some data recovery to get back *some* of his photos 
+ all good 
+ he had a windows 7 retail pack in his hand when he came to collect it 
+ now if i 'd been thinking i might 've asked him more about it because it tells a story : it says the <unk> on the laptop was n't windows 7 it says he bought a pack himself and upgraded it 
+ it says he likes to <unk> 
+ still i showed him the machine working showed him how to do a few things showed him the software i 'd installed 
+ it was obvious he no longer needed to use it 
+ obvious 
+ right 
+ right 
+ i got a call from his wife today not 24 hours later reporting that she 'd put windows 7 on '' as per his instruction and now everything was gone 
+ the recovered data the programs the shortcuts 
+ i <unk> with a few questions and yes sure enough *he 'd told <unk> to stick the windows cd in and install windows 
+ quote : *we 'll need this on there 
+ * '' they 'd done it from <unk> windows too : they 'd put the cd in and followed the <unk> installer <unk> windows was booted up* because they thought they needed windows '' 
+ me : <unk> did he think that needed doing 
+ her : he said it was n't on there 
+ the data was <unk> from the <unk> of course 
+ his <unk> probably wo n't <unk> i work as call support for about 20 small businesses 
+ basically business that are large enough to have enough employees to have dedicated servers but not large enough to have on-site it staff 
+ so i 'm doing my weekly meet and greet for one of my larger clients a doctors office - saying hi to the staff asking if there are any problems checking the physical hardware etc 
+ one of the nurses asks me if i could look at a problem 
+ she needs two pictures before and after surgery presented on the page <unk> not <unk> 
+ not thinking anything of it i walk around the back of the desk and am presented with two sets of <unk> in all their high <unk> color corrected <unk> <unk> glory 
+ giving myself a second to get <unk> to the software i found the <unk> option and swapped it 
+ tl dr saw <unk> as part of work <unk> at my office we 're <unk> in that we only have three models of laptop to support 
+ it 's a case in which the initial batch model 1 the oldest was bought four years ago for everybody 
+ as people came on board afterwards they were provided the next generation of laptop model 2 as model 1 was no longer being made 
+ model 3 came about the same way model 2 no longer available but it was provided to new people 
+ now the office is looking at model 4 which is going to eventually be <unk> for a mass replacement of all the model <unk> 
+ generally speaking the model 1 's are pieces of crap 
+ 2 's and 3 's are actually really nice 
+ it will be good for everyone having the 1 's out and having <unk> equipment all around 
+ anyways we have a demo model of the 4 for testing in our office 
+ cue <unk> <unk> 
+ he 'd been told to come in for a bios update to fix a known issue 
+ usually this is about a five minute process 
+ and of course he comes in and spots the demo model and immediately starts asking for one 
+ & gt <unk> - just give me one of those that will fix the problem 
+ this thing runs like crap 
+ i 'm a bit puzzled because he 's got a model 3 <unk> bridge i5 8gb ram & gt <unk> - that 's a little strange you 've got one of the newest ones here already 
+ but i 'm sorry you 're not due for replacement yet 
+ those are coming for the people who have model 1 's 
+ & gt <unk> - well you should give me one anyways 
+ i can barely get any work done on that piece of crap 
+ will this boss upgrade help 
+ & gt <unk> - it will at least resolve your battery charging issue but i ca n't promise the computer will run better 
+ this should n't take long but before we get started i see you have a few documents open 
+ the process requires a reboot so could you please save and close all of your documents 
+ he gives me a look as if i had just told him we need to put <unk> in his eye 
+ & gt <unk> - are you serious 
+ i have to close all my stuff 
+ we go back and forth for a few minutes while i explain and in a huff he starts <unk> 
+ and <unk> 
+ and five minutes pass still <unk> 
+ so i start counting how many programs he had open 
+ at <unk> he says it 's nothing important anyways can i just push the button '' 
+ i 'm not real keen on that but the problem is already obvious 
+ i do a shutdown and windows yells that there are 27 programs open 
+ force them all closed do my thing and i explain that if he actually closes things as he 's done using them then his computer will run much better 
+ i have no idea if he understands or not 
+ some quick math - <unk> programs closed that i counted plus 27 more that were left when we shut it down for <unk> programs 
+ the five minutes of <unk> he may have been doing four windows per minute for an additional 20 windows total of <unk> programs or more 
+ sorry dude no computer is going to run well when you have that much stuff open 
+ no way no how 
+ edit : yay formatting 
+ edit 2 : you all rock 
+ thank you for all the feedback and upvotes 
+ to answer a few questions : no <unk> did not get a new machine 
+ we are stuck for 3 years once an asset is tied to us 
+ he had a mix of programs open handful of our proprietary software <unk> a dozen or so powerpoint presentations maybe <unk> excel spreadsheets another 10 or so word documents etc 
+ we are a large enterprise environment so we tend to run a bunch of crap in the background too 
+ on an idle windows session we have <unk> processes running to begin with 
+ i do n't think he did n't know how to close windows rather i think every time he needed something he just opened a new copy of it 
+ he seemed to genuinely not know what he was doing was incorrect during a follow up conversation 
+ and yes i agree with the responses that he should be doing something that does n't involve a computer anyways 
+ he does too ... and i edited my confusion of cue and <unk> had an elderly man roughly <unk> years old come in and say his all-in-one is n't turning on all the way 
+ i turn it on device posts then says no bootable device found '' 
+ at this point i 'm thinking the hard drive is corrupted failed etc 
+ proceed to open it up to pull the hard drive to check the condition and check the possibility to <unk> data 
+ when i finally get the thing opened i understood why it was not detecting a boot device 
+ there literally was no hard drive in the all-in-one ... trying to explain what the hard drive does to an <unk> year old man has proven to be difficult 
+ question : in what scenario would an <unk> year old man somehow just randomly lose his all-in-one hard drive one day 
+ the device was not easy to open i work as an i.t 
+ support specialist for a medical company in the <unk> <unk> <unk> 
+ it 's a fairly <unk> job and often times problems are rather simple 
+ one of my tasks is to set new hires up with user accounts in active directory 
+ easy enough 
+ we had a new hire start working today and i had passed along her account info to her supervisor as i usually do 
+ not twenty minutes into my monday morning i get a call on my personal cell phone which i do n't mind *too* much seeing as i made the choice to put it on my email signature i just would have preferred that they opened a ticket instead 
+ our conversation went a little bit like this : me : this is <unk> 
+ $ <unk> new hire : help 
+ i ca n't log in the username and password you gave me are wrong 
+ me : is that so 
+ let me take a look for you 
+ *i remote into our active directory server and reset her password to what i emailed her supervisor just as a <unk> me : give it another try for me $ <unk> : it 's just returning to the log in screen <unk> flag number one* i try to remote into her computer but apparently teamviewer was n't running 
+ no big deal i 'll just use windows rdp to get in 
+ <unk> remote desktop connection is not enabled on this <unk> i was a little bit frustrated at this point but i held my tongue and went out to her office which was just up the road again no big deal 
+ once i arrive at her office i have her log in for me 
+ as she types her password she <unk> the caps lock as the shift <unk> <unk> flag number <unk> she then proceeded to <unk> the cancel button without reading it thinking it would magically log her in* i almost slammed my head directly into her desk when that happened 
+ i tell her to log in again but this time to press the return key and not click the cancel button 
+ so she does exactly what she was told and clicks the cancel button again $ <unk> oops force of habit lol *how can you have a habit if you ca n't log into a computer to use <unk> it took her a third try but once she got in she was grateful 
+ why are n't basic computer skills a job requirement at my company office rumor <unk> are always fast but sometimes they beat <unk> 
+ i walked into the office after the meeting with hr and youngsec where he was moved to it 
+ i needed a coffee 
+ <unk> and <unk> came up to me as i reached for the beans 
+ & gt colorblind : so i hear we’re getting a new member 
+ & gt greyit : and you’re not happy about it 
+ grey it was always <unk> 
+ she was the <unk> of the office no <unk> just on the point 
+ she was sorta the best 
+ & gt me : yep 
+ <unk> coming to work for us 
+ & gt colorblind : so how are we going to <unk> him 
+ & gt me : sorry 
+ & gt greyit : he did pull the network down for two hours 
+ & gt colorblind : lets get him to test the switch he fixed by counting the <unk> all day 
+ & gt me : haha could we tell him its wrong and to do a recount everyday for a year 
+ & gt greyit : i think for every hour he wasted for us he should have to man an it help desk 
+ & gt me : <unk> too harsh 
+ <unk> him to users would be too mean 
+ & gt colorblind : how about we find the oldest computer we have and get him to use that 
+ & gt me : that might slow him down probably not slow enough though 
+ & gt greyit : we could get out an old <unk> system and get him to punch everything he wants to write into a pc on to cards 
+ & gt me : er… do you know how to punch those cards 
+ i took a sip of my coffee 
+ the <unk> was a nice change 
+ & gt colorblind : no 
+ sadly no 
+ it was at this point that youngsec walked in 
+ he looked happy 
+ he didn’t realize he’d recently pulled down a proud it teams network 
+ an it team who was now with him all day 
+ it was like a <unk> to the <unk> 
+ <unk> ps 
+ i realize the no <unk> tales rule 
+ however this story is about <unk> at arms in the it sector 
+ we did n't play any of the <unk> listed to anyone 
+ : next older it stopped again 
+ a voice called out from the void i ignored it 
+ i chose to stare at my blank screen instead 
+ blank is good 
+ clean 
+ <unk> 
+ & gt <unk> : hello 
+ airz 
+ i said it stopped again 
+ i broke free from my dreams shook off my delightful rest and gave the man in front of my the hardest stare i could make 
+ & gt me : what 
+ the voice that <unk> out from my mouth sounded cold <unk> 
+ & gt <unk> : it just stopped you know ... i was just using it normally and it just stopped 
+ & gt me : just 
+ stopped 
+ my mind <unk> all the problems that could be described as “it just <unk> 
+ there are lots 
+ lots and lots 
+ the <unk> held up a company phone 
+ & gt <unk> : they told me i couldn’t get anymore credit 
+ they said i had to come see you 
+ & gt me : who told you 
+ my chair <unk> as i grabbed the device from his hand 
+ i examined it slowly its data graph <unk> told me he’d managed to download <unk> of data in a five hour window 
+ & gt <unk> : er ... <unk> i stared directly into his eyes not as a display of <unk> 
+ i was trying to see why he thought i was dumb enough to buy his <unk> it <unk> story 
+ & gt <unk> : are you ummm ... alright 
+ you seem a little off 
+ maybe i’ll come back later 
+ & gt me : me ... 
+ oh i’m fine 
+ this phone though 
+ i held up the phone between two fingers gave the <unk> a look of disgust and dumped it in the paper bin 
+ & gt <unk> : my phone 
+ why are you putting it in the bin 
+ & gt me : that is not your primary concern at the moment 
+ sit down 
+ <unk> looked at the phone in the bin <unk> 
+ he <unk> took a seat 
+ & gt <unk> : i really think we should find a better bin for ... my disdain for the <unk> had grown to such a point i think i was bearing my teeth 
+ i couldn’t help it 
+ & gt me : you think <unk> are important 
+ <unk> 
+ your waste of company resources your <unk> <unk> of duties 
+ you’ve used over <unk> of mobile data 
+ & gt <unk> : has something happened 
+ no one ever made a fuss before 
+ & gt me : in a week 
+ and all videos 
+ i looked over to my blank screen it was a shame to break the clean <unk> white peace 
+ <unk> of support and devices for employee ... <unk> away at the keyboard i typed a honest assessment of <unk> technical capabilities 
+ so as to be fair the document included a blank list of technical skills he’d <unk> 
+ i even included a handy table outlining the number of hours <unk> had spent on various sites with mobile data 
+ & gt <unk> : seriously airz 
+ i’m worried about you man 
+ you look ... 
+ maybe go take a holiday you’ll come back feeling much better 
+ & gt me : and done 
+ i punched the final full stop into the document and promptly printed it off 
+ <unk> the paper from the out tray i quickly signed it and handed it too the <unk> 
+ & gt <unk> : and this is ... 
+ & gt me : a contract i want you to sign 
+ <unk> glanced at the piece of paper for a second 
+ he seemed to <unk> over vaguely 
+ & gt <unk> : what does it say 
+ & gt me : here is a pen 
+ amazingly instead of reading <unk> just signed his name at the bottom 
+ right next to the line that said “i agree with the above <unk> 
+ i wondered why <unk> even existed you didn’t need to fake <unk> people just sign things they’re given 
+ & gt <unk> : can i get my phone out of the bin now 
+ & gt me : no 
+ you’re never getting a phone again 
+ i <unk> the contract out of his hands 
+ i gave <unk> the first real true smile i’d had in months 
+ & gt <unk> : what 
+ but i just signed ... i <unk> printed off another copy of the document and handed it over to <unk> 
+ this time he decided to actually read the piece of paper 
+ & gt <unk> : potentially incompetent 
+ malicious <unk> 
+ what ... this is <unk> mean 
+ & gt me : you signed it 
+ <unk> looked <unk> down at the paper 
+ & gt <unk> : i’m worried about you airz normally you’re so nice 
+ today you’re in a weird mood 
+ i really think a holiday will do you good 
+ & gt me : a holiday 
+ <unk> the first day in ages i finally feel like i’m back 
+ <unk> hurried to the door and called out to the office 
+ & gt <unk> : redcheer 
+ redcheer 
+ where’s redcheer airz is acting all ... weird 
+ i heard a voice call out from one of the desks in the it department 
+ & gt voice : redcheer 
+ where have you been these past few months 
+ she’s gone ... this actually happened today 
+ and it 's my first post to tfts so be nice please 
+ i went over to my uncle 's house for a <unk> this evening and i wanted to show my sister a video i found on youtube 
+ no problem i set up my uncle 's wifi a few years ago and as far as i knew nothing had changed 
+ when i looked for his network it was n't there and had been replaced by a generic named <unk> wifi channel instead 
+ i immediately looked up and mentioned it to him 
+ mind you - my uncle is about 70 years old now and has never been good with technology 
+ he let his neighbor install <unk> onto his <unk> old desktop because it was running slow and that 's easier than replacing the shitty old windows xp machine apparently 
+ i have no idea how he learned the os but it runs worse than xp ever did on his computer 
+ anyway that 's a headache story for a different day 
+ i looked up and told him that his wireless network was n't secured and that anyone nearby who wanted to could jump on it without a second thought 
+ i was definitely concerned about it 
+ instead of being worried and asking me to fix it which would have maybe taken two minutes of my time he simply looked up and said oh we do n't use our wifi 
+ it 's not a problem '' 
+ i could have gone into why he should still be concerned but there were <unk> <unk> in front of me and i was on a time limit i work overnight <unk> at a 24 hour help desk so i bit my tongue and let it go 
+ i 'm waiting to get a call from him saying something 's wrong his computer because someone joined his network and played around with other devices on it 
+ minor edit : <unk> previous my headache was growing 
+ i could sense the imminent arrival of pda’s all with windows mobile <unk> i tried to ignore it 
+ defiant sat in my office with his arms crossed 
+ & gt me : so… want to do some tickets 
+ & gt defiant : no 
+ i’m not even talking to you 
+ <unk> 
+ i needed a fun <unk> not an angry <unk> 
+ & gt me : why don’t we take a look at the queue 
+ & gt defiant : … 
+ i decided to take a look at the queue regardless of defiant’s <unk> 
+ **new ticket** the computer is making funny noises 
+ <unk> secretary & gt me : should we go up and take a look 
+ or ask for clarification 
+ & gt defiant : we’re not talking 
+ 'why is defiant angry 
+ i thought to myself 
+ i couldn’t bring myself to care 
+ & gt me : lets go take a look at the legal secretaries computer yeah 
+ & gt defiant : … i shrugged and got up from my chair 
+ as i walked over to the door defiant finally spoke 
+ & gt defiant : i can’t believe you sold me 
+ & gt me : sold you 
+ i didn’t sell you… 
+ i … err… <unk> you out 
+ & gt defiant : you <unk> me like i was an item 
+ i’m offended 
+ & gt me : really 
+ <unk> 
+ i was demonstrating how valuable you are by attempting to trade you for a <unk> <unk> 
+ defiant thought for a second 
+ i saw a <unk> of a smile but it was immediately <unk> 
+ & gt defiant : hr didn’t accept 
+ my time isn’t worth a big favour 
+ before i could <unk> however we arrived at legal secretaries desk 
+ her computer sounded like an <unk> taking off 
+ & gt defiant : is your computer always this loud 
+ & gt <unk> : it only started making noises today 
+ defiant put his hand on the desktop tower 
+ he immediately pulled it back with a shock & gt defiant : oh my 
+ it’s burning up 
+ defiant shut down the computer and turned to see an increasingly worried legal secretary 
+ & gt defiant : don’t worry we’ll sort it out 
+ & gt <unk> : is it a simple fix 
+ if not i don’t want to waste your time 
+ it’s probably not worth investigating ... do you bill by the minute like lawyers 
+ defiant stared blankly at <unk> 
+ i realised it was my time to step in 
+ & gt me : don’t worry <unk> 
+ it doesn’t bill your department for something going wrong 
+ & gt <unk> : oh thank goodness 
+ my stationary budget is almost <unk> 
+ i can’t go another month without new pens 
+ my mind <unk> as i looked around the department 
+ not a spare pen to be seen 
+ & gt me : we’ll get you a loaner laptop while this computer <unk> down 
+ & gt <unk> : thanks 
+ defiant and i started walking back to it to fetch a loaner laptop 
+ & gt defiant : even if they did charge by the <unk> hr thinks my time is worth what 
+ less then the price of a poster 
+ & gt me : some posters are worth a lot 
+ & gt defiant : well … it would be good to know i’m appreciated occasionally 
+ & gt me : listen defiant you’re a decent worker 
+ i appreciate the effort you bring to it 
+ i watched as a smile formed on defiant’s face 
+ i waited for defiant to return some appreciation onto me but it never came 
+ then i <unk> 
+ i work in it 
+ next there i was ... looking out my window at the warm sun waiting for 4pm to roll around and enjoy the nice breeze 
+ *ring ring <unk> in this episode of why isp call centers have <unk> as customers 
+ starring : $ me $ cc confused customer $ <unk> big boss aka my boss level 2 tech $ l2 $ me : hello 
+ $ l2 : hey $ me i have this customer whose being irate and refusing to speak with billing because she owes $ <unk> not including equipment fees and demands to speak to the damn tech people who turned off my internet '' she wants to speak to my supervisor aka you 
+ & gt $ me : well we are n't the damned tech people who turned her internet off but you can send her on through 
+ & gt $ l2 : thanks she 's mad 
+ * thinking great 30 minutes till time to go home and a furious <unk> & gt $ me : hi you 've been transferred to $ me what can i do for you 
+ & gt $ cc : yeah you can turn on my fucking internet 
+ & gt $ me : first i 'm not being rude to you so do n't try to <unk> me 
+ second if you continue to swear at me this call will disconnect with a complaint followed up for <unk> my techs and myself 
+ third we did n't turn off your services billing did 
+ & gt $ cc : <unk> <unk> why did they turn it off 
+ & gt $ me : from what i can see due to a balance of <unk> being owed 
+ did you want to make a payment of $ <unk> to turn services back on 
+ & gt $ cc : no i 'm not paying anything 
+ i stopped paying my bill because i was n't happy with the service and i was n't going to pay for something i was n't happy with 
+ & gt $ me : did you call in about not being happy with the services 
+ & gt $ cc : no i figured ya 'll would see the services not being used and call and ask why 
+ & gt $ me : just looking at the account here i can see you used <unk> of data someone has been 
+ & gt $ cc : i want to speak to your supervisor now 
+ & gt $ me : certainly * trying not to <unk> <unk> on hold and transfers <unk> & gt $ me : hey $ <unk> customer wants to speak with you 
+ & gt $ <unk> : come on $ me it 's <unk> and it 's almost time to go 
+ ca n't she just get lost '' in the transfer 
+ ah i know no go ahead and send her through 
+ by the way what 's it about 
+ & gt $ me : oh her balance being owed here she comes 
+ bye 
+ & gt $ <unk> : <unk> - <unk> 4pm came around and i see a message on <unk> from $ <unk> 
+ & gt $ <unk> : meet me in the conference room now 
+ $ me : *thinking <unk> oh great a complaint meeting 
+ i walk into the room and the level 1 who originally took the call is sitting there looking like he 'd just seen a server fall from the <unk> state building 
+ level 2 is sitting there just staring at level 1 so i sit down next to level 2 in case level 1 starts to cry 
+ in walks $ <unk> and his boss $ <unk> ... * oh shit oh shit goes through my <unk> & gt $ <unk> : evening gentleman level 1 why do you look like you just walked through hell 
+ anyway i gathered you here today because we had a very interesting call that managed to make it the whole way up to me 
+ she said she was treated <unk> '' by everyone on her way up the chain 
+ thankfully $ <unk> was in the room so i put it on speaker and kept it going 
+ we gave her the choice pay balance and get the services back pay $ <unk> and we will drop the balance and bar her from service or her last option ignore it and let it go to collections 
+ she paid the balance and her services are on 
+ now i listened to your calls none of you where rude she was just angry 
+ good job 
+ now let 's get out of here before she calls <unk> thank you boss man for not being someone who just says yes to please the customer and throws his <unk> under the <unk> time reader first time poster 
+ a tale of the three <unk> inside the weird world of traffic engineering : the <unk> of <unk> '' civil engineers the <unk> of fuck that : it 's less than <unk> '' electricians and the <unk> of what do you mean we have to do computers now '' 
+ electronic engineers 
+ the worst failures across the system occur when these three groups of engineers have to deal with one system 
+ these are their stories 
+ cue law and order <unk> <unk> 
+ i am a proud <unk> of the <unk> 
+ the <unk> currently consists of 8 <unk> <unk> <unk> who all have a very particular set of skills and me : the <unk> trainee 
+ in addition to our normal duties we offer 3rd line support to anyone who puts money in the big <unk> marked beer '' 
+ this story involves my personal favourite <unk> <unk> - a man who once wrote code in order to avoid finding a <unk> to measure a line 
+ at the time of this story i am his <unk> 
+ he is my <unk> master 
+ our <unk> received a communication from <unk> : & gt <unk> : hello third line technical support 
+ how best may i drop my daily duties and sort out your problems instead '' 
+ & gt traffic <unk> : we need this <unk> <unk> working 
+ we need it now 
+ the entire traffic network of the city will come to a screaming halt if we do n't 
+ the planet 's <unk> will be <unk> 
+ <unk> and dogs living together ... '' 
+ for those of you not in the know can i be one of you 
+ please 
+ <unk> technology has just started to be implemented in <unk> <unk> collecting <unk> traffic data 
+ it 's a simple system really - a <unk> <unk> '' buried in the road which has a <unk> field 
+ when a car passes over the change in the <unk> field <unk> <unk> makes the <unk> send data over <unk> wifi frequencies to a wireless <unk> which is mounted on a pole tree or stationary <unk> above ground which then sends its information to a wired access point which <unk> information to a local <unk> to the <unk> 
+ back on the call traffic <unk> has begun to <unk> 
+ i have a standing <unk> with another member of the <unk> to have a bullet shot into my brain should i ever care that much about traffic 
+ there have been a lot of these failures recently so much so that the engineers who regularly deal with these are so <unk> dealing with the faults that we 've started wondering whether there 's something deeply wrong with the devices themselves 
+ & gt <unk> : let me just talk to our resident <unk> of all things <unk> ... '' and lo there he sat my <unk> master no doubt trying to hack into our secure network '' in order to get a <unk> but genuinely really <unk> useful piece of monitoring software working 
+ i <unk> down on one knee and <unk> in his aura 
+ & gt <unk> : master i <unk> you 
+ i have a message from the <unk> department of traffic network 
+ a young traffic <unk> is seeking resolution of a fault '' 
+ & gt <unk> master : but i 've got <unk> in my <unk> <unk> '' i nodded accepting my master 's dilemma 
+ he was <unk> by the traffic <unk> 's <unk> although i could still hear traffic <unk> 's sobbing over the line 
+ however i am afflicted with something which needs to be beaten out of me during my <unk> <unk> : <unk> for users 
+ it was my job to <unk> the <unk> which my master was unable to <unk> he be unable to enjoy his <unk> chicken 
+ so i had to cart my butt to site 
+ on getting there and opening the cabinet i proved connection from the <unk> to the <unk> 
+ that was the easy part 
+ now i had to deal with the bullshit that was the <unk> system 
+ as i said before communication between the <unk> wireless repeaters and access points is in the <unk> wifi range 
+ you know the <unk> 14 channels <unk> 
+ so it 's really great that there 's no such thing as channel <unk> where local <unk> wifi devices can <unk> up a channel right 
+ and it 's even better that we 're not in an extremely <unk> area where we 're likely to experience a high level of devices across all channels yeah 
+ yeah ... the little lost <unk> was in an absolute sea of <unk> wifi 
+ it was <unk> <unk> the local high school 's <unk> wireless internet and so every time it tried to <unk> a vehicle detection to it 's wireless <unk> the message was lost in the ocean 
+ i tried to call out to it desperately to get it to change it 's freaking channel to one less <unk> but it could n't hear me 
+ it was jack and i was rose 
+ *my heart will go on and on ... * so i had to pull out the big <unk> 
+ and by big <unk> i mean a <unk> box which my <unk> master <unk> in his garage which consists of a big fuck off access point which i could place on top of the <unk> <unk> to yell a hell of a lot louder 
+ but still it was deaf to me trapped in some sort of <unk> hell 
+ <unk> for it but to pull it out 
+ i called up my contact in the <unk> 
+ & gt <unk> : politely <unk> '' 
+ & gt <unk> : me <unk> 
+ you <unk> 
+ you pull out <unk> from road with suitable tools 
+ i stand far away for fear of being hit in the face by <unk> 
+ you replace with new <unk> i <unk> - uhh make more <unk> '' 
+ & gt <unk> : <unk> ... <unk> '' 
+ of course it was going to take some time for <unk> to arrive and pull out the <unk> so i set up a new <unk> <unk> far away from the north atlantic sea that was that stretch of road 
+ i put it on a band which was far less <unk> wifi <unk> <unk> 
+ set up the wireless repeaters and access points to accept the new <unk> when it 's put in and left it in the cabinet for <unk> to put into the road 
+ home reddit food reddit sleep reddit back to the office 
+ the next day 
+ & gt <unk> : hello third line technical support '' 
+ & gt traffic <unk> : sounds of <unk> in the background children screaming the end is <unk> it 's not working it 's still not working '' ... shit 
+ now at this point i 'm still a trainee so i 'm having a minor crisis in my knowledge of the system 
+ from my point of view it 's quite simple but there might be something i overlooked 
+ my <unk> is quite <unk> so i <unk> to go out again rather than distract my master who is busy <unk> small animals <unk> a small camera with <unk> <unk> to put onto his <unk> 
+ at site i see the <unk> is gone from where i left it and in its place a stone tablet <unk> with <unk> i <unk> as being <unk> 's report of installation 
+ i fear the worst - but as i <unk> <unk> out into the system <unk> 
+ is it <unk> you 're looking for 
+ * i can actually communicate with the new <unk> 
+ it 's a miracle 
+ but it 's still not detecting anything ... i drive my van over it a couple of times still nothing 
+ i know the device needs to be trained but at this point it 's flat out ignoring me 
+ i wonder whether the <unk> is faulty a possibility especially with all the recent failures pointing that way 
+ either way i 'm a <unk> electronics engineer who has n't picked up a tool bigger than a hammer in her life so i call up <unk> 
+ & gt <unk> : happy <unk> '' 
+ & gt <unk> : me <unk> 
+ you <unk> 
+ you meet me at site i buy you tea with 7 <unk> 
+ deal '' 
+ & gt <unk> : <unk> <unk> '' 
+ when i meet <unk> i stand well back as he <unk> his way into the <unk> and brings up the poor <unk> which never had a chance to live <unk> on the pointy end 
+ as <unk> <unk> around his kill i notice that the way it had been installed 
+ & gt <unk> : uhm <unk> 
+ when you put <unk> in ground where was arrow on top of <unk> pointing '' 
+ <unk> gave me a wide eyed stare and pointed to his god the sun 
+ i try not to facepalm and instead point to the <unk> written onto the new <unk> and indeed on all <unk> 
+ & gt <unk> : arrow is to point in direction of traffic <unk> 
+ so in this case that way '' 
+ <unk> 's eyes went even wide 
+ i 'm not really bothered considering that i 'd rather it be an issue with installation then my shitty <unk> or the <unk> wifi 
+ it 's a simple fix 
+ but <unk> started pointing desperately at the back of his van 
+ i raise an <unk> and follow him 
+ throwing open the back of the van i blink 
+ in the back of the van <unk> 
+ a mess of <unk> <unk> and <unk> 
+ boxes upon boxes of spent <unk> <unk> 
+ i realise what <unk> is trying to communicate with me with a sinking feeling 
+ & gt <unk> : <unk> ... how many of these <unk> have you installed recently '' 
+ ripping off his shirt and falling to his knees <unk> <unk> at his sun god for <unk> him 
+ and that is how i spent the next week <unk> over one hundred new <unk> <unk> just because some genius did n't think that civil engineers might be perfectly nice guys but completely unable to read english 
+ edit : gold 
+ gold 
+ i do n't even know what that is but i love it.i 'll say it - anytime i 've <unk> this story i do n't think anyone has ever believed it - i have to be honest i would n't either 
+ however me and at least two other people in the world know this to be absolutely true 
+ i was doing a contract for a major national public sector organisation 
+ obviously no names but if you 've ever been to london you 've been a customer 
+ it was your standard high staff turnover pay <unk> till they get bored throw them the bs tasks kind of role 
+ anyway one day myself and another contractor were set the task of a machine hunt 
+ basically the network was a <unk> of <unk> on <unk> using various standards practically held together with poor soldering and bits of <unk> tape 
+ however there were a list of <unk> windows <unk> machines which were apparently alive on the user <unk> which needed reimaging to xp or replacing 
+ our job was to do the <unk> hunt to determine who was using them and where they were 
+ i say <unk> it was n't exactly thought out '' ... it was some task that appeared from the <unk> which would most likely be <unk> into the <unk> 
+ this is the same organisation who only a few months prior saw a <unk> shipment from dell literally get delivered outside their offices which nobody retrieved or was aware even being ordered and over the course of the next 24 hours were promptly retrieved by members of the public 
+ yep it got left there overnight and there were only docking stations left 
+ good use of public money eh 
+ anyway we <unk> down an old compaq on our list 
+ serial matched ip matched now to talk to the user 
+ the user was a guy who wore a grey suit <unk> turned out but who looked like he was about to wet himself with fear 
+ he asked us several times who we were what we wanted what for where was this information going etc 
+ after <unk> him as much as possible that it was just an upgrade <unk> and we were it support he finally <unk> his name 
+ it just so happened another machine we were hunting for was right next to his desk our decision to wait around for this user to return was <unk> by his worried glances ... after a few minutes of uncomfortable i 'm pretending to not acknowledge you '' silence we went away <unk> to return later - <unk> when he had disappeared 
+ a few days later the same contractor and i were out on a pub lunch 
+ the guy happens to come in and immediately notices us 
+ he 's weird really weird 
+ he walks quickly to the back of the pub <unk> glances at us and then makes for the door 
+ of course now we 're talking about him like wtf 
+ he makes an about turn at the door and comes up to us he nervously asks are you definitely just it support '' 
+ we reply and say yep and he just immediately leaves with an ok thank you '' 
+ of course we 're <unk> out but whatever 
+ we just put him down as a <unk> 
+ again another few days later we 're out on a smoke break this guy appears again seemingly on a smoke break too 
+ his eyes are wide as soon as he notices us but as he 's already lit his cigarette he kinda has to come out now 
+ we 're <unk> of him this guy is a <unk> 
+ he tries to make small talk it seems to me he 's <unk> so i just come out and talk about what we do all day pretending to <unk> about our <unk> duties 
+ anyway it turns out after a few more chance <unk> he kinda <unk> down and starts talking - mainly about f1 <unk> etc 
+ he shows up again on a friday afternoon drink this time with his wife in tow 
+ it turns out that he has every right to have been nervous 
+ this guy was initially hired as part of a major projects team in the organisation 
+ he applied for a role got accepted gave in notice at his old job and duly showed up for work as prescribed 
+ however as it turns out in between getting confirmed for his role and actually starting the entire major projects department had gotten <unk> 
+ the manager who hired him had left the business members of the team were scattered far and wide yet he showed up some receptionist showed him to his desk where he was to wait for someone and nobody showed up 
+ he made <unk> all he ever got told was that someone would come talk to him eventually - but nobody ever did 
+ for the last 11 years he had shown up for work 
+ nobody ever <unk> him nobody ever asks him for anything sometimes he just does n't show up and nobody questions it he gets paid every month gets a <unk> annual pay rise and that 's it 
+ he 's been filling his time writing books for the past 8 years on this that and the other and that is literally what he does every day 
+ as the physical office he 's in also has a high staff turnover there 's no time to make <unk> or for anyone to even really acknowledge him 
+ of course he was slightly <unk> at that point 
+ i just thought he was plain <unk> nuts <unk> resident in <unk> 
+ i did n't believe a word of it 
+ it 's too <unk> to be true 
+ that was until the monday morning we had to check 
+ sure enough hr systems showed his dept had indeed been <unk> mere days after he was <unk> and his active manager on the hr system had indeed long since left the business 
+ everything we did to verify his story checked out 
+ we even performed a few random <unk> and sure enough there he is with word opened and he 's tapping out page <unk> for a <unk> 
+ he never seems to do anything 
+ of course he 's back to being nervous again as he let his guard down while drunk and told someone 
+ even his wife at the time seemed to <unk> his tale 
+ i left the contract a couple of months later but as far as i know he 's still there 
+ i still even questioned the reality of such a situation 
+ however ... on my first day of that role i duly asked where it was 
+ i was told to go with a massive group of people to induction 
+ i passed three <unk> where security guards asked my name and though i was n't on their list let me through with an ok must be a mess up '' 
+ one even said who 's your manager '' 
+ to which i replied i have no idea i 've only just arrived '' 
+ he too allowed me through 
+ what i went into was an entire day 's induction for <unk> staff 
+ a lot of sensitive stuff got said a lot of activities went on - nothing catastrophically major do n't get me wrong - but there we have it 
+ on leaving and switching my phone back on i had several voicemails from my <unk> demanding to know my whereabouts 
+ i told him i 'd been in induction which surprised him 
+ it took me another 30 minutes to track down which it department i was even supposed to be in and even a day later got told i was still in the wrong place while i was <unk> into laying some network cable 
+ this place was so <unk> i can not think of anything to <unk> his account - other than how absolutely <unk> it is 
+ lucky - <unk> 
+ tl/dr - someone shows up for a new job to find his department <unk> to the ground he ends up flying under the radar for 11 years with full salary and nothing to do but write <unk> is my first post here 
+ it will be a short and sweet one 
+ <unk> - employee 
+ dir - director of the software development company and also a programmer 
+ so my director walks in and starts hitting his keyboard 
+ & gt dir : what the f*** 
+ & gt ... & gt dir : <unk> get over here and have a look at this 
+ & gt <unk> : whats up & gt dir : i ca n't get my mac to work and i have been typing at it for the past couple of minutes & gt ** i noticed the issue ** & gt <unk> : i know whats wrong here 
+ & gt dir : really what 
+ & gt <unk> : look 
+ & gt dir : what 
+ & gt <unk> : look again 
+ & gt dir : oh ... <unk> 
+ <unk> support i ever done 
+ it turned out that my director had forgotten to bring in his macbook but the keyboard was there and he was just typing away while looking at his windows desktop monitor 
+ so now we have added it to the <unk> of stupid shit people do and gave him a <unk> soft toy 
+ we use <unk> to <unk> when some is a <unk> 
+ <unk> definition as this is a commonly used <unk> term edit : at request i have also attached an image of one of the <unk> 
+ <unk> image 
+ so hope you enjoyed my first post here and i hope i can add more in the <unk> 1 : i meant <unk> not <unk> 
+ i 'm dumb 
+ edit 2 : a <unk> is a form you fill out when beginning employment for those who are n't familiar with the <unk> <unk> that is the american tax system 
+ -- - between my junior and senior year of university i declined an offer to go back to my previous internship for a few reasons the main one being the culture and my dad 's insistence to get out while i can 
+ of course this left me without an internship for the summer until my rich professor <unk> heard of my <unk> 
+ he offered me $ 14 an hour at almost full time state laws prevented a full 40 hours 
+ this is the story of my first day 
+ the company <unk> currently owns is a utility services firm we contract out to <unk> and the like to do their projects 
+ the project the company was on during my time was a shutdown of an extremely dated cellular network to <unk> the spectrum for lte 
+ our job was to document each of the <unk> cell sites and determine whether shutting off power to the old equipment would cause other issues 
+ usually it was another cellular technology or the tower lights but i 'm pretty sure i saw a microwave oven at one point 
+ the business used a 3 step process : 1. <unk> the images and report sent in from the field techs because they <unk> to be less than reliable 1. <unk> <unk> and zip <unk> the files to meet the <unk> of our client and 1. upload the <unk> files to the client 's project management platform 
+ on my first day after being given the lay of the land i was assigned to work on <unk> 
+ each site took <unk> minutes for this process and like any good techie i got bored 
+ i realized there was a way to break it down : * <unk> any images in <unk> orientation * <unk> the files * <unk> them with the site name and an <unk> number * add them to a zip archive i downloaded python and got to work 
+ three and a half hours later i 'd automated the process and even managed to <unk> a better <unk> ratio out of it 
+ <unk> saw that the <unk> <unk> was almost empty and came up to me 
+ & gt <unk> : how are you doing that 
+ you ca n't actually be processing everything 
+ & gt me : i wrote a script that does it automatically 
+ just drag the files from the network share and it takes care of the rest 
+ & gt <unk> : show me 
+ two minutes and several sites later <unk> was a <unk> 
+ he brought me into his office 
+ & gt <unk> : do you know what you 've done 
+ & gt me : 
+ & gt <unk> : you turned our three step process into a two step process 
+ here 's your <unk> 
+ & gt me : just glad to help 
+ & gt <unk> : you saved us hundreds of <unk> 
+ i think we can afford to pay you a bit more than your offer stated 
+ an hour or two later i went home with a $ <unk> raise and a promise of something much more interesting than just processing sites ... but that 's a story for another time 
+ next story 
+ 
