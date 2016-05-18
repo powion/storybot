@@ -76,7 +76,7 @@ story_map = {
     "tifu": [
         "../datasets/tifu/storybot.txt",
         [1000, 0, 0],
-        [s_terminator],
+        ["today", "i"],
         [],
         [],
         [],
@@ -93,6 +93,24 @@ story_map = {
     ],
     "techsupport": [
         "../datasets/talesfromtechsupport/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "pettyrevenge": [
+        "../datasets/pettyrevenge/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "prorevenge": [
+        "../datasets/prorevenge/storybot.txt",
         [1000, 0, 0],
         [s_terminator],
         [],
@@ -120,8 +138,8 @@ def parse_args():
     parser.add_argument("-v", "--verbose", action='store_true', help="Increase output verbosity")
     args = parser.parse_args()
 
-    if args.name not in ["tifu", "retail", "techsupport"]:
-        print("Wrong corpus name given. Must be one of: {tifu, retail, techsupport}")
+    if args.name not in ["tifu", "retail", "techsupport", "pettyrevenge", "prorevenge"]:
+        print("Wrong corpus name given. Must be one of: {tifu, retail, techsupport, pettyrevenge, prorevenge}")
         parser.print_help()
         sys.exit(-2)
     return args
@@ -250,7 +268,7 @@ class StoryGen:
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
             #self.lstm = nn.Lstm("../models/lstm/ptb/model5.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
-            self.lstm = nn.Lstm("../models/lstm/talesfromtechsupport/model.ckpt","../datasets/talesfromtechsupport_lstm/ptb.train.txt", self.max_lstm_steps)
+            self.lstm = nn.Lstm("../models/lstm/tifu/model4.ckpt","../datasets/tifu_lstm/ptb.train.txt", self.max_lstm_steps)
         self.sentence_count = 0
         self.shortname = shortname
         self.min_grams = min_grams
