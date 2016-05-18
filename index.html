@@ -51,8 +51,10 @@
         </ul>
 
         <!-- STORIES CONTAINER -->
-        <div  class="w3-container w3-animate-opacity" ng-repeat="x in sources"
+        <div  class="w3-container w3-animate-opacity"
+              ng-repeat="x in sources"
               ng-hide="x.hide">
+
           <!-- create a div for each story -->
           <div ng-repeat="t in x.text" class="{{x.name}}-texts w3-animate-opacity">
             <br><blockquote>{{ t }}</blockquote>
