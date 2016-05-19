@@ -179,6 +179,19 @@ def embellish(tokens):
             break
         ret.insert(0, token[0])
     ret[0] = ret[0].capitalize()
+
+    # concatentate tokens starting with apostrophe
+    # and capitalize i:s
+    start_chars = ("'", "n'")
+    for i, t in enumerate(ret):
+        if t == 'i':
+            ret.pop(i)
+            ret.insert(i, 'I')
+        if t.startswith(start_chars):
+            t2 = ret.pop(i)
+            t1 = ret.pop(i-1)
+            ret.insert(i-1, t1+t2)
+
     ret = " ".join(ret)
     return ret + "."
 
