@@ -76,7 +76,7 @@ story_map = {
     "tifu": [
         "../datasets/tifu/storybot.txt",
         [1000, 0, 0],
-        ["today", "i"],
+        [s_terminator],
         [],
         [],
         [],
