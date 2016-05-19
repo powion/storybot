@@ -16,12 +16,12 @@ pos_training_path = "../lib/tagged/english-bidirectional-distsim.tagger"
 pos_jar_path = "../lib/jar/stanford-postagger.jar"
 
 # Minimum amount of choices for the next word (otherwise lower gram).
-# This configures the focus on the real documents. 
+# This configures the focus on the real documents.
 # A wide choice gives more freedom to the LSTM -> more general (or financial) English.
-# A smaller choice forces more real document content in the story (the n-grams dominate). 
+# A smaller choice forces more real document content in the story (the n-grams dominate).
 min_amount = 10
 
-# How many sentences per story shall we generate? 
+# How many sentences per story shall we generate?
 sentence_count = 10
 
 # Sentence terminators. We want flowing stories, so skipping these for now.
@@ -41,7 +41,7 @@ forbidden_type_sequences = {
 }
 
 forbidden_types = ["``", "''", "CD", ":", "(", ")"]
-forbidden_tokens = set(["(", ")", "[", "]", ",", "'", "\"", ";", "``","“", "?", "!", ".", "へ", "‿", "_", "''"])
+forbidden_tokens = set(["(", ")", "[", "]", ",", "'", "\"", ";", "``","“", "?", "!", ".", "へ", "‿", "_", "''", "&", "gt"])
 
 ''' Here we may want parameters for different story datasets.
 I'm leaving it as-is for example purposes. The parameters we want to tune will
@@ -81,6 +81,42 @@ story_map = {
         [],
         [],
         nltk.MLEProbDist
+    ],
+    "retail": [
+        "../datasets/talesfromretail/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "techsupport": [
+        "../datasets/talesfromtechsupport/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "pettyrevenge": [
+        "../datasets/pettyrevenge/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
+    ],
+    "prorevenge": [
+        "../datasets/prorevenge/storybot.txt",
+        [1000, 0, 0],
+        [s_terminator],
+        [],
+        [],
+        [],
+        nltk.MLEProbDist
     ]
 }
 
@@ -102,8 +138,8 @@ def parse_args():
     parser.add_argument("-v", "--verbose", action='store_true', help="Increase output verbosity")
     args = parser.parse_args()
 
-    if args.name not in ["tifu"]:
-        print("Wrong corpus name given. Must be one of: {tifu}")
+    if args.name not in ["tifu", "retail", "techsupport", "pettyrevenge", "prorevenge"]:
+        print("Wrong corpus name given. Must be one of: {tifu, retail, techsupport, pettyrevenge, prorevenge}")
         parser.print_help()
         sys.exit(-2)
     return args
@@ -145,7 +181,7 @@ def embellish(tokens):
     ret[0] = ret[0].capitalize()
     ret = " ".join(ret)
     return ret + "."
-    
+
 
 # PosTagger class - make POS tagger changes easier.
 class PosTagger:
@@ -157,7 +193,7 @@ class PosTagger:
             self.tag = nltk.pos_tag
         else:
             raise ValueError('Required POS tagger \"' + tagger_type + '\" is unknown.')
-    
+
 
 def vocabulary_stats(words):
     print("Wait for the stats...")
@@ -183,7 +219,7 @@ def vocabulary_stats(words):
             cum_sum += word_counts[idx]
             idx += 1
         print("{} top vocabulary words cover {:.2f}% of the text.".format(idx, 100.0*cum_sum/text_size))
-    
+
 
 def text2words(text):
     words = []
@@ -214,20 +250,20 @@ class StoryGen:
     pos_tagger_enabled = False
     # LSTM enable/disable configuration.
     lstm_enabled = True
-    # The longest sequence of words being sent to the LSTM. 
+    # The longest sequence of words being sent to the LSTM.
     max_lstm_steps = 30
     # When the n-grams fail to find anything, generate at most max_random_words instead.
     max_random_words = 400
-    # When the LSTM says "terminate the sentence", we "toss a coin" and terminate with 
+    # When the LSTM says "terminate the sentence", we "toss a coin" and terminate with
     # probability sure_terminate_prob.
     sure_terminate_prob = 0.5
-    
+
     ngrams_terminator_probability = 0.02
-    
+
     # How many times is n-gram score larger than (n-1)-gram score? 10 - a lot, 1.2 - much less
     # This should be always larger than 1.
     ngrams_decay_base = 3.0
-    
+
     def __init__(self, shortname, min_grams=2, max_grams=5, text=""):
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
@@ -242,7 +278,7 @@ class StoryGen:
          self.term_except, smoothing_factory) = story_map[shortname]
         self.max_length, self.min_length, self.min_preferred = limits
         self.out = ""  # self.out contains all the text we have generated.
-        
+
         # Either load the full corpus or just use the provided text string
         # for story generation.
         if(text == ""):
@@ -274,7 +310,7 @@ class StoryGen:
             self.estimates[n] = nltk.ConditionalProbDist(dist, smoothing_factory, bins=len(self.vocabulary))
 
         self.startPhrase = [[w, t] for (w, t) in self.posTagger.tag(self.startSeq)]  # TODO: Change anything here?
-        
+
 
     def is_terminator(self, out):
         next_word, next_type = out[-1][0], out[-1][1]
@@ -350,7 +386,7 @@ class StoryGen:
         This method picks num_choices random tokens from the probability distribution and returns a list of
         distinct tagged tokens.
         """
-        
+
         choices = []
         for i in range(0, num_choices):
             token = prob_dist.generate()
@@ -358,15 +394,15 @@ class StoryGen:
                 choices.append(token)
         tagged_choices = self.posTagger.tag(choices)
         return tagged_choices
-    
+
     def random_word_dict(self):
         k = min(len(self.vocabulary), self.max_random_words)
         words = random.sample(self.vocabulary, k)
         wd = dict()
         for w in words:
             wd[w] = 1.0/len(words)
-        return wd    
-    
+        return wd
+
     def filter_lstm_input(self, current_seq, choice_seq):
         # Substitute '<s>' for '<eos>' (end of sentence).
         #word_choice = [wt if not wt == '<s>' else '<eos>' for wt in choice_seq ]
@@ -379,8 +415,8 @@ class StoryGen:
         word_seq = [current_seq[i][0] for i in range(roll_begin, len(current_seq))]
         #word_seq = [w if not w=='<s>' else '<eos>' for w in word_seq]
         return [word_seq, word_choice]
-        
-    
+
+
     # Return the union of dict1 and dict2, adding only non-present values to dict1 from dict2.
     # Values of dict2 are pre-multiplied by c before adding to dict1.
     def merge_dicts(self, dict1, dict2, c):
@@ -388,8 +424,8 @@ class StoryGen:
             if k not in dict1:
                 dict1[k] = v * c
         return dict1
-    
-    # Multiply probabilities of words in wpdict dictionary by LSTM predictions.    
+
+    # Multiply probabilities of words in wpdict dictionary by LSTM predictions.
     def lstm_prob(self, word_seq, wpdict):
         in_words = list(wpdict.keys())
         word_seq, word_choice = self.filter_lstm_input(word_seq, in_words)
@@ -400,8 +436,8 @@ class StoryGen:
         for i in range(0, len(in_words)):
             wpdict[in_words[i]] *= wprob[i]
         return [wpdict, top_word]
-        
-        
+
+
     # Build a dictionary from the specified probability distribution.
     def prob_dict(self, key, gram_count):
         samples = list(self.estimates[gram_count][key].samples())
@@ -409,13 +445,13 @@ class StoryGen:
         for s in samples:
             d[s] = self.estimates[gram_count][key].prob(s)
         return d
-        
+
     def normalize_pdict(self, pdict):
         psum = sum(pdict.values())
         for k, v in pdict.items():
             pdict[k] = pdict[k]/psum
         return pdict
-        
+
     def first_good_choice(self, tagged_choices, seq):
         for i in range(0, len(tagged_choices)):
             next_word, next_type = tagged_choices[i]
@@ -425,14 +461,14 @@ class StoryGen:
             else:
                 return [next_word, next_type]
         return None
-    
+
     # Add one word to the sequence seq, using between min_ and max_grams ngrams model.
     # Return [succeeded = False/True, (extended) sequence].
     def extend_sequence(self, min_grams, max_grams, seq):
         gram_count = max_grams
         num_choices = 0
 
-        # Decide the range of ngram models required for obtaining enough choices. 
+        # Decide the range of ngram models required for obtaining enough choices.
         while gram_count >= min_grams and num_choices < min_amount:
             dist = self.models[gram_count]
             key = self.key_for_gram_count(seq, gram_count)
@@ -441,7 +477,7 @@ class StoryGen:
                 gram_count -= 1
 
         logging.debug("Available choices: %i" % num_choices)
-        
+
         assert(self.ngrams_decay_base > 1)
         pdict = dict()
         # Use random words from the input documents or the n-grams if there is enough of them.
@@ -455,11 +491,11 @@ class StoryGen:
                 pd = self.prob_dict(key, ng)
                 pd = self.normalize_pdict(pd)
                 pdict = self.merge_dicts(pdict, pd, c)
-        
+
         # Add the end of sentence as a choice.
         pdict[s_terminator] = max(pdict.values()) * self.ngrams_terminator_probability
         pdict = self.normalize_pdict(pdict)
-            
+
         # Update the distribution by LSTM. May terminate the sentence when LSTM thinks it is good to do so.
         if(self.lstm_enabled):
             pdict, top_word = self.lstm_prob(seq, pdict)
@@ -468,7 +504,7 @@ class StoryGen:
                 seq.append([s_terminator,'.'])
                 return [True, seq]
         probs = nltk.DictionaryProbDist(pdict, normalize = True)
-        
+
         # Choose the next word. Filter by POS or not.
         if(self.pos_tagger_enabled):
             tagged_choices = self.generate_tagged_choice(probs, min(num_choices, 20))
@@ -511,7 +547,7 @@ class StoryGen:
                 break
             if self.is_terminator(self.out):
                 break
-                
+
         self.sentence_count += 1
         logging.debug("Sentence completed.")
         return embellish(self.out)
@@ -560,11 +596,9 @@ def main(argv):
         text += search.file_content(fn)
     run(sentence_count, short_name, text)
 
-    
-    
+
+
 
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-
