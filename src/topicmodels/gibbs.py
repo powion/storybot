@@ -2,6 +2,7 @@ from __future__ import division
 
 import os
 import sys
+import pickle
 from datetime import datetime
 
 import vocabparser
@@ -80,36 +81,58 @@ def gibbs_step(i):
   else:
     return 1
 
+
+def save_state(function, list):
+  with open(outname+'_tmp/'+function+'.dat', 'wb') as file:
+    pickle.dump(list, file)
+
+def load_state(function):
+  with open(outname+'_tmp/'+function+'.dat', 'rb') as file:
+    list = pickle.load(file)
+    return list
+
+def exists_state(function):
+  return os.path.exists(outname+'_tmp/'+function+'.dat')
+
 # Runs the specified number of iterations, or less if the changes
 # stay under 35% for 10 consecutive iterations.
 def gibbs(iterations):
+  global Z, VT, TW, DT, DW
   convergence_counter = 0
-  for it in range (0, iterations):
+  run_its = 0
+  if exists_state('gibbs'):
+    Z, VT, TW, DT, DW, convergence_counter, run_its = load_state('gibbs')
+  for it in range (run_its, iterations):
     changes = 0
     for i in range (0, Z.size):
       changes += gibbs_step(i)
     if (it != 0 and it % 10 == 0):
       print(timestr() +
-            " Iteration {} out of {}, changes: ".format(it, iterations) + 
+            " Iteration {} out of {}, changes: ".format(it, iterations) +
             "{:.0%}".format(changes/Z.size))
     if (changes/Z.size < 0.35):
       if(convergence_counter > 70):
-        np.save(outname + '_tmp/convergedZ', Z)
+        save_state('gibbs', [Z, VT, TW, DT, DW, 0, 0])
         return
       convergence_counter += 1
     else:
       convergence_counter = 0
-    np.save(outname + '_tmp/convergedZ', Z)
+    save_state('gibbs', [Z, VT, TW, DT, DW, convergence_counter, it+1])
+  save_state('gibbs', [Z, VT, TW, DT, DW, 0, 0])
 
 def sample(n, interval):
   DT_copy = np.array(DT)
   VT_copy = np.array(VT)
-  for i in range (0, n-1):
+  index = 0
+  if exists_state('sample'):
+    DT_copy, VT_copy, index = load_state('sample')
+  for i in range (index, n-1):
     gibbs(interval)
     DT_copy += DT
     VT_copy += VT
+    save_state('sample', [DT_copy, VT_copy, i])
     print(timestr() +
-            " Sample {} out of {}.".format(i, n))
+            " Sample {} out of {}.".format(i+1, n))
   np.save(outname + '_tmp/DT', DT_copy)
   np.save(outname + '_tmp/VT', VT_copy)
   DT_copy = DT_copy/n
@@ -165,8 +188,9 @@ def main(inputfile, outputname):
   DW = np.zeros(D)
 
   init_matrices()
-  print(timestr() + " Running {} iterations, please wait.".format(conv_iterations))
-  gibbs(conv_iterations)
+  if not exists_state('sample'):
+    print(timestr() + " Running {} iterations, please wait.".format(conv_iterations))
+    gibbs(conv_iterations)
   print(timestr() + " Sampling {} times, please wait.".format(samples))
   DT_samples, VT_samples = sample(samples, sample_interval)
 
