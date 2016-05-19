@@ -268,6 +268,7 @@ class StoryGen:
         self.posTagger = PosTagger('nltk')
         if self.lstm_enabled:
             #self.lstm = nn.Lstm("../models/lstm/ptb/model5.ckpt","../datasets/ptb/ptb.train.txt", self.max_lstm_steps)
+            #self.lstm = nn.Lstm("../models/lstm/tailsfromretail/model4.ckpt","../datasets/talesfromretail_lstm/ptb.train.txt", self.max_lstm_steps)
             self.lstm = nn.Lstm("../models/lstm/tifu/model4.ckpt","../datasets/tifu_lstm/ptb.train.txt", self.max_lstm_steps)
         self.sentence_count = 0
         self.shortname = shortname
