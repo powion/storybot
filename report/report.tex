@@ -96,7 +96,12 @@ As the content on Reddit is voted on by the users the crawler was built to explo
 \subsection{Creating our story}
 We preprocessed our reddit data by dividing the posts into clusters according to the LDA model, and used these as input for the n-grams and LSTM.The n-grams enabled our program to generate stories from different subtopics while using one LSTM trained on the whole corpus. The LSTM captured English grammar and dataset specific rules of sentence structure.To create new stories, we linearly combined the predictions from the previous words from the n-grams and the LSTM to calculate a score for each possible next word. We then normalize these scores for the most likely words to get a probability distribution. Finally, we sample a word from the distribution and add it to the text. For the first word in the new text, the probabilities are calculated from how likely the words are to appear as the first word of a sentence.
 
+\subsection{Text Preprocessing}
+TODO: Extracting sentences, tokenization, forbidden tokens, $<eos>$, commas.
+
 \subsubsection{n-grams}
+TODO: Mention NLTK, what we have done (the algorithm - adding lower n-grams, max random words = 400), reference articles?
+
 A popular approach in language modeling are n-gram models. An n-gram is a continuous sequence of n words from a sequence of text. As an example, these are the 3-grams from the sequence “The quick brown fox jumps”:
 
 \begin{itemize}
@@ -115,9 +120,34 @@ An n-gram language model provides a probability distribution of words that can f
 \end{itemize}
 
 \subsubsection{Long Short Term Memory (LSTM)}
-LSTM, long short term memory is a combination of an RNN (recurrent neural network) and word embeddings. Word embeddings map a known vocabulary word to a real vector of a preset constant dimension. These word vectors then serve as inputs for the RNN. The RNN and word embeddings are trained on a long text to predict the next word following a sequence of words. Recurrent means the RNN consists of many identical units linked together in a chain structure. The number of units in the chain is equal to the number of words in the input sequence. Each unit takes in one vector representing one input word and a state vector. Each unit updates the state vector and passes it on to the next unit in the RNN chain. It also outputs a size-of-the-vocabulary dimensional vector estimating the probability (score) that a given word follows after the current word in the input sequence.
 
-The LSTM as a whole provides us with an English language model. It says how much is each known word likely to follow a given sequence of words. As this information is given in the form of probability distribution over the vocabulary, we utilize it by combining the n-gram topic specific probability distribution with the LSTM distribution. A reasonable (more specific?) sampling of words from this distribution usually generates a good story (not working yet).
+LSTM, long short term memory is a combination of an RNN (recurrent neural network) and word embeddings. Word embeddings map a known vocabulary word to a real vector of a preset constant dimension. These word vectors then serve as inputs for the RNN. The RNN and word embeddings are trained on a long text to predict the next word following a sequence of words. Recurrent means the RNN consists of many identical units linked together in a chain structure. The number of units in the chain is equal to the number of words in the input sequence. Each unit takes in one vector representing one input word and a state vector. Each unit updates the state vector and passes it on to the next unit in the RNN chain. It also outputs a size-of-the-vocabulary dimensional vector estimating the probability (score) that a given word follows after the current word in the input sequence. See \cite{LSTM} for a more detailed description of LSTMs.
+
+We have based our LSTM solution on the LSTM small, non-regularized network architecture presented in \cite{Zaremba14}. We have trained this network first on the Penn Tree Bank (PTB) English news dataset \cite{PTB} and then also on our preprocessed input texts from reddit, finally having one LSTM model for each subreddit. The training has been done in TensorFlow, see \cite{TensorFlow} for more details on the training procedure. All words unknown to the word embeddings are replaced with the $<unk>$ token both when training and when evaluating the model. This enables us to use always the same network architecture with the same output dimension (10000 words in our case).
+
+When generating stories, the LSTM is evaluated on up to 30 words (a tunable parameter) of the preceding output text sequence. 
+
+The LSTM as a whole provides us with an English language model. It says how much each known word is likely to follow a given sequence of words. As this information is given in the form of probability distribution over the vocabulary, we utilize it by combining the n-gram topic specific probability distribution with the LSTM distribution.
+
+\subsubsection{Score Combination and Next Word Sampling}
+At first we have to ensure that all the scores are non-negative. All negative LSTM scores are replaced with zeros. The n-gram model suggests a set of (at least 10) possible story continuing words and their probabilities. The combined n-gram score for a word w out of this set
+\begin{equation}
+s_{ng,w}= d^{n-2} s_{n,w}
+\end{equation}
+is obtained from the highest n-gram model (index n) mentioning the word w, where $s_{n,w}$ is the score of the highest n-gram model and d is a tunable decay parameter. We use $d=3$. The lowest possible n-gram (bigram) has $n=2$.
+
+After normalizing both the combined n-gram and lstm score ($s_{l,w}$) vectors to sum to one, we perform an element-wise multiplication of these two normalized (probability) vectors.
+\begin{equation}
+s_{c,w}= \frac{s_{ng,w} s_{l,w}}{\sum_w{s_{ng,w}} \sum_w{s_{l,w}}}
+\end{equation}
+This combined score $s_{c,w}$ is then again normalized to sum to one and becomes our final probability distribution. We sample a word to append to the story from this distribution by utilizing functions of the NLTK library \cite{NLTK}.
+
+A sentence can end in 2 possible ways:
+\begin{enumerate}
+\item With probability 50\% (tunable) if the LSTM gives the highest score to the sentence terminator token, $<eos>$.
+\item With probability proportional to $0.02 \times \max_w{s_{ng,w}} \times s_{l,w}$ (needs to be normalized).
+\end{enumerate}
+
 
 \subsubsection{Latent Dirichlet Allocation (LDA)}
 To further ensure similar topics in the dataset, we used Latent Dirichlet Allocation (LDA)\cite{blei2003latent} to cluster our documents.
