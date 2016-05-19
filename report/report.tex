@@ -2,7 +2,7 @@
 \usepackage{enumerate, amsmath, amsfonts}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
-\usepackage[bibencoding=utf8,style=numeric,firstinits=true,hyperref,backend=biber]{biblatex}
+\usepackage[bibencoding=utf8,style=numeric,hyperref,backend=biber]{biblatex}
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \addbibresource{refs.bib}
@@ -39,7 +39,7 @@
 
 
 \begin{abstract}
-\lipsum[1]
+A quite recent development in the industry is using algorithms to generate text from other text or data. The goal of our project was to generate inspiring stories of a given theme which a reasonable person could believe were created by an actual person. A combination of n-grams, LSTM, and LDA where used to generate stories from user submitted data at Reddit. The result is reasonably successful considering the quality of the generated stories can only ever be as good as the quality of the data.
 \end{abstract}
 \pagebreak
 
@@ -88,27 +88,100 @@ The latter of these two use cases is often used in conjunction with the former t
 \section{Method}\label{sec:method}
 The user created content from the community of Reddit, the 9th most visited website in America and 30th in the world\autocite{alexa}, was used to get a good sample of interesting human written stories. We identified the subreddit "Today I Fucked Up" (\url{https://www.reddit.com/r/tifu}) as a perfect initial source of data as it contains short and funny stories written by humans in a somewhat casual language. The subreddit with over 6 million subscribers describes itself as \begin{quote}
 A community for the dumbass in all of us. We all have those moments where we do something ridiculously stupid. Share your stories and laugh along with the internet\autocite{tifu}.
-\end{quote} \todonote{Expand on this if we add more subreddits!}
+\end{quote}. When our finished model was completed and tested we added further subreddits with a strong focus on humor and personal storytelling such as "Tales from tech support" and "Tales from retail".
 
 \subsection{Getting the data}
-As the content on Reddit is voted on by the users the crawler was built to exploit that fact and thus download from top to bottom score wise to get a selection of high quality stories where the relative quality level is crowdsourced from the community. Reddit makes it easy to download the data via their API\autocite{redditAPI}. The downloaded data contains the stories in addition to meta data such as \todonote{what metadata?}. The data is then parsed\todonote{is it?} and put into a database \todonote{needs elaboration!}.
+As the content on Reddit is voted on by the users the crawler was built to exploit that fact and thus download from top to bottom score wise to get a selection of high quality stories where the relative quality level is crowdsourced from the community. Reddit makes it easy to download the data via their API\autocite{redditAPI}. The downloaded data contains the stories in addition to meta data such as \todonote{what metadata?}. The data is then parsed\todonote{is it?} into text files.
 
 \subsection{Creating our story}
-The stories are created by \todonote{Need more info!!!}.
+We preprocessed our reddit data by dividing the posts into clusters according to the LDA model, and used these as input for the n-grams and LSTM.The n-grams enabled our program to generate stories from different subtopics while using one LSTM trained on the whole corpus. The LSTM captured English grammar and dataset specific rules of sentence structure.To create new stories, we linearly combined the predictions from the previous words from the n-grams and the LSTM to calculate a score for each possible next word. We then normalize these scores for the most likely words to get a probability distribution. Finally, we sample a word from the distribution and add it to the text. For the first word in the new text, the probabilities are calculated from how likely the words are to appear as the first word of a sentence.
+
+\subsection{Text Preprocessing}
+TODO: Extracting sentences, tokenization, forbidden tokens, $<eos>$, commas.
+
+\subsubsection{n-grams}
+TODO: Mention NLTK, what we have done (the algorithm - adding lower n-grams, max random words = 400), reference articles?
+
+A popular approach in language modeling are n-gram models. An n-gram is a continuous sequence of n words from a sequence of text. As an example, these are the 3-grams from the sequence “The quick brown fox jumps”:
+
+\begin{itemize}
+\item (The, quick, brown)
+\item (quick, brown, fox)
+\item (brown, fox, jumps)
+\end{itemize}
+
+An n-gram language model provides a probability distribution of words that can follow a given input sequence. An n-gram model is trained by counting the frequency of all unique n-grams in the training corpus. A basic probability estimate is then the ratio of n-grams ending with the given word and all n-grams starting with the input sequence. 
+
+(quick, brown)
+\begin{itemize}
+\item fox: 0.7
+\item cat: 0.2
+\item bear: 0.1
+\end{itemize}
+
+\subsubsection{Long Short Term Memory (LSTM)}
+
+LSTM, long short term memory is a combination of an RNN (recurrent neural network) and word embeddings. Word embeddings map a known vocabulary word to a real vector of a preset constant dimension. These word vectors then serve as inputs for the RNN. The RNN and word embeddings are trained on a long text to predict the next word following a sequence of words. Recurrent means the RNN consists of many identical units linked together in a chain structure. The number of units in the chain is equal to the number of words in the input sequence. Each unit takes in one vector representing one input word and a state vector. Each unit updates the state vector and passes it on to the next unit in the RNN chain. It also outputs a size-of-the-vocabulary dimensional vector estimating the probability (score) that a given word follows after the current word in the input sequence. See \cite{LSTM} for a more detailed description of LSTMs.
+
+We have based our LSTM solution on the LSTM small, non-regularized network architecture presented in \cite{Zaremba14}. We have trained this network first on the Penn Tree Bank (PTB) English news dataset \cite{PTB} and then also on our preprocessed input texts from reddit, finally having one LSTM model for each subreddit. The training has been done in TensorFlow, see \cite{TensorFlow} for more details on the training procedure. All words unknown to the word embeddings are replaced with the $<unk>$ token both when training and when evaluating the model. This enables us to use always the same network architecture with the same output dimension (10000 words in our case).
+
+When generating stories, the LSTM is evaluated on up to 30 words (a tunable parameter) of the preceding output text sequence. 
+
+The LSTM as a whole provides us with an English language model. It says how much each known word is likely to follow a given sequence of words. As this information is given in the form of probability distribution over the vocabulary, we utilize it by combining the n-gram topic specific probability distribution with the LSTM distribution.
+
+\subsubsection{Score Combination and Next Word Sampling}
+At first we have to ensure that all the scores are non-negative. All negative LSTM scores are replaced with zeros. The n-gram model suggests a set of (at least 10) possible story continuing words and their probabilities. The combined n-gram score for a word w out of this set
+\begin{equation}
+s_{ng,w}= d^{n-2} s_{n,w}
+\end{equation}
+is obtained from the highest n-gram model (index n) mentioning the word w, where $s_{n,w}$ is the score of the highest n-gram model and d is a tunable decay parameter. We use $d=3$. The lowest possible n-gram (bigram) has $n=2$.
+
+After normalizing both the combined n-gram and lstm score ($s_{l,w}$) vectors to sum to one, we perform an element-wise multiplication of these two normalized (probability) vectors.
+\begin{equation}
+s_{c,w}= \frac{s_{ng,w} s_{l,w}}{\sum_w{s_{ng,w}} \sum_w{s_{l,w}}}
+\end{equation}
+This combined score $s_{c,w}$ is then again normalized to sum to one and becomes our final probability distribution. We sample a word to append to the story from this distribution by utilizing functions of the NLTK library \cite{NLTK}.
+
+A sentence can end in 2 possible ways:
+\begin{enumerate}
+\item With probability 50\% (tunable) if the LSTM gives the highest score to the sentence terminator token, $<eos>$.
+\item With probability proportional to $0.02 \times \max_w{s_{ng,w}} \times s_{l,w}$ (needs to be normalized).
+\end{enumerate}
+
+
+\subsubsection{Latent Dirichlet Allocation (LDA)}
+To further ensure similar topics in the dataset, we used Latent Dirichlet Allocation (LDA)\cite{blei2003latent} to cluster our documents.
+
+LDA is a generative model that assumes each document in a set is generated by sampling words from a mixture of topics, and that the distribution over the topics has a Dirichlet prior. The Dirichlet prior favors distributions where a small number of choices are much more likely than the others, which encourages distinct topics.
+
+In LDA, each instance of a word has its own assigned topic, meaning the same word can belong to several different topics. It also means each document belongs to different topics to different extents. The topics themselves are unobserved, which means they do not need to be known or defined by someone with knowledge of the dataset, but are rather found from the data itself. We did not know how many topics to expect, and the number of topics may be different for each subreddit. We opted to model 25 different topics, as that should be enough to model our data while not taking too long to converge.
+
+To approximate the topic mixtures we made use of Markov chain Monte Carlo and Gibbs sampling, as described by T. Griffiths\cite{griffiths2002gibbs}.
+
+We approximated the mixture of topics for each document, and used the euclidian distances between the resulting vectors to calculate the similarity between different documents. We could then create new, smaller and more topic-consistent datasets by taking the N closest neighbors of a random document. 
+
+\subsubsection{Old stuff, just delete if not needed...}
 
 This is sent through a n-gram model with n=X... Then LSTM? Or before...? We also use some kind of open source dictionary from some university which defines our words as adjectives etc.
 
 A LSTM (long short term memory) model is trained and implemented which is an RNN (recurrent neural network) with word embeddings. Traditional neural networks throw away everything in each iteration which the RNN improves on by essentially adding loops to the network and thus allowing information to persists\autocite{LSTM}. An LSTM is a special kind of RNN which was first introduced by \textcite{LSTMarticle} and works tremendously well on a large variety of problems\autocite{LSTM}.
 
 \subsection{Presentation}
-The generated stories were presented in a user friendly manner by creating a website alongside the full source code on Github (\url{http://powion.github.io/storybot/}). Here the user can select from the different subreddits described in \autoref{sec:method} and get a selection of generated stories for that theme. \todonote{If we do some kind of voting system then elaborate on that!}.
+The generated stories were presented in a user friendly manner by creating a website alongside the full source code on Github (\url{http://powion.github.io/storybot/}). Here the user can select from the different subreddits described in \autoref{sec:method} and get a selection of generated stories for that theme.
 
-\section{Experiments/Results}
-\lipsum[2] \todonote{Possibly do a short trial with friends/family to see what they think of our stories as a way of evaluating our method!} \todonote{Add a few examples of the best and worst cases!}
+\section{Results}
+Results with the approach described above were fairly good. Two examples stories from Tales from Tech Support and Tales from Retail respectively are
+
+\begin{quotation}
+Please leave and get on the network. I come in one morning and 7 people were around the office. I couldn’t see the ghost in the computer room to fix my computer needs that. I mumbled to myself as I collected all my belongings maybe it would all work out. Soon after we noticed he started sometimes coming in on days he wasn't scheduled to work and I have him email me the logs and I'll be right down to help him. If he hadn't been so lazy. He also had the next day off but what could the harm be.
+\end{quotation}
+and
+\begin{quotation}
+Today I had a guy think. I'm a decorator. Finally she says that her grandson is 9 in total for one person to let her see the cop. Again we are closed. We've spent over an hour with her at this point and we had never had a problem with that. In fact the reason she didn't do anything it just sat there. He gives me a short and rude no. Okay. I still input. A rational closer treatment routine.
+\end{quotation}
 
 \section{Conclusions/Discussion}
-\lipsum[3]
-\todonote{Obviously expand on this when we have our final results!}
+The quality of the stories depended on the quality of the dataset. This was of course the point of the project, but it also introduced some difficulties. Since Reddit posts are often not fully grammatically correct, the grammar in our stories is not perfect. Also, this discrepancy from correct grammar made it more difficult to use other datasets such as news articles for additional grammar data. Our algorithms generated stories only by looking into the past text output. Exploring the storyline into the future or adding semantic models could further improve the output quality.
 
 \printbibliography[heading=bibnumbered]
 %\bibliography{refs}{}
