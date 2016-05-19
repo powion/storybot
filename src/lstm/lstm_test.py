@@ -7,7 +7,8 @@ import random
 
 max_lstm_steps = 8
 draw_from = 20
-lstm = nn.Lstm("model5.ckpt","../../datasets/ptb/ptb.train.txt", max_lstm_steps)
+#lstm = nn.Lstm("model5.ckpt","../../datasets/ptb/ptb.train.txt", max_lstm_steps)
+lstm = nn.Lstm("../models/lstm/tifu/model4.ckpt","../datasets/tifu_lstm/ptb.train.txt", max_lstm_steps)
 
 def random_lstm_story(start, count):
     text = start
@@ -49,7 +50,8 @@ test_prediction(["have","you","ever"])
 test_prediction(["have","you","ever","seen"])
 test_prediction(["have","you","ever","seen","the"])
 test_prediction(["have","you","ever","seen","the","rain"])
+test_prediction(["she", "asked"])
 
 print("And now stand by for a complete story...")
 
-print(random_lstm_story(["the", "company"], 8))
+print(random_lstm_story(["<eos>"], 8))
