@@ -1,0 +1,45 @@
+\subsubsection{Old stuff, just delete if not needed...}
+
+This is sent through a n-gram model with n=X... Then LSTM? Or before...? We also use some kind of open source dictionary from some university which defines our words as adjectives etc.
+
+A LSTM (long short term memory) model is trained and implemented which is an RNN (recurrent neural network) with word embeddings. Traditional neural networks throw away everything in each iteration which the RNN improves on by essentially adding loops to the network and thus allowing information to persists\autocite{LSTM}. An LSTM is a special kind of RNN which was first introduced by \textcite{LSTMarticle} and works tremendously well on a large variety of problems\autocite{LSTM}.
+
+
+We preprocessed our reddit data by dividing the posts into clusters according to the LDA model, and used these as input for the n-grams and LSTM. The n-grams enabled our program to generate stories from different subtopics while using one LSTM trained on the whole corpus. The LSTM captured English grammar and dataset specific rules of sentence structure. To create new stories, we linearly combined the predictions from the previous words from the n-grams and the LSTM to calculate a score for each possible next word. We then pick out the most probable words and normalize their scores to get a probability distribution. Finally, we sample a word from the distribution and add it to the text. For the first word in a new text, the probabilities are calculated from how likely the words are to appear as the first word of a sentence.
+
+In the case of Smmry they achieve this by running an algorithm that
+\begin{enumerate}
+\item Associates words with their grammatical counterparts.
+\item Calculates the occurrence of each word in the text.
+\item Assigns each word with points depending on their popularity.
+\item Detects which periods represent the end of a sentence.
+\item Splits up the text into individual sentences.
+\item Ranks sentences by the sum of their words' points.
+\item Returns X of the most highly ranked sentences in chronological order.
+\end{enumerate}
+
+ Reddit users can vote content up or down to determine what content is good or important. Upvoted content rises to the top while downvoted content sinks to the bottom. 
+ 
+ The 3-grams starting with (quick, brown) may for example have the following distribution for some corpus.
+
+(quick, brown)
+\begin{itemize}
+\item fox: 0.7
+\item cat: 0.2
+\item bear: 0.1
+\end{itemize}
+
+The summary can usually be set to a specific number of sentences or paragraphs which allows the user to test what fits their source text best. 
+
+
+The LSTM as a whole provides us with an English language model. It says how much each known word is likely to follow a given sequence of words. As this information is given in the form of a probability distribution over the vocabulary, we utilize it by combining the n-gram topic-specific probability distribution with the LSTM distribution.
+
+\newsavebox\mybox
+\savebox\mybox{\tikz[color=red,opacity=0.1]\node{DRAFT};}
+\newwatermark*[
+  allpages,
+  angle=45,
+  scale=6,
+  xpos=-20,
+  ypos=15
+]{\usebox\mybox}
