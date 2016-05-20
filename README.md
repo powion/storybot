@@ -1,6 +1,6 @@
 # storybot
 
-Storytelling bot for Information Retrieval project.
+Storytelling bot for Information Retrieval project. The project website with sample generated stories is at https://powion.github.io/storybot/.
 
 # Usage
 
